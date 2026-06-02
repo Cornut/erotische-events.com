@@ -235,9 +235,9 @@ Such-UI.
    Kategorie-Filter, Tag-Filter, Land/Region/Stadt, Datum-Bereich, Audience,
    Sprache, Preis-Range, Radius in km (10/25/50/100/250/weltweit), Geo-Koordinaten
    (Mittelpunkt); Pagination; gibt geordnetes Ergebnis-Set zurück.
-3. **Geo-Middleware** — Standortbestimmung: Browser-Geolocation (Frontend),
-   manuelle Eingabe, IP-Fallback (GeoLite2, IP wird danach verworfen); Koordinaten
-   werden als Session-Wert oder Query-Parameter weitergegeben.
+3. **Geo-Middleware** — Standortbestimmung: Browser-Geolocation (Frontend)
+   und manuelle Eingabe; Koordinaten werden als Session-Wert oder
+   Query-Parameter weitergegeben. (IP-basierter Fallback folgt in Sprint 5.)
 4. **Such-UI (Inertia/Vue)** — öffentliche Seite `GET /events` mit:
    Volltext-Suchfeld; Kategorien-Filter (Checkbox-Baum); Radius-Selektor;
    Datum-Picker; Audience-Filter; Sprachen-Filter; Ergebnis-Liste mit Karten;
@@ -288,10 +288,18 @@ Testabdeckung auf Gesamtprojektniveau geprüft und Lücken geschlossen.
    `EventClick`-Datensatz (`event_id`, `organizer_id`, `clicked_at`,
    `country`, `device_type`, `referrer`); Fehler im Tracking dürfen den Redirect
    nicht blockieren.
-2. **Geo-IP-Resolver** (`app/Tracking/GeoIpResolver.php`) — kapselt GeoLite2-DB
+2. **`GeoIpResolver`** (`app/Tracking/GeoIpResolver.php`) — kapselt GeoLite2-DB
    (oder gleichwertiges lokales Lookup); gibt ISO-3166-1-Alpha-2-Ländercode zurück
    oder `null` bei unbekannter IP (privat/intern); IP wird nur im Speicher
-   verwendet, nie persistiert.
+   verwendet, nie persistiert. Wird von zwei Stellen genutzt: (a) von
+   `ClickTrackingService` zur Länder-Ermittlung beim Outbound-Tracking und
+   (b) als IP-basierter Standort-Fallback in der Geo-Middleware (ergänzt die
+   Browser-Geolocation + manuelle Eingabe aus Sprint 4).
+2a. **IP-basierter Standort-Fallback (Geo-Middleware-Erweiterung)** — erweitert
+   die in Sprint 4 gelieferte Geo-Middleware um einen dritten Fallback-Pfad:
+   Steht weder Browser-Geolocation noch manuelle Eingabe zur Verfügung, wird
+   `GeoIpResolver` für einen ungefähren Standort-Hinweis genutzt; IP wird
+   danach verworfen.
 3. **Tracking-Route** — `GET /go/{event:slug}` → `ClickController@redirect`;
    ruft `ClickTrackingService::track()` auf; antwortet mit HTTP 302 auf
    `event.booking_url`; funktioniert ohne JavaScript; Rate-Limiting per

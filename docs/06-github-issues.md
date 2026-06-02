@@ -482,15 +482,15 @@ Radius nicht zurückgegeben werden.
 
 ---
 
-### #405 Geo-Middleware: Browser-Geolocation, manuelle Eingabe, IP-Fallback
+### #405 Geo-Middleware: Browser-Geolocation und manuelle Eingabe
 
 **Labels:** `area:frontend` · `area:backend`
 
 **AK:** Frontend kann Browser-Koordinaten per `navigator.geolocation`
-ermitteln; manuelle Eingabe eines Ortsnamens ist möglich; IP-Fallback
-verwendet GeoLite2-Lookup (IP wird danach verworfen); Koordinaten werden
+ermitteln; manuelle Eingabe eines Ortsnamens ist möglich; Koordinaten werden
 als Session-Wert oder Query-Parameter an `SearchService` weitergegeben;
-Feature-Test prüft Fallback-Logik.
+Feature-Test prüft beide Eingabepfade. (IP-basierter Fallback via GeoLite2
+wird in Sprint 5 / Epic 5 ergänzt.)
 
 ---
 
@@ -548,7 +548,20 @@ für Loopback-IP (127.0.0.1).
 
 ---
 
-### #502 `ClickTrackingService`: `track(Event, Request)`
+### #502 IP-basierter Standort-Fallback in der Geo-Middleware
+
+**Labels:** `area:search` · `area:tracking`
+
+**AK:** Die in Sprint 4 (#405) gelieferte Geo-Middleware wird um einen dritten
+Fallback-Pfad erweitert: Steht weder Browser-Geolocation noch manuelle Eingabe
+zur Verfügung, ermittelt `GeoIpResolver` (#501) einen ungefähren Standort aus
+der Request-IP; die IP wird danach verworfen und nicht persistiert; Feature-Test
+prüft den Fallback-Pfad mit einer privaten IP (erwartet: kein Standort) und
+einer öffentlichen IP (erwartet: Ländercode).
+
+---
+
+### #503 `ClickTrackingService`: `track(Event, Request)`
 
 **Labels:** `area:backend` · `area:tracking`
 
@@ -561,7 +574,7 @@ prüft Datensatz-Inhalt und Fehler-Isolation.
 
 ---
 
-### #503 Tracking-Route `GET /go/{event:slug}` mit Rate-Limiting
+### #504 Tracking-Route `GET /go/{event:slug}` mit Rate-Limiting
 
 **Labels:** `area:backend` · `area:tracking`
 
@@ -573,7 +586,7 @@ vorhanden, kein IP-Feld im Datensatz.
 
 ---
 
-### #504 Filament-Statistik-Dashboard: Klicks je Event und Organizer
+### #505 Filament-Statistik-Dashboard: Klicks je Event und Organizer
 
 **Labels:** `area:admin` · `area:tracking`
 
@@ -584,7 +597,7 @@ Feature-Test prüft, dass die Dashboard-Route HTTP 200 zurückgibt.
 
 ---
 
-### #505 Organizer-eigene Klick-Statistik im Organizer-Dashboard
+### #506 Organizer-eigene Klick-Statistik im Organizer-Dashboard
 
 **Labels:** `area:frontend` · `area:tracking`
 
@@ -595,7 +608,7 @@ prüft, dass ein Organizer keine Daten anderer Organizer sieht.
 
 ---
 
-### #506 Filament-Statistik: Aufschlüsselung nach Land und Gerätetyp
+### #507 Filament-Statistik: Aufschlüsselung nach Land und Gerätetyp
 
 **Labels:** `area:admin` · `area:tracking`
 
@@ -605,7 +618,7 @@ implementiert; Feature-Test prüft HTTP 200 für das Dashboard.
 
 ---
 
-### #507 Laravel-Lang-Dateien für DE und EN (`resources/lang/de`, `resources/lang/en`)
+### #508 Laravel-Lang-Dateien für DE und EN (`resources/lang/de`, `resources/lang/en`)
 
 **Labels:** `area:i18n`
 
@@ -617,7 +630,7 @@ optionalem URL-Prefix möglich; Feature-Test prüft, dass die App bei
 
 ---
 
-### #508 Inertia teilt `locale` und Übersetzungs-Strings ans Vue-Frontend
+### #509 Inertia teilt `locale` und Übersetzungs-Strings ans Vue-Frontend
 
 **Labels:** `area:frontend` · `area:i18n`
 
@@ -628,7 +641,7 @@ Feature-Test prüft die Locale-Prop im Inertia-Response.
 
 ---
 
-### #509 Integrations- und End-to-End-Tests: vollständiger Organizer-Event-Lifecycle
+### #510 Integrations- und End-to-End-Tests: vollständiger Organizer-Event-Lifecycle
 
 **Labels:** `area:backend`
 
@@ -640,7 +653,7 @@ Event-Detailseite zeigt Event ab; alle Schritte in einem Test.
 
 ---
 
-### #510 Integrations- und End-to-End-Tests: Such-Integration mit Meilisearch
+### #511 Integrations- und End-to-End-Tests: Such-Integration mit Meilisearch
 
 **Labels:** `area:search`
 
@@ -651,7 +664,7 @@ außerhalb des Radius aus.
 
 ---
 
-### #511 Code-Qualität & Abschluss: Pint, PHPStan Level 6, TODO-Bereinigung
+### #512 Code-Qualität & Abschluss: Pint, PHPStan Level 6, TODO-Bereinigung
 
 **Labels:** `area:devops`
 
@@ -671,5 +684,5 @@ Fehler; alle `TODO`/`FIXME`-Kommentare sind aufgelöst oder in Issues
 | Epic 2 – Core Catalog & Admin Resources | Sprint 2 | #201–#213 (13 Issues) |
 | Epic 3 – Organizer Self-Service & Event Lifecycle | Sprint 3 | #301–#312 (12 Issues) |
 | Epic 4 – Search & Geosearch + Favorites | Sprint 4 | #401–#408 (8 Issues) |
-| Epic 5 – Outbound Tracking & i18n | Sprint 5 | #501–#511 (11 Issues) |
-| **Gesamt** | | **55 Issues** |
+| Epic 5 – Outbound Tracking & i18n | Sprint 5 | #501–#512 (12 Issues) |
+| **Gesamt** | | **56 Issues** |
