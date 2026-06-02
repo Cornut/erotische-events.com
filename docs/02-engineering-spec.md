@@ -11,10 +11,10 @@ Status: Gültig für MVP (Phase 1)
 
 | Komponente | Version / Paket |
 |---|---|
-| PHP | 8.3 |
+| PHP | 8.3+ (Sail-Image: 8.4) |
 | Framework | Laravel 13 |
 | HTTP-Layer | Inertia.js (Server-Side Adapter) |
-| Admin | Filament (Version bei Bootstrap auf Laravel-13-Kompatibilität prüfen) |
+| Admin | Filament 5 (`^5.6`) — verifiziert kompatibel mit Laravel 13 |
 | Suche | Laravel Scout + Meilisearch |
 | Queue / Cache | Redis |
 | Datenbank | MySQL |
@@ -22,9 +22,7 @@ Status: Gültig für MVP (Phase 1)
 | Geo-IP | Lokale GeoLite2-Datenbank (oder gleichwertiges Offline-DB-Format) |
 | Entwicklungsumgebung | Docker / Laravel Sail |
 
-> **Hinweis Filament-Version:** Die aktuelle Filament-Major-Version muss beim
-> Projekt-Bootstrap explizit auf Laravel-13-Kompatibilität geprüft werden. Im
-> Zweifel gilt: stabil > aktuell.
+> **Filament-Version:** Filament 5 (`^5.6`) ist verifiziert kompatibel mit Laravel 13.
 
 ### Frontend
 

@@ -16,8 +16,8 @@ auf; jeder Sprint hat ein klares Ziel, konkrete Deliverables, explizite
 Abhängigkeiten und ein messbares Abnahmekriterium.
 
 **Plattformmodell:** Aggregator + Outbound-Click-Tracking — kein Buchungssystem.  
-**Stack:** Laravel 13 / PHP 8.3 · Inertia.js + Vue 3 + TypeScript + Pinia +
-TailwindCSS · Filament · Scout + Meilisearch · MySQL · Redis · Docker/Sail.
+**Stack:** Laravel 13 / PHP 8.3+ (Sail-Image: 8.4) · Inertia.js + Vue 3 + TypeScript + Pinia +
+TailwindCSS · Filament 5 (`^5.6`) · Scout + Meilisearch · MySQL · Redis · Docker/Sail.
 
 ---
 
@@ -33,7 +33,7 @@ und funktionierender CI-Pipeline — bevor die erste Fachlogik geschrieben wird.
 1. **Docker/Sail-Setup** — `docker-compose.yml` mit Diensten: `app` (PHP 8.3),
    `mysql`, `redis`, `meilisearch`; `.env.example` vollständig dokumentiert.
 2. **Laravel 13 + Filament** — `composer.json` mit gepinnten Versionen (Laravel
-   13.x, Filament 3.x — auf Laravel-13-Kompatibilität geprüft); `composer.lock`
+   13.x, Filament 5 (`^5.6`) — verifiziert kompatibel mit Laravel 13); `composer.lock`
    eingecheckt.
 3. **Frontend-Stack** — Inertia.js + Vue 3 (Composition API) + TypeScript +
    Pinia + TailwindCSS installiert; `vite.config.ts` konfiguriert; `tsconfig.json`
