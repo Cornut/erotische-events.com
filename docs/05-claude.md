@@ -123,7 +123,7 @@ This is the core tracking feature of the platform.
 Flow:
 
 ```text
-Visitor clicks "Go to Event" / "Book now"
+Visitor clicks "Go to Event" / "Zum Veranstalter"
    ↓
 GET /go/{event}   (no JavaScript required)
    ↓

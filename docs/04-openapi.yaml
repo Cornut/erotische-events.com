@@ -63,11 +63,11 @@ paths:
       responses:
         '302':
           description: >
-            Redirect to the organizer's booking/event URL. The click has been
+            Redirect to the organizer's external event URL (the URL stored in the `booking_url` field). The click has been
             recorded at this point.
           headers:
             Location:
-              description: The organizer's external event/booking URL.
+              description: The organizer's external event URL (the URL stored in the `booking_url` field).
               required: true
               schema:
                 type: string
