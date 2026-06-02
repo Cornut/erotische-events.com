@@ -17,6 +17,9 @@ docs/archiv/.env.*
 /auth.json
 /node_modules
 /public/build
+/public/css
+/public/fonts
+/public/js
 /public/fonts-manifest.dev.json
 /public/hot
 /public/storage
