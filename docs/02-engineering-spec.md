@@ -100,9 +100,10 @@ Definierte Services des MVP:
 | `EventPublishingService` | `App\Services` | Event-Lifecycle: einreichen, veröffentlichen, ablehnen, archivieren |
 | `OrganizerApprovalService` | `App\Services` | Organizer-Verifizierung: freischalten, ablehnen, Benachrichtigungen |
 | `ClickTrackingService` | `App\Tracking` | Outbound-Klick aufzeichnen, Geo-IP auflösen, Redirect vorbereiten |
+| `GeoIpResolver` | `App\Tracking` | Besucherland aus IP ermitteln, IP danach sofort verwerfen (wird nie gespeichert) |
 | `SearchService` | `App\Search` | Volltext- und Geo-Suche via Scout/Meilisearch |
 
-> Diese vier Service-Namen sind verbindlich. Abweichende Bezeichnungen sind nicht
+> Diese fünf Klassen-Namen sind verbindlich. Abweichende Bezeichnungen sind nicht
 > zulässig.
 
 ### Models
@@ -145,7 +146,7 @@ Controller.
 
 - Strikte Typisierung für Props, Emits und Store-State
 - API-Response-Typen werden aus dem OpenAPI-Schema abgeleitet (Phase 2:
-  automatisch generiert; MVP: manuell gepflegt)
+  automatisch generiert; MVP: manuell gepflegt) – Schema-Quelle: `docs/04-openapi.yaml`
 
 ---
 
