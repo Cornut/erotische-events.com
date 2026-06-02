@@ -18,3 +18,17 @@ it('can create an admin and soft-delete it', function () {
     expect(User::query()->count())->toBe(0)
         ->and(User::withTrashed()->count())->toBe(1);
 });
+
+it('mass-assigns a non-default role and locale via create', function () {
+    $user = User::create([
+        'name' => 'Org Owner',
+        'email' => 'org@example.com',
+        'password' => 'password123',
+        'role' => UserRole::Organizer,
+        'locale' => 'en',
+    ]);
+
+    $fresh = $user->fresh();
+    expect($fresh->role)->toBe(UserRole::Organizer)
+        ->and($fresh->locale)->toBe('en');
+});
