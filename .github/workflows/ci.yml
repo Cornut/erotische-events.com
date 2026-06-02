@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+      - name: Install PHP deps
+        run: composer install --no-interaction --prefer-dist
+      - name: Copy env
+        run: cp .env.example .env && php artisan key:generate
+      - name: Pint (lint)
+        run: vendor/bin/pint --test
+      - name: Tests
+        run: php artisan test
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build assets
+        run: npm ci && npm run build
