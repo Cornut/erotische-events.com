@@ -56,4 +56,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# erotische-events.com
+
+## erotische-events.com
+
+This directory (`root/`) is the project root (Laravel app + Docker/Sail).
+
+- `docs/` — product specs, API, schema, roadmap
+- `docker-compose.yml` — local stack (`./vendor/bin/sail up -d`)
+
+Open this folder in your IDE (path: `~/Documents/sites/erotische-events.com/root`).
