@@ -25,5 +25,7 @@ class DatabaseSeeder extends Seeder
                 'locale' => 'de',
             ],
         );
+
+        $this->call(CategorySeeder::class);
     }
 }
