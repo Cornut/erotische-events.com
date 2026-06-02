@@ -1,10 +1,791 @@
 openapi: 3.1.0
+
 info:
   title: Conscious Events Platform API
   version: 1.0.0
+  description: >
+    MVP surface only; the full public REST API is Phase 2.
+
+    This document covers the two categories of endpoints available in the MVP:
+
+    1. **Outbound tracking redirect** (`GET /go/{event}`) — server-side click
+       recording followed by a 302 redirect to the organizer URL. No IP is stored.
+
+    2. **Read-only JSON endpoints** (`/api/...`) — shared by the Inertia/Vue
+       frontend and intended for future API consumers. All are public and
+       unauthenticated in the MVP.
+
+    Write operations (creating/editing events, organizer self-service, admin
+    moderation) are handled exclusively through the **Inertia frontend** and the
+    **Filament admin panel** in the MVP. They are NOT exposed via this API.
+  license:
+    name: Proprietary
+
+servers:
+  - url: https://erotische-events.com
+    description: Production
+
+# All MVP endpoints are public (no authentication required).
+security: []
+
+tags:
+  - name: Tracking
+    description: Outbound-link click tracking and redirect
+  - name: Events
+    description: Event discovery endpoints
+  - name: Organizers
+    description: Organizer profile endpoints
+  - name: Categories
+    description: Category taxonomy endpoints
+
+# ---------------------------------------------------------------------------
+# Paths
+# ---------------------------------------------------------------------------
+
 paths:
-  /events:
+
+  /go/{event}:
     get:
-      summary: List events
-    post:
-      summary: Create event
+      operationId: trackOutboundClick
+      tags: [Tracking]
+      summary: Record outbound click and redirect to organizer URL
+      description: >
+        Records the outbound click server-side (event ID, organizer ID,
+        timestamp, ISO-3166-1-Alpha-2 country derived from the request IP via
+        local GeoLite2 lookup, and device type derived from the User-Agent
+        string). The IP address is **never stored** (GDPR-compliant). After
+        recording, the visitor is immediately redirected to the event's
+        `booking_url` at the organizer's website.
+
+        This flow works without JavaScript.
+      parameters:
+        - $ref: '#/components/parameters/EventSlugPath'
+      responses:
+        '302':
+          description: >
+            Redirect to the organizer's booking/event URL. The click has been
+            recorded at this point.
+          headers:
+            Location:
+              description: The organizer's external event/booking URL.
+              required: true
+              schema:
+                type: string
+                format: uri
+                example: https://example-organizer.com/events/tantra-retreat-2026
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/events:
+    get:
+      operationId: listEvents
+      tags: [Events]
+      summary: List published events
+      description: >
+        Returns a paginated list of published events. Supports filtering by
+        location, date range, category, organizer, language, audience, price,
+        and geographic proximity. Only events with `status = published` are
+        returned.
+      parameters:
+        - name: country
+          in: query
+          description: Filter by country (ISO-3166-1-Alpha-2, e.g. DE).
+          schema:
+            type: string
+            pattern: '^[A-Z]{2}$'
+            example: DE
+        - name: region
+          in: query
+          description: Filter by region / federal state / canton.
+          schema:
+            type: string
+            example: Bayern
+        - name: city
+          in: query
+          description: Filter by city name.
+          schema:
+            type: string
+            example: Munich
+        - name: date_from
+          in: query
+          description: Include only events starting on or after this date (ISO 8601 date).
+          schema:
+            type: string
+            format: date
+            example: '2026-07-01'
+        - name: date_to
+          in: query
+          description: Include only events starting on or before this date (ISO 8601 date).
+          schema:
+            type: string
+            format: date
+            example: '2026-12-31'
+        - name: category
+          in: query
+          description: Filter by category slug (e.g. tantra, bdsm, shibari).
+          schema:
+            type: string
+            example: tantra
+        - name: organizer
+          in: query
+          description: Filter by organizer slug.
+          schema:
+            type: string
+            example: lotus-school-berlin
+        - name: language
+          in: query
+          description: Filter by event language (ISO-639-1 code, e.g. de, en).
+          schema:
+            type: string
+            example: de
+        - name: audience
+          in: query
+          description: >
+            Filter by intended audience. One of: singles, couples, men,
+            women, lgbtq, everyone.
+          schema:
+            type: string
+            enum: [singles, couples, men, women, lgbtq, everyone]
+        - name: price_min
+          in: query
+          description: Minimum price in the event's currency (inclusive).
+          schema:
+            type: number
+            format: float
+            minimum: 0
+            example: 0
+        - name: price_max
+          in: query
+          description: Maximum price in the event's currency (inclusive).
+          schema:
+            type: number
+            format: float
+            minimum: 0
+            example: 500
+        - name: near
+          in: query
+          description: >
+            Geographic center for proximity search, as lat,lng
+            (decimal degrees, WGS-84). Requires radius_km.
+          schema:
+            type: string
+            pattern: '^-?\d+(\.\d+)?,-?\d+(\.\d+)?$'
+            example: '48.1351,11.5820'
+        - name: radius_km
+          in: query
+          description: >
+            Search radius in kilometres around near. Ignored if near is
+            absent. Typical values: 10, 25, 50, 100, 250.
+          schema:
+            type: integer
+            minimum: 1
+            example: 50
+        - $ref: '#/components/parameters/PageQuery'
+        - $ref: '#/components/parameters/PerPageQuery'
+      responses:
+        '200':
+          description: Paginated list of published events.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessEnvelope'
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Event'
+                      meta:
+                        $ref: '#/components/schemas/PaginationMeta'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+
+  /api/events/{slug}:
+    get:
+      operationId: getEvent
+      tags: [Events]
+      summary: Get a single published event by slug
+      parameters:
+        - $ref: '#/components/parameters/SlugPath'
+      responses:
+        '200':
+          description: The requested event.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessEnvelope'
+                  - type: object
+                    properties:
+                      data:
+                        $ref: '#/components/schemas/Event'
+                      meta:
+                        type: object
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/organizers/{slug}:
+    get:
+      operationId: getOrganizer
+      tags: [Organizers]
+      summary: Get an approved organizer profile by slug
+      description: Only organizers with verification_status approved are accessible.
+      parameters:
+        - $ref: '#/components/parameters/SlugPath'
+      responses:
+        '200':
+          description: The requested organizer.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessEnvelope'
+                  - type: object
+                    properties:
+                      data:
+                        $ref: '#/components/schemas/Organizer'
+                      meta:
+                        type: object
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/categories:
+    get:
+      operationId: listCategories
+      tags: [Categories]
+      summary: List all categories (full taxonomy tree)
+      description: >
+        Returns the full two-level category taxonomy. Top-level categories have
+        parent_id null; sub-categories reference their parent by ID. Results
+        are ordered by position within each level.
+      responses:
+        '200':
+          description: Full list of categories, ordered by position.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessEnvelope'
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Category'
+                      meta:
+                        type: object
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+# ---------------------------------------------------------------------------
+# Components
+# ---------------------------------------------------------------------------
+
+components:
+
+  # ---- Parameters ----------------------------------------------------------
+
+  parameters:
+
+    SlugPath:
+      name: slug
+      in: path
+      required: true
+      description: URL slug of the resource.
+      schema:
+        type: string
+        example: tantra-retreat-berlin-2026
+
+    EventSlugPath:
+      name: event
+      in: path
+      required: true
+      description: URL slug of the event whose outbound click is being tracked.
+      schema:
+        type: string
+        example: tantra-retreat-berlin-2026
+
+    PageQuery:
+      name: page
+      in: query
+      description: Page number (1-based).
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
+
+    PerPageQuery:
+      name: per_page
+      in: query
+      description: Number of results per page (max 100).
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+
+  # ---- Responses -----------------------------------------------------------
+
+  responses:
+
+    NotFound:
+      description: Resource not found.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorEnvelope'
+          example:
+            success: false
+            message: Not found.
+            errors: {}
+
+    ValidationError:
+      description: Validation failed.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorEnvelope'
+          example:
+            success: false
+            message: Validation failed.
+            errors:
+              date_from: ['The date_from field must be a valid date.']
+
+  # ---- Schemas -------------------------------------------------------------
+
+  schemas:
+
+    # -- Envelopes ------------------------------------------------------------
+
+    SuccessEnvelope:
+      type: object
+      required: [success, data, meta]
+      properties:
+        success:
+          type: boolean
+          enum: [true]
+          example: true
+        data:
+          description: The response payload (object or array depending on endpoint).
+        meta:
+          description: Pagination or supplementary metadata; null on single-resource endpoints.
+
+    ErrorEnvelope:
+      type: object
+      required: [success, message]
+      properties:
+        success:
+          type: boolean
+          enum: [false]
+          example: false
+        message:
+          type: string
+          description: Human-readable error summary.
+          example: Validation failed.
+        errors:
+          type: object
+          description: >
+            Field-level validation errors. Keys are field names; values are
+            arrays of error strings. May be an empty object for non-validation
+            errors.
+          additionalProperties:
+            type: array
+            items:
+              type: string
+          example:
+            slug: ['The slug field is required.']
+
+    PaginationMeta:
+      type: object
+      properties:
+        current_page:
+          type: integer
+          example: 1
+        per_page:
+          type: integer
+          example: 20
+        total:
+          type: integer
+          example: 142
+        last_page:
+          type: integer
+          example: 8
+
+    # -- Core domain schemas --------------------------------------------------
+
+    Category:
+      type: object
+      required: [id, slug, name_de, name_en, position]
+      properties:
+        id:
+          type: integer
+          example: 1
+        parent_id:
+          type: ['integer', 'null']
+          description: ID of the parent category; null for top-level categories.
+          example: null
+        slug:
+          type: string
+          description: Stable kebab-case identifier.
+          example: tantra
+        name_de:
+          type: string
+          description: German display name.
+          example: Tantra
+        name_en:
+          type: string
+          description: English display name.
+          example: Tantra
+        position:
+          type: integer
+          description: Sort order within the level (top-level or children of the same parent).
+          example: 1
+        created_at:
+          type: ['string', 'null']
+          format: date-time
+        updated_at:
+          type: ['string', 'null']
+          format: date-time
+
+    Tag:
+      type: object
+      required: [id, name, slug]
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          description: Display name.
+          example: Anfängerfreundlich
+        slug:
+          type: string
+          example: beginner-friendly
+        created_at:
+          type: ['string', 'null']
+          format: date-time
+        updated_at:
+          type: ['string', 'null']
+          format: date-time
+
+    Venue:
+      type: object
+      required: [id, organizer_id, name, slug, country]
+      properties:
+        id:
+          type: integer
+          example: 10
+        organizer_id:
+          type: integer
+          example: 3
+        name:
+          type: string
+          example: Lotus Retreat Center
+        slug:
+          type: string
+          example: lotus-retreat-center
+        description:
+          type: ['string', 'null']
+          example: A peaceful retreat venue nestled in the Bavarian forest.
+        street:
+          type: ['string', 'null']
+          example: Waldweg 12
+        postal_code:
+          type: ['string', 'null']
+          example: '83700'
+        city:
+          type: ['string', 'null']
+          example: Rosenheim
+        region:
+          type: ['string', 'null']
+          description: Federal state, canton, or equivalent.
+          example: Bayern
+        country:
+          type: string
+          description: ISO-3166-1-Alpha-2 country code.
+          pattern: '^[A-Z]{2}$'
+          example: DE
+        latitude:
+          type: ['number', 'null']
+          format: float
+          description: WGS-84 latitude for geo search.
+          example: 47.8588
+        longitude:
+          type: ['number', 'null']
+          format: float
+          description: WGS-84 longitude for geo search.
+          example: 12.1283
+        images:
+          type: ['array', 'null']
+          description: Array of image paths or URLs.
+          items:
+            type: string
+          example: ['/storage/venues/lotus-1.jpg']
+        contact_info:
+          type: ['string', 'null']
+          description: Free-text contact information for the venue.
+        created_at:
+          type: ['string', 'null']
+          format: date-time
+        updated_at:
+          type: ['string', 'null']
+          format: date-time
+
+    Teacher:
+      type: object
+      required: [id, name, slug]
+      properties:
+        id:
+          type: integer
+          example: 5
+        name:
+          type: string
+          example: Jana Müller
+        slug:
+          type: string
+          example: jana-mueller
+        bio:
+          type: ['string', 'null']
+          description: Free-text biography.
+        photo:
+          type: ['string', 'null']
+          description: Path or URL to the teacher's photo.
+          example: /storage/teachers/jana-mueller.jpg
+        links:
+          type: ['object', 'null']
+          description: 'External links, e.g. {"website": "...", "instagram": "..."}.'
+          additionalProperties:
+            type: string
+          example:
+            website: https://jana-mueller.de
+            instagram: https://instagram.com/jana.mueller
+        created_at:
+          type: ['string', 'null']
+          format: date-time
+        updated_at:
+          type: ['string', 'null']
+          format: date-time
+
+    EventPrice:
+      type: object
+      required: [id, event_id, type, amount, currency]
+      properties:
+        id:
+          type: integer
+          example: 1
+        event_id:
+          type: integer
+          example: 42
+        type:
+          type: string
+          enum: [early_bird, regular, late_bird]
+          description: Price tier.
+          example: early_bird
+        amount:
+          type: number
+          format: float
+          description: Price amount in the given currency.
+          example: 249.00
+        currency:
+          type: string
+          description: ISO-4217 currency code.
+          pattern: '^[A-Z]{3}$'
+          example: EUR
+        valid_until:
+          type: ['string', 'null']
+          format: date
+          description: Expiry date for the price tier (especially relevant for early_bird).
+          example: '2026-06-30'
+        created_at:
+          type: ['string', 'null']
+          format: date-time
+        updated_at:
+          type: ['string', 'null']
+          format: date-time
+
+    Organizer:
+      type: object
+      required: [id, company_name, contact_name, email, slug, verification_status]
+      properties:
+        id:
+          type: integer
+          example: 3
+        company_name:
+          type: string
+          description: Official name of the organizer.
+          example: Lotus School Berlin
+        contact_name:
+          type: string
+          description: Primary contact person.
+          example: Maria Schmidt
+        email:
+          type: string
+          format: email
+          example: info@lotus-berlin.de
+        phone:
+          type: ['string', 'null']
+          example: '+4930123456789'
+        website:
+          type: ['string', 'null']
+          format: uri
+          example: https://lotus-berlin.de
+        social_links:
+          type: ['object', 'null']
+          description: 'Social media links, e.g. {"instagram": "...", "facebook": "..."}.'
+          additionalProperties:
+            type: string
+          example:
+            instagram: https://instagram.com/lotus_berlin
+        description:
+          type: ['string', 'null']
+          description: Free-text organizer description.
+        logo:
+          type: ['string', 'null']
+          description: Path or URL to the organizer logo.
+          example: /storage/organizers/lotus-berlin-logo.png
+        slug:
+          type: string
+          example: lotus-school-berlin
+        verification_status:
+          type: string
+          enum: [pending, approved, rejected]
+          description: Only approved organizers appear in public-facing API responses.
+          example: approved
+        created_at:
+          type: ['string', 'null']
+          format: date-time
+        updated_at:
+          type: ['string', 'null']
+          format: date-time
+
+    Event:
+      type: object
+      required:
+        - id
+        - organizer_id
+        - title
+        - slug
+        - start_date
+        - status
+        - accommodation
+        - currency
+        - booking_url
+      properties:
+        id:
+          type: integer
+          example: 42
+        organizer_id:
+          type: integer
+          example: 3
+        venue_id:
+          type: ['integer', 'null']
+          description: Null for online events.
+          example: 10
+        title:
+          type: string
+          example: Tantra Retreat Berlin 2026
+        slug:
+          type: string
+          example: tantra-retreat-berlin-2026
+        short_description:
+          type: ['string', 'null']
+          description: Teaser text (max 500 characters).
+          example: A transformative five-day tantra retreat in the heart of Berlin.
+        long_description:
+          type: ['string', 'null']
+          description: Full description; HTML allowed.
+        main_image:
+          type: ['string', 'null']
+          description: Path or URL to the main event image.
+          example: /storage/events/tantra-retreat-berlin-2026.jpg
+        start_date:
+          type: string
+          format: date-time
+          example: '2026-09-14T10:00:00Z'
+        end_date:
+          type: ['string', 'null']
+          format: date-time
+          description: Null for single-day events without a fixed end time.
+          example: '2026-09-18T18:00:00Z'
+        status:
+          type: string
+          enum: [draft, pending_review, published, rejected, archived]
+          description: Only published events are returned by the public API.
+          example: published
+        audience:
+          type: ['array', 'null']
+          description: Intended audience groups.
+          items:
+            type: string
+            enum: [singles, couples, men, women, lgbtq, everyone]
+          example: [singles, couples]
+        min_participants:
+          type: ['integer', 'null']
+          description: Minimum number of participants.
+          example: 4
+        max_participants:
+          type: ['integer', 'null']
+          description: Maximum number of participants.
+          example: 20
+        languages:
+          type: ['array', 'null']
+          description: ISO-639-1 language codes for the event.
+          items:
+            type: string
+          example: [de, en]
+        accommodation:
+          type: string
+          enum: [none, optional, mandatory, external]
+          description: Accommodation arrangement.
+          example: optional
+        currency:
+          type: string
+          description: ISO-4217 currency code.
+          pattern: '^[A-Z]{3}$'
+          example: EUR
+        booking_url:
+          type: string
+          format: uri
+          description: >
+            Outbound URL at the organizer's website. This is the destination of
+            the GET /go/{event} tracking redirect.
+          example: https://lotus-berlin.de/events/tantra-retreat-2026
+        source_url:
+          type: ['string', 'null']
+          format: uri
+          description: Original URL if the event was imported from an external source.
+        organizer:
+          $ref: '#/components/schemas/Organizer'
+          description: Embedded organizer object (always included in detail responses; may be included in list responses).
+        venue:
+          oneOf:
+            - $ref: '#/components/schemas/Venue'
+            - type: 'null'
+          description: Embedded venue object; null for online events.
+        prices:
+          type: array
+          items:
+            $ref: '#/components/schemas/EventPrice'
+          description: Available price tiers for this event.
+        categories:
+          type: array
+          items:
+            $ref: '#/components/schemas/Category'
+          description: Categories assigned to this event.
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+          description: Tags assigned to this event.
+        teachers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Teacher'
+          description: Teachers associated with this event.
+        created_at:
+          type: ['string', 'null']
+          format: date-time
+        updated_at:
+          type: ['string', 'null']
+          format: date-time
