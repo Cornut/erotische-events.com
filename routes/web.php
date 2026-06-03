@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\Organizer\DashboardController;
 use App\Http\Controllers\Organizer\EventController;
 use App\Http\Controllers\OrganizerRegistrationController;
@@ -32,6 +33,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Favorites (registered users)
+    Route::get('/favorites', [FavoriteController::class, 'index'])->name('favorites.index');
+    Route::post('/events/{event}/favorite', [FavoriteController::class, 'toggle'])->name('favorites.toggle');
 
     // Task 4: Organizer self-registration
     Route::get('/organizer/register', [OrganizerRegistrationController::class, 'create'])->name('organizer.register');
