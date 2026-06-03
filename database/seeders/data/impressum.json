@@ -1,12 +1,1825 @@
 [
-  {"slug":"no-guru-net","legal_name":"Matthias Möbius","contact_name":"Matthias Möbius","email":"info@no-guru.net","phone":"040-340328","street":"Kleine Rainstr. 3","postal_code":"22765","city":"Hamburg","country":"DE","vat_id":null,"impressum_url":"https://no-guru.net/impressum","logo_url":"https://www.no-guru.net/templates/nogurutemplate2022/logo.png"},
-  {"slug":"shakti-sangha-de","legal_name":"Shakti Sangha – André Sadjadian","contact_name":"André Sadjadian","email":"info@shakti-sangha.de","phone":"+49 175 4214862","street":"Willinger Weg 3","postal_code":"29614","city":"Soltau","country":"DE","vat_id":null,"impressum_url":"https://shakti-sangha.de/impressum","logo_url":"https://shakti-sangha.de/wp-content/uploads/shakti-sangha_LOGO-QF.svg"},
-  {"slug":"secret-of-tantra-de","legal_name":"Secret of Tantra – Institut für integrale Lebenskultur","contact_name":"Silvio Wirth","email":"kontakt@secret-of-tantra.de","phone":"+49 (0)160/ 97662464","street":"Rosa-Luxemburg-Str. 28 a","postal_code":"14806","city":"Bad Belzig","country":"DE","vat_id":null,"impressum_url":"https://secret-of-tantra.de/impressum","logo_url":null},
-  {"slug":"surya-tantra-de","legal_name":"SURYA-Tantra®","contact_name":"Birgit Blechschmidt, Hartwin Dreier","email":"web-kontakt@surya-seminare.de","phone":"+49 (0) 6127 79382","street":"Distelweg 17","postal_code":"65527","city":"Niedernhausen","country":"DE","vat_id":"DE190361289","impressum_url":"https://surya-tantra.de/impressum","logo_url":null},
-  {"slug":"aruna-tantra-de","legal_name":"GbR Schinko & König","contact_name":"Hellwig Schinko, Regina König","email":"info@aruna-tantra.de","phone":"07936-621","street":"St.Nepomukstr. 13","postal_code":"74673","city":"Mulfingen","country":"DE","vat_id":"DE146306800","impressum_url":"https://aruna-tantra.de/impressum","logo_url":"https://www.aruna-tantra.de/wp-content/uploads/aruna-institut-logo-transparent.png"},
-  {"slug":"befree-tantra-de","legal_name":"BeFree Tantra® Institut","contact_name":"Regina Heckert","email":"kontakt@befree-tantra.de","phone":"+49-6344-954160","street":"Am Viehtriftweg 17","postal_code":"67374","city":"Hanhofen","country":"DE","vat_id":"DE183990969","impressum_url":"https://befree-tantra.de/impressum","logo_url":"https://befree-tantra.de/_assets/29a1b9eae6e2f45d392016db1110e1a8/Images/befree_logo_nachgezeichnet_02.svg"},
-  {"slug":"art-of-loving-tantra-de","legal_name":"Integralis Seminare & Beratung GmbH","contact_name":"Ulrich Krüger","email":"info@art-of-loving-tantra.de","phone":"+49 (0) 40-7121507","street":"Stückenstr. 74","postal_code":"22081","city":"Hamburg","country":"DE","vat_id":"DE260464110","impressum_url":"http://www.art-of-loving-tantra.de/impressum","logo_url":"https://www.art-of-loving-tantra.de/files/aol/images/logo_8_neu.png"},
-  {"slug":"tantra-berlin-de","legal_name":null,"contact_name":null,"email":null,"phone":null,"street":null,"postal_code":null,"city":null,"country":"DE","vat_id":null,"impressum_url":null,"logo_url":null},
-  {"slug":"diamond-lotus-de","legal_name":"Diamond Lotus Tantra GmbH","contact_name":"Timo Ollech","email":"gmbh@diamond-lotus.de","phone":"05843-668960","street":"Remonteweg 3","postal_code":"29462","city":"Wustrow (Wendland)","country":"DE","vat_id":"DE327945382","impressum_url":"https://diamond-lotus.de/service-infos/impressum/","logo_url":"https://diamond-lotus.de/wp-content/themes/Divi-Lotus/images/DiamondLotus.png"},
-  {"slug":"skydancing-de","legal_name":"Sa-BeKo GmbH","contact_name":"Prof. Dr. Andreas Rupp, Maike Breitfeld","email":"namaste@skydancing.de","phone":"+49 179 2666885","street":"Georg-Haindl-Straße 15","postal_code":"87448","city":"Waltenhofen","country":"DE","vat_id":"DE457667306","impressum_url":"https://skydancing.de/impressum","logo_url":"https://www.skydancing.de/wp-content/uploads/SkyDancingTantra_Logo_708x180.png"}
+  {
+    "slug": "no-guru-net",
+    "reachable": true,
+    "legal_name": "Matthias Möbius",
+    "contact_name": "Matthias Möbius",
+    "email": "info@no-guru.net",
+    "phone": "040-340328",
+    "street": "Kleine Rainstr. 3",
+    "postal_code": "22765",
+    "city": "Hamburg",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://no-guru.net/de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "shakti-sangha-de",
+    "reachable": true,
+    "legal_name": "Shakti Sangha – André Sadjadian",
+    "contact_name": "André Sadjadian",
+    "email": "info@shakti-sangha.de",
+    "phone": "+49 175 4214862",
+    "street": "Willinger Weg 3",
+    "postal_code": "29614",
+    "city": "Soltau",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://shakti-sangha.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "secret-of-tantra-de",
+    "reachable": true,
+    "legal_name": "Secret of Tantra – Institut für integrale Lebenskultur",
+    "contact_name": "Silvio Wirth",
+    "email": "kontakt@secret-of-tantra.de",
+    "phone": "+49 (0)160/ 97662464",
+    "street": "Rosa-Luxemburg-Str. 28 a",
+    "postal_code": "14806",
+    "city": "Bad Belzig",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://www.secret-of-tantra.de/kontakt/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "surya-tantra-de",
+    "reachable": true,
+    "legal_name": "SURYA-Tantra®",
+    "contact_name": "Birgit Blechschmidt",
+    "email": "web-kontakt@surya-seminare.de",
+    "phone": "+49 (0) 6127 79382",
+    "street": "Distelweg 17",
+    "postal_code": "65527",
+    "city": "Niedernhausen",
+    "country": "DE",
+    "vat_id": "DE190361289",
+    "impressum_url": "https://www.surya-tantra.de/surya-tantra/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "spiritual-tantra-de",
+    "reachable": true,
+    "legal_name": "Spiritual Tantra Institut für Bewusstsein & Tantra",
+    "contact_name": "Johann P. Werner",
+    "email": null,
+    "phone": "05138-6064894",
+    "street": "Bürgermeister-Schaper-Str. 5",
+    "postal_code": "31319",
+    "city": "Sehnde",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://www.spiritual-tantra.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "sinneserleben-de",
+    "reachable": true,
+    "legal_name": "sinneserleben",
+    "contact_name": "André Terstappen",
+    "email": "info@sinneserleben.de",
+    "phone": "02153/9510145",
+    "street": "Nettetaler Straße 130",
+    "postal_code": "41751",
+    "city": "Viersen",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://www.sinneserleben.de/impressum.html",
+    "logo_url": null
+  },
+  {
+    "slug": "heartoftantra-de",
+    "reachable": true,
+    "legal_name": "Molotnikova Reich Coaching GbR",
+    "contact_name": "Kristina Molotnikova",
+    "email": "info@heartoftantra.de",
+    "phone": null,
+    "street": "Hansaring 66",
+    "postal_code": "50670",
+    "city": "Köln",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://heartoftantra.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "tantraxperience-de",
+    "reachable": true,
+    "legal_name": "TantraXperience",
+    "contact_name": "Klaus Engels",
+    "email": "klaus@tantraXperience.de",
+    "phone": "+49-(0)2232-5007 963",
+    "street": "Nelkenweg 21",
+    "postal_code": "50389",
+    "city": "Wesseling",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://www.tantraxperience.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "eye-of-the-tantra-de",
+    "reachable": true,
+    "legal_name": "Garlef Konstantin Rinne",
+    "contact_name": "Garlef Konstantin Rinne",
+    "email": "Info@eye-of-the-tantra.de",
+    "phone": "+49 170 5050316",
+    "street": "Am Kieckelberg 7",
+    "postal_code": "23999",
+    "city": "Kirchdorf Insel Poel",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://eye-of-the-tantra.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "aruna-tantra-de",
+    "reachable": true,
+    "legal_name": "GbR Schinko & König",
+    "contact_name": "Hellwig Schinko",
+    "email": "info@aruna-tantra.de",
+    "phone": "07936-621",
+    "street": "St.Nepomukstr. 13",
+    "postal_code": "74673",
+    "city": "Mulfingen",
+    "country": "DE",
+    "vat_id": "DE146306800",
+    "impressum_url": "https://www.aruna-tantra.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "befree-tantra-de",
+    "reachable": true,
+    "legal_name": "BeFree Tantra® Institut",
+    "contact_name": "Regina Heckert",
+    "email": "kontakt@befree-tantra.de",
+    "phone": "+49-6344-954160",
+    "street": "Am Viehtriftweg 17",
+    "postal_code": "67374",
+    "city": "Hanhofen",
+    "country": "DE",
+    "vat_id": "DE183990969",
+    "impressum_url": "https://befree-tantra.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "tantraerleben-in-de",
+    "reachable": false
+  },
+  {
+    "slug": "pravahi-de",
+    "reachable": true,
+    "legal_name": "Pravahi Ute Starck",
+    "contact_name": "Pravahi U. Starck",
+    "email": "info@pravahi.de",
+    "phone": "+49 (0) 06036 – 904.023",
+    "street": "Bismarckstraße 9",
+    "postal_code": "61200",
+    "city": "Berstadt",
+    "country": "DE",
+    "vat_id": "DE112588628",
+    "impressum_url": "https://pravahi.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "art-of-loving-tantra-de",
+    "reachable": true,
+    "legal_name": "Integralis Seminare & Beratung GmbH",
+    "contact_name": "Ulrich Krüger",
+    "email": "info@art-of-loving-tantra.de",
+    "phone": "+49 (0) 40-7121507",
+    "street": "Stückenstr. 74",
+    "postal_code": "22081",
+    "city": "Hamburg",
+    "country": "DE",
+    "vat_id": "DE260464110",
+    "impressum_url": "http://www.art-of-loving-tantra.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "tantra-yoga-art-de",
+    "reachable": true,
+    "legal_name": "Tantra-Yoga-Art",
+    "contact_name": "Daniel Wilczkowiak",
+    "email": "info@tantra-yoga-art.de",
+    "phone": null,
+    "street": "Hildener Str. 79",
+    "postal_code": "42697",
+    "city": "Solingen",
+    "country": "DE",
+    "vat_id": "DE368328043",
+    "impressum_url": "https://www.tantra-yoga-art.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "tantra-vision",
+    "reachable": true,
+    "legal_name": "Vision Institut für integrales Tantra",
+    "contact_name": "DI Delia Rubick",
+    "email": "info@tantra.vision",
+    "phone": "0650 67 41 310",
+    "street": "Kuchelauer Hafenstraße 91",
+    "postal_code": "1190",
+    "city": "Wien",
+    "country": "AT",
+    "vat_id": null,
+    "impressum_url": "http://www.tantra.vision/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "tantra-one",
+    "reachable": true,
+    "legal_name": "Institut Namasté DACH",
+    "contact_name": "Dr. Helena Krivan",
+    "email": "info@namaste.at",
+    "phone": "+43 660 615 1635",
+    "street": "Waidäckergasse 21A",
+    "postal_code": "1160",
+    "city": "Wien",
+    "country": "AT",
+    "vat_id": null,
+    "impressum_url": "https://tantra.one/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "leben-und-lieben-de",
+    "reachable": true,
+    "note": "parked"
+  },
+  {
+    "slug": "laya-tantra-de",
+    "reachable": false
+  },
+  {
+    "slug": "anandawave-com",
+    "reachable": false
+  },
+  {
+    "slug": "moha-institut-de",
+    "reachable": true
+  },
+  {
+    "slug": "shivakti-tantra-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-berlin-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-connection-de",
+    "reachable": false
+  },
+  {
+    "slug": "skydancing-de",
+    "reachable": true,
+    "legal_name": "Sa-BeKo GmbH",
+    "contact_name": "Maike Breitfeld",
+    "email": "namaste@skydancing.de",
+    "phone": "+49 179 2666885",
+    "street": "Georg-Haindl-Straße 15",
+    "postal_code": "87448",
+    "city": "Waltenhofen",
+    "country": "DE",
+    "vat_id": "DE457667306",
+    "impressum_url": "https://www.skydancing.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "diamond-lotus-de",
+    "reachable": true,
+    "legal_name": "Diamond Lotus Tantra GmbH",
+    "contact_name": "Timo Ollech",
+    "email": "gmbh@diamond-lotus.de",
+    "phone": "05843-668960",
+    "street": "Remonteweg 3",
+    "postal_code": "29462",
+    "city": "Wustrow (Wendland)",
+    "country": "DE",
+    "vat_id": "DE327945382",
+    "impressum_url": "https://diamond-lotus.de/service-infos/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "tantrabande-de",
+    "reachable": false
+  },
+  {
+    "slug": "ananda-balance-de",
+    "reachable": false
+  },
+  {
+    "slug": "dakinimassagen-de",
+    "reachable": true,
+    "legal_name": "Monika Kochs",
+    "contact_name": "Monika Kochs",
+    "email": "mail@dakinimassagen.de",
+    "phone": "015120189216",
+    "street": "Lebretstraße 4",
+    "postal_code": "70327",
+    "city": "Stuttgart-Untertürkheim",
+    "country": "DE",
+    "vat_id": "DE182938623",
+    "impressum_url": "https://dakinimassagen.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "yoni-und-lingam-de",
+    "reachable": false
+  },
+  {
+    "slug": "bewusster-leben-und-lieben-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-training-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-club-de",
+    "reachable": false
+  },
+  {
+    "slug": "gut-frohberg-de",
+    "reachable": false
+  },
+  {
+    "slug": "love-and-spirit-de",
+    "reachable": false
+  },
+  {
+    "slug": "mann-frau-balance-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-lebensfreude-de",
+    "reachable": false
+  },
+  {
+    "slug": "anukan-de",
+    "reachable": true,
+    "legal_name": "AnuKan GmbH",
+    "contact_name": "Katrin Laux",
+    "email": "seminare@anukan.de",
+    "phone": "+49 (0) 351 4224602",
+    "street": "Alexander-Puschkin-Platz 1",
+    "postal_code": "01127",
+    "city": "Dresden",
+    "country": "DE",
+    "vat_id": "DE358861465",
+    "impressum_url": "https://anukan.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "anukan-akademie-de",
+    "reachable": false
+  },
+  {
+    "slug": "shakti-mandir-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-muenchen-de",
+    "reachable": true,
+    "legal_name": "Institut Lebens-Raum / Tantra Zentrum München",
+    "contact_name": "Ralf Deutschmann & Jutta Raddatz-Deutschmann",
+    "email": "info@lebens-raum-muenchen.de",
+    "phone": "+49 (0) 177 525 18 14",
+    "street": "Jennerstr. 14",
+    "postal_code": "80999",
+    "city": "München",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://tantra-muenchen.de/index.php/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "tantra-koeln-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-frankfurt-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-hamburg-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-berlin-com",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-hannover-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-stuttgart-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-nuernberg-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-bremen-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-dresden-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-lounge-hamburg-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-tempel-berlin-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-leipzig-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-raum-nrw-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-sued-de",
+    "reachable": false
+  },
+  {
+    "slug": "koerpertempel-berlin-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-institut-muenchen-de",
+    "reachable": false
+  },
+  {
+    "slug": "lust-und-liebe-tantra-de",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-weg-de",
+    "reachable": true
+  },
+  {
+    "slug": "liebe-jetzt-tantra-de",
+    "reachable": false
+  },
+  {
+    "slug": "shiva-institut-com",
+    "reachable": false
+  },
+  {
+    "slug": "reconnectprem-com",
+    "reachable": true,
+    "legal_name": "Caroline Koschke",
+    "contact_name": "Caroline Koschke",
+    "email": "info@reconnectprem.com",
+    "phone": "0049-8920354060",
+    "street": "Nuernberger Strasse 24",
+    "postal_code": "80637",
+    "city": "Munich",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://reconnectprem.com/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "alpenhaus-gastein-at",
+    "reachable": true,
+    "legal_name": "Alpenhaus Management GmbH",
+    "contact_name": "Tina Maria Verdi",
+    "email": "willkommen@alpenhaus-gastein.at",
+    "phone": "+43 6432 63 560",
+    "street": "Kurgartenstraße 26",
+    "postal_code": "5630",
+    "city": "Bad Hofgastein",
+    "country": "AT",
+    "vat_id": "ATU67900756",
+    "impressum_url": "https://alpenhaus-gastein.at/kontakt/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "leben-und-lieben-at",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-wien-at",
+    "reachable": true,
+    "legal_name": null,
+    "contact_name": "Danyana",
+    "email": null,
+    "phone": "0676 36 50 277",
+    "street": null,
+    "postal_code": null,
+    "city": "Wien",
+    "country": "AT",
+    "vat_id": null,
+    "impressum_url": null,
+    "logo_url": null
+  },
+  {
+    "slug": "tantra-linz-at",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-graz-at",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-innsbruck-at",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-salzburg-at",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-kaernten-at",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-vorarlberg-at",
+    "reachable": false
+  },
+  {
+    "slug": "alles-ist-eins-ch",
+    "reachable": true,
+    "legal_name": "Alles ist Eins",
+    "contact_name": null,
+    "email": "info@alles-ist-eins.ch",
+    "phone": "+41 76 290 03 12",
+    "street": "Brüggenstrase 1",
+    "postal_code": "8732",
+    "city": "Mettmenstetten",
+    "country": "CH",
+    "vat_id": null,
+    "impressum_url": "https://alles-ist-eins.ch/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "leben-und-lieben-ch",
+    "reachable": false
+  },
+  {
+    "slug": "kularnava-schweiz-ch",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-zuerich-ch",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-basel-ch",
+    "reachable": true
+  },
+  {
+    "slug": "tantra-bern-ch",
+    "reachable": true,
+    "legal_name": null,
+    "contact_name": "Thomas",
+    "email": "info@tantramasseur.ch",
+    "phone": "079 350 32 65",
+    "street": null,
+    "postal_code": null,
+    "city": "Bern",
+    "country": "CH",
+    "vat_id": null,
+    "impressum_url": null,
+    "logo_url": null
+  },
+  {
+    "slug": "tantra-luzern-ch",
+    "reachable": true
+  },
+  {
+    "slug": "tantra-stgallen-ch",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-raum-zuerich-ch",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-zug-ch",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-aarau-ch",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-schaffhausen-ch",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-chur-ch",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-lausanne-ch",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-genf-ch",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-tessin-ch",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-institut-zuerich-ch",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-institut-basel-ch",
+    "reachable": false
+  },
+  {
+    "slug": "tantra-institut-bern-ch",
+    "reachable": false
+  },
+  {
+    "slug": "sinn-und-sinnlichkeit-tantra-ch",
+    "reachable": false
+  },
+  {
+    "slug": "smkurse-de",
+    "reachable": true,
+    "legal_name": "Studio LUX",
+    "contact_name": "Fabienne Freymadl",
+    "email": "info@smkurse.de",
+    "phone": "030 / 755 10 222",
+    "street": "Tempelhofer Damm 145",
+    "postal_code": "12099",
+    "city": "Berlin",
+    "country": "DE",
+    "vat_id": "DE298876896",
+    "impressum_url": "https://smkurse.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "gillian-events-de",
+    "reachable": true,
+    "legal_name": "GILLIAN EVENTS",
+    "contact_name": null,
+    "email": null,
+    "phone": null,
+    "street": null,
+    "postal_code": null,
+    "city": "Karlsruhe",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://gillian-events.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "flair-apartment-de",
+    "reachable": true,
+    "legal_name": "FLAIR-Apartments c/o BesD e.V.",
+    "contact_name": null,
+    "email": null,
+    "phone": "01738926604",
+    "street": "Köpenicker Straße 187/188",
+    "postal_code": "10997",
+    "city": "Berlin",
+    "country": "DE",
+    "vat_id": "DE27457309",
+    "impressum_url": "https://www.flair-apartment.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "marlen-me",
+    "reachable": true
+  },
+  {
+    "slug": "marlensworld-com",
+    "reachable": true
+  },
+  {
+    "slug": "quaelgeist-sm",
+    "reachable": true,
+    "legal_name": "Quälgeist Berlin e. V.",
+    "contact_name": null,
+    "email": "info@quaelgeist.sm",
+    "phone": "(030) 69 51 96 50",
+    "street": "Lankwitzer Straße 42/43",
+    "postal_code": "12107",
+    "city": "Berlin",
+    "country": "DE",
+    "vat_id": "DE174470705",
+    "impressum_url": "https://quaelgeist.sm/start/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "black-candle-de",
+    "reachable": true,
+    "legal_name": "Black-Candle",
+    "contact_name": "Markus Dräger",
+    "email": "info@black-candle.de",
+    "phone": "0173-3086711",
+    "street": "Hohenzollernstrasse 138-140",
+    "postal_code": "66117",
+    "city": "Saarbrücken",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://black-candle.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "sakura-rope-de",
+    "reachable": true,
+    "legal_name": "Sakura Rope",
+    "contact_name": "Frank Kerschbaum",
+    "email": "mail@sakura-rope.de",
+    "phone": "+49 175 400 83 85",
+    "street": "Stuttgarter Straße 42/2",
+    "postal_code": "71701",
+    "city": "Schwieberdingen",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://www.sakura-rope.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "riggoros-love",
+    "reachable": true,
+    "legal_name": "RIGGOROS e.V.",
+    "contact_name": null,
+    "email": "mail@riggoros.love",
+    "phone": "015788985753",
+    "street": "Meybuschhof 2",
+    "postal_code": "45327",
+    "city": "Essen",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://riggoros.love/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "fessel-schule-de",
+    "reachable": true,
+    "legal_name": "Ichi Taikan – Körperkunst",
+    "contact_name": "Marcus Kramhöller",
+    "email": "info@Seilung.de",
+    "phone": "+49 (0) 1515 988 12 75",
+    "street": "Nürnberger Straße 22a",
+    "postal_code": "91301",
+    "city": "Forchheim",
+    "country": "DE",
+    "vat_id": "DE365045301",
+    "impressum_url": "https://fessel-schule.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "mieneko-com",
+    "reachable": true,
+    "legal_name": "MieNeko",
+    "contact_name": "Nathalie Bursy",
+    "email": "mieneko@gmx.de",
+    "phone": "017656885203",
+    "street": "Schillingstr. 52",
+    "postal_code": "44137",
+    "city": "Dortmund",
+    "country": "DE",
+    "vat_id": "DE336226249",
+    "impressum_url": "https://mieneko.com/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "seilprofi-com",
+    "reachable": true,
+    "legal_name": "seilprofi",
+    "contact_name": "Dirk Breyer",
+    "email": "info@seilprofi.com",
+    "phone": "089 88999263",
+    "street": "Josef-Retzer Str. 6",
+    "postal_code": "81241",
+    "city": "München",
+    "country": "DE",
+    "vat_id": "DE159427024",
+    "impressum_url": "https://seilprofi.com/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "juliaseifried-de",
+    "reachable": true,
+    "legal_name": "Julia Seifried",
+    "contact_name": "Julia Seifried",
+    "email": "info@juliaseifried.de",
+    "phone": "089 92133814",
+    "street": "c/o Grosch Postflex #1846, Emsdettener Str. 10",
+    "postal_code": "48268",
+    "city": "Greven",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://juliaseifried.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "seminare-waldschloesschen-org",
+    "reachable": true
+  },
+  {
+    "slug": "kali-dreadful-de",
+    "reachable": true
+  },
+  {
+    "slug": "kinkalitz-de",
+    "reachable": true,
+    "legal_name": "Kinkalitz",
+    "contact_name": "Samu Konrad",
+    "email": "kontakt@kinkalitz.de",
+    "phone": "+49 (176) 77 99 55 30",
+    "street": "Stuttgarter Str. 106",
+    "postal_code": "70736",
+    "city": "Fellbach",
+    "country": "DE",
+    "vat_id": "DE365816416",
+    "impressum_url": "https://kinkalitz.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "bdsmexperience-ffm-com",
+    "reachable": true
+  },
+  {
+    "slug": "dresdner-erlebniswelt-de",
+    "reachable": true,
+    "legal_name": "Meisel & Venter GbR III",
+    "contact_name": "Torsten Meisel, Benjamin Venter",
+    "email": "info@dresdner-erlebniswelt.de",
+    "phone": "0351 87377873",
+    "street": "Emilienstraße 20",
+    "postal_code": "01139",
+    "city": "Dresden",
+    "country": "DE",
+    "vat_id": "DE326327781",
+    "impressum_url": "https://dresdner-erlebniswelt.de/policies/legal-notice",
+    "logo_url": null
+  },
+  {
+    "slug": "domina-ausbildung-com",
+    "reachable": true,
+    "legal_name": "Yvonne Schuhmann",
+    "contact_name": "Yvonne Schuhmann",
+    "email": "info@domina-ausbildung.com",
+    "phone": "+49 (0) 176 / 23 222 643",
+    "street": "Stuttgarter Str. 106",
+    "postal_code": "70736",
+    "city": "Fellbach",
+    "country": "DE",
+    "vat_id": "DE352779321",
+    "impressum_url": "https://www.domina-ausbildung.com/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "louisa-von-luxe-de",
+    "reachable": true
+  },
+  {
+    "slug": "passion-messe-com",
+    "reachable": true,
+    "legal_name": "M&A Messemanagement",
+    "contact_name": "Gottfried M. von Enzberg",
+    "email": "info@messemanagement.org",
+    "phone": "+49 7722 9299780",
+    "street": "Baslertal 6",
+    "postal_code": "78141",
+    "city": "Schönwald",
+    "country": "DE",
+    "vat_id": "DE260374287",
+    "impressum_url": "https://www.passion-messe.com/de/impressum",
+    "logo_url": "https://www.passion-messe.com/data/site/passion-logo-negativ.png"
+  },
+  {
+    "slug": "melanie-fritz-com",
+    "reachable": true,
+    "legal_name": "Melanie Fritz",
+    "contact_name": "Melanie Fritz",
+    "email": "mf@melanie-fritz.com",
+    "phone": "0176.84 00 63 34",
+    "street": "Marie-Curie-Straße 5",
+    "postal_code": "91052",
+    "city": "Erlangen",
+    "country": "DE",
+    "vat_id": "DE262914928",
+    "impressum_url": "https://www.melanie-fritz.com/impressum/index.html",
+    "logo_url": null
+  },
+  {
+    "slug": "passionfactory-de",
+    "reachable": true,
+    "legal_name": "Passion Factory",
+    "contact_name": null,
+    "email": null,
+    "phone": "0911-50 73 92 70",
+    "street": "Otto-Kraus-Str. 10",
+    "postal_code": "90411",
+    "city": "Nürnberg",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://www.passionfactory.de/factory/index.php/kontakt-impressum.html",
+    "logo_url": null
+  },
+  {
+    "slug": "ladyalexa-de",
+    "reachable": true,
+    "legal_name": "Lady Alexa X",
+    "contact_name": null,
+    "email": "ladyalexax@gmx.de",
+    "phone": "+49 170 80 92 086",
+    "street": "Odenwaldstraße 72",
+    "postal_code": "51105",
+    "city": "Köln",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://www.ladyalexa.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "princesszuleika-de",
+    "reachable": true,
+    "legal_name": "D. S.",
+    "contact_name": "D. S.",
+    "email": "kontakt@princesszuleika.de",
+    "phone": "+41 76 735 8283",
+    "street": "Siewerdtstrasse 7",
+    "postal_code": "8050",
+    "city": "Zürich",
+    "country": "CH",
+    "vat_id": null,
+    "impressum_url": "https://princesszuleika.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "residenz-hekate-ch",
+    "reachable": true,
+    "legal_name": "Residenz Hekaté Kristall",
+    "contact_name": "Monarchin Hekate",
+    "email": null,
+    "phone": "+41 (0) 56 470 9314",
+    "street": "Gewerbestrasse 20, 1OG",
+    "postal_code": "8132",
+    "city": "Egg",
+    "country": "CH",
+    "vat_id": null,
+    "impressum_url": "https://www.residenz-hekate.ch/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "old-libertine-at",
+    "reachable": true,
+    "legal_name": "Verein LIBERTINE",
+    "contact_name": null,
+    "email": "contact@libertine.at",
+    "phone": null,
+    "street": "Stiftgasse 8",
+    "postal_code": "1070",
+    "city": "Wien",
+    "country": "AT",
+    "vat_id": null,
+    "impressum_url": "https://www.libertine.at/en/about",
+    "logo_url": null
+  },
+  {
+    "slug": "netzwerk-polyamorie-de",
+    "reachable": true,
+    "legal_name": "Praxis am Nussbaumpark",
+    "contact_name": "Leonie Henning",
+    "email": "kontakt@leoniehenning.de",
+    "phone": "+4915678994346",
+    "street": "Nussbaumstraße 14",
+    "postal_code": "80336",
+    "city": "München",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://netzwerk-polyamorie.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "annikaackermann-de",
+    "reachable": true,
+    "legal_name": "Annika Ackermann - Systemische Paar- und Einzelberatung",
+    "contact_name": "Annika Ackermann",
+    "email": "hallo@annikaackermann.de",
+    "phone": "01633374950",
+    "street": "Hauptstr. 25",
+    "postal_code": "63928",
+    "city": "Eichenbühl",
+    "country": "DE",
+    "vat_id": "DE370553735",
+    "impressum_url": "https://www.annikaackermann.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "psychologenakademie-de",
+    "reachable": true,
+    "legal_name": "Deutsche Psychologen Akademie GmbH",
+    "contact_name": "Dr. Günter Koch",
+    "email": "info@psychologenakademie.de",
+    "phone": "+49 (0) 30 / 20 91 66 – 0",
+    "street": "Am Köllnischen Park 2",
+    "postal_code": "10179",
+    "city": "Berlin",
+    "country": "DE",
+    "vat_id": "DE268119648",
+    "impressum_url": "https://www.psychologenakademie.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "online-akademie-psychotherapie-de",
+    "reachable": true
+  },
+  {
+    "slug": "kuschelraum-de",
+    "reachable": true,
+    "legal_name": "Angeline Anett Heilfort",
+    "contact_name": "Angeline Anett Heilfort",
+    "email": "willkommen@kuschelraum.de",
+    "phone": "+49 (0) 155 61185228",
+    "street": "Schulzestraße 21",
+    "postal_code": "13187",
+    "city": "Berlin",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://kuschelraum.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "koelner-kuschelparty-de",
+    "reachable": true,
+    "legal_name": "Trikaya Ltd.",
+    "contact_name": "Rita Schmitz",
+    "email": null,
+    "phone": null,
+    "street": "Machabäerstraße 28",
+    "postal_code": "50668",
+    "city": "Köln",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://koelner-kuschelparty.de/impressumraw",
+    "logo_url": null
+  },
+  {
+    "slug": "cuddlers-net",
+    "reachable": true,
+    "legal_name": "Die Kuschel Kiste",
+    "contact_name": "Elisa Meyer",
+    "email": "diekuschelkiste@gmail.com",
+    "phone": "+49 (0)6021 9206003",
+    "street": "Otto-Adam-Str. 20",
+    "postal_code": "04157",
+    "city": "Leipzig",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://cuddlers.net/agb-impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "luisawulf-com",
+    "reachable": true,
+    "legal_name": "Luisa Wulf",
+    "contact_name": "Luisa Wulf",
+    "email": "info@luisawulf.com",
+    "phone": "+49 178 4148740",
+    "street": "Suderwichstraße 147",
+    "postal_code": "45665",
+    "city": "Recklinghausen",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://luisawulf.com/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "sinneswelten-stuttgart-de",
+    "reachable": true,
+    "legal_name": "Horst Emrich",
+    "contact_name": "Horst Emrich",
+    "email": "info@kaba-reh.de",
+    "phone": "0711 - 470 41 85",
+    "street": "Werastraße 56",
+    "postal_code": "70190",
+    "city": "Stuttgart",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://www.sinneswelten-stuttgart.de/impressum.php",
+    "logo_url": null
+  },
+  {
+    "slug": "kuschelevents-de",
+    "reachable": true,
+    "legal_name": "MS Care GmbH",
+    "contact_name": "Malte Soenke",
+    "email": "info@kuschelevents.de",
+    "phone": "+49 (0) 40 57 30 98 12",
+    "street": "Pannsweg 21",
+    "postal_code": "22417",
+    "city": "Hamburg",
+    "country": "DE",
+    "vat_id": "DE353971642",
+    "impressum_url": "https://kuschelevents.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "awa-stern-info",
+    "reachable": true,
+    "legal_name": "AwA* – Kollektiv für Awareness-Arbeit",
+    "contact_name": null,
+    "email": "office@awa-stern.info",
+    "phone": null,
+    "street": "Spittelauer Platz 1/3+5",
+    "postal_code": "1090",
+    "city": "Wien",
+    "country": "AT",
+    "vat_id": null,
+    "impressum_url": "https://awa-stern.info/dsvgo-impressum-2/",
+    "logo_url": null
+  },
+  {
+    "slug": "gewaltfrei-at",
+    "reachable": true,
+    "legal_name": "Verein Gewaltfreie Kommunikation Austria",
+    "contact_name": "Stephan Soukup",
+    "email": null,
+    "phone": null,
+    "street": "Sonnenblumengasse 26",
+    "postal_code": "1220",
+    "city": "Wien",
+    "country": "AT",
+    "vat_id": null,
+    "impressum_url": "https://www.gewaltfrei.at/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "konsenskultur-at",
+    "reachable": true,
+    "legal_name": "Akademie Konsenskultur",
+    "contact_name": "DDr.in Patricia Velikay",
+    "email": null,
+    "phone": null,
+    "street": "Margaretenstraße 21/2/13",
+    "postal_code": "1040",
+    "city": "Wien",
+    "country": "AT",
+    "vat_id": null,
+    "impressum_url": "https://www.konsenskultur.at/akademie/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "ziss-ch",
+    "reachable": true,
+    "legal_name": "ZISS – Zürcher Institut für klinische Sexologie & Sexualtherapie",
+    "contact_name": "Karoline Bischof",
+    "email": "karoline.bischof@ziss.ch",
+    "phone": null,
+    "street": "Minervastrasse 99",
+    "postal_code": "8032",
+    "city": "Zürich",
+    "country": "CH",
+    "vat_id": null,
+    "impressum_url": "https://ziss.ch/de/datenschutz/",
+    "logo_url": null
+  },
+  {
+    "slug": "bodyworkcenter-ch",
+    "reachable": true,
+    "legal_name": "Bodywork Center GmbH",
+    "contact_name": "Janine Hug",
+    "email": "admin@bodyworkcenter.ch",
+    "phone": null,
+    "street": "Engweg 3",
+    "postal_code": "8006",
+    "city": "Zürich",
+    "country": "CH",
+    "vat_id": null,
+    "impressum_url": "https://bodyworkcenter.ch/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "simonheller-ch",
+    "reachable": true,
+    "legal_name": "Simon Heller",
+    "contact_name": "Simon Heller",
+    "email": null,
+    "phone": null,
+    "street": "Morgenacherstrasse 48",
+    "postal_code": "5452",
+    "city": "Oberrohrdorf",
+    "country": "CH",
+    "vat_id": null,
+    "impressum_url": "https://simonheller.ch/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "ekstase-lernen-ch",
+    "reachable": false
+  },
+  {
+    "slug": "dr-oberpeilsteiner-de",
+    "reachable": true,
+    "legal_name": "Dr. med. Alexandra Oberpeilsteiner",
+    "contact_name": "Dr. med. Alexandra Oberpeilsteiner",
+    "email": "dr.alexandra.oberpeilsteiner@gmail.com",
+    "phone": null,
+    "street": "Baaderstraße 74",
+    "postal_code": "80469",
+    "city": "München",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://dr-oberpeilsteiner.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "oshouta-de",
+    "reachable": false
+  },
+  {
+    "slug": "somatic-experiencing-de",
+    "reachable": true,
+    "legal_name": "Somatic Experiencing Deutschland e.V.",
+    "contact_name": "Hanna Mennenöh-Grimm",
+    "email": "info@somatic-experiencing.de",
+    "phone": "0201-24 87 04 46",
+    "street": "Kaninenberghöhe 16",
+    "postal_code": "45136",
+    "city": "Essen",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://www.somatic-experiencing.de/kontakt-und-impressum-2",
+    "logo_url": null
+  },
+  {
+    "slug": "teach-love-de",
+    "reachable": true,
+    "legal_name": "Akademie für psychologischen Wissenstransfer (APW) GmbH",
+    "contact_name": "Andreas Jaszczuk",
+    "email": "info@teach-love.de",
+    "phone": "+49 (461) 40 684 273",
+    "street": "Nerongsallee 35",
+    "postal_code": "24939",
+    "city": "Flensburg",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://teach-love.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "lustvolllernen-de",
+    "reachable": true,
+    "legal_name": "lust.voll.lernen GbR",
+    "contact_name": "Franziska Hartung",
+    "email": "info@lustvolllernen.de",
+    "phone": "0179 2449993",
+    "street": "Ecksteinstr. 29",
+    "postal_code": "04277",
+    "city": "Leipzig",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://lustvolllernen.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "vanessalanger-ch",
+    "reachable": true
+  },
+  {
+    "slug": "intimacy-guide-com",
+    "reachable": true,
+    "legal_name": "Maria Garzon | Intimacy - Guide",
+    "contact_name": "Maria Magdalena Garzon",
+    "email": "maria@intimacy-guide.com",
+    "phone": null,
+    "street": "Kulmgasse 27",
+    "postal_code": "1170",
+    "city": "Wien",
+    "country": "AT",
+    "vat_id": null,
+    "impressum_url": "https://intimacy-guide.com/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "seminare-glarisegg-ch",
+    "reachable": true,
+    "legal_name": "Schloss Glarisegg Betriebsgesellschaft GmbH",
+    "contact_name": "Julia Dietiker",
+    "email": "seminare@glarisegg.ch",
+    "phone": "+41 (0)52 770 27 61",
+    "street": "Schloss Glarisegg 1",
+    "postal_code": "8266",
+    "city": "Steckborn",
+    "country": "CH",
+    "vat_id": null,
+    "impressum_url": "https://seminare-glarisegg.ch/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "seminare-waldhaus-ch",
+    "reachable": true,
+    "legal_name": "Waldhaus Zentrum Lützelflüh",
+    "contact_name": "Michael Wenzl",
+    "email": "info@waldhaus.ch",
+    "phone": "+41 (0)34 461 07 05",
+    "street": "Waldhaus 36",
+    "postal_code": "3432",
+    "city": "Lützelflüh-Goldbach",
+    "country": "CH",
+    "vat_id": null,
+    "impressum_url": "https://seminare.waldhaus.ch/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "coachingyou-at",
+    "reachable": true,
+    "legal_name": "CoachingYou® Trainingszentrum e. U.",
+    "contact_name": "Mag. Gabriela Schildbach",
+    "email": "office@coachingyou.at",
+    "phone": "+43 664 30 10 478",
+    "street": "Tokiostrasse 11, Stiege 3 Tür 45",
+    "postal_code": "1220",
+    "city": "Wien",
+    "country": "AT",
+    "vat_id": "ATU56446812",
+    "impressum_url": "https://coachingyou.at/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "tantrischekoerperarbeit-at",
+    "reachable": true,
+    "legal_name": "Sabine Sonnenschein",
+    "contact_name": "Sabine Sonnenschein",
+    "email": "samavesa@gmail.com",
+    "phone": null,
+    "street": null,
+    "postal_code": "1090",
+    "city": "Wien",
+    "country": "AT",
+    "vat_id": null,
+    "impressum_url": "https://tantrischekoerperarbeit.at/disclaimer.html",
+    "logo_url": null
+  },
+  {
+    "slug": "seminar-aidshilfe-de",
+    "reachable": true
+  },
+  {
+    "slug": "tantra-festival-de",
+    "reachable": true,
+    "legal_name": "Secret of Tantra - Institut für neue Lebenskultur",
+    "contact_name": "Silvio Wirth",
+    "email": null,
+    "phone": "160/97662464",
+    "street": "Rosa-Luxemburg-Straße 28a",
+    "postal_code": "14806",
+    "city": "Bad Belzig",
+    "country": "DE",
+    "vat_id": "DE289851413",
+    "impressum_url": "https://tantra-festival.de/kontakt.html",
+    "logo_url": null
+  },
+  {
+    "slug": "heartoftantrafestival-com",
+    "reachable": true,
+    "legal_name": null,
+    "contact_name": null,
+    "email": "heartoftantrafestival@gmail.com",
+    "phone": null,
+    "street": null,
+    "postal_code": null,
+    "city": null,
+    "country": null,
+    "vat_id": null,
+    "impressum_url": null,
+    "logo_url": null
+  },
+  {
+    "slug": "lifebalance-frankfurt-de",
+    "reachable": true,
+    "legal_name": "Türkan Möller",
+    "contact_name": "Türkan Möller",
+    "email": "info@lifebalance-frankfurt.de",
+    "phone": "+49 (0) 178 97 12 732",
+    "street": "Pferdskopfweg 6",
+    "postal_code": "65931",
+    "city": "Frankfurt am Main",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://lifebalance-frankfurt.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "xplore-berlin-de",
+    "reachable": true,
+    "legal_name": "Compagnie Felix Ruckert Berlin e.V.",
+    "contact_name": "Felix Ruckert",
+    "email": "info@xplore-festival.com",
+    "phone": "+49-171-4947333",
+    "street": "Raabestr. 13",
+    "postal_code": "10405",
+    "city": "Berlin",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://xplore-berlin.de/imprint/",
+    "logo_url": "https://xplore-berlin.de/wp-content/uploads/berlin00-logo-en_500bb.png"
+  },
+  {
+    "slug": "tribehaus-org",
+    "reachable": true,
+    "legal_name": "Holistic Culture Hub gGmbH",
+    "contact_name": "Aaron Kaufmann",
+    "email": "contact@tribe.haus",
+    "phone": "01577 / 9502801",
+    "street": "Zeppelinstraße 189",
+    "postal_code": "69121",
+    "city": "Heidelberg",
+    "country": "DE",
+    "vat_id": "DE342505749",
+    "impressum_url": "https://tribehaus.org/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "club-equinoxe-de",
+    "reachable": true,
+    "legal_name": "Club Equinoxe",
+    "contact_name": "Dan-Steven Brylski",
+    "email": "info@club-equinoxe.de",
+    "phone": "+49 176 613 99 195",
+    "street": "Eiffestraße 584",
+    "postal_code": "20537",
+    "city": "Hamburg",
+    "country": "DE",
+    "vat_id": "DE308700990",
+    "impressum_url": "https://club-equinoxe.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "burning-pants-de",
+    "reachable": true,
+    "legal_name": "Burning Pants GmbH",
+    "contact_name": "Gabriele Janetz",
+    "email": "info@burning-pants.de",
+    "phone": null,
+    "street": "Industriestraße 8",
+    "postal_code": "45899",
+    "city": "Gelsenkirchen",
+    "country": "DE",
+    "vat_id": "351516758",
+    "impressum_url": "https://www.burning-pants.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "konsentival-events",
+    "reachable": true,
+    "legal_name": "Erforschungsraum e.V.",
+    "contact_name": "Ingo Fleckenstein",
+    "email": "hi@konsentival.events",
+    "phone": null,
+    "street": "Gebelsberstraße 87",
+    "postal_code": "70199",
+    "city": "Stuttgart",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://konsentival.events/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "kinkycircus-de",
+    "reachable": true
+  },
+  {
+    "slug": "einmalig-events-de",
+    "reachable": true
+  },
+  {
+    "slug": "theintimaterevolution-com",
+    "reachable": true,
+    "legal_name": "Academy for Intimacy and Awareness (Bildungsinitiative Achtsamkeit und Intimität e.V.)",
+    "contact_name": null,
+    "email": "contact@theintimaterevolution.com",
+    "phone": null,
+    "street": null,
+    "postal_code": null,
+    "city": null,
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": null,
+    "logo_url": null
+  },
+  {
+    "slug": "liebeskunstnetzwerk-de",
+    "reachable": true,
+    "impressum_url": "https://liebeskunstnetzwerk.de/impressum/"
+  },
+  {
+    "slug": "raumfuer-com",
+    "reachable": true,
+    "legal_name": "Raum-Für...",
+    "contact_name": "Johannes Kaspar Vondey",
+    "email": "johannes@raumfuer.com",
+    "phone": "+49 176 49 25 12 09",
+    "street": "Hellmühler Weg 1",
+    "postal_code": "16348",
+    "city": "Wandlitz",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://www.raumfuer.com/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "hausgemacht-org",
+    "reachable": true,
+    "legal_name": "hausgemacht - feministischer Kulturverein",
+    "contact_name": null,
+    "email": "info@hausgemacht.org",
+    "phone": null,
+    "street": "Lenneisgasse 5/1",
+    "postal_code": "1140",
+    "city": "Wien",
+    "country": "AT",
+    "vat_id": "ATU80165223",
+    "impressum_url": "https://hausgemacht.org/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "purepleasure-at",
+    "reachable": true,
+    "legal_name": "tabulos - Initiative für sexuelle Aufklärung",
+    "contact_name": "Manuela Eigelsreiter MA",
+    "email": "office@purepleasure.at",
+    "phone": "06644572797",
+    "street": "Dresdner Straße",
+    "postal_code": "1200",
+    "city": "Wien",
+    "country": "AT",
+    "vat_id": null,
+    "impressum_url": "https://www.purepleasure.at/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "joyclub-com",
+    "reachable": true,
+    "legal_name": "F&P GmbH",
+    "contact_name": "Dr. Ingmar Ackermann",
+    "email": null,
+    "phone": null,
+    "street": "Karl-Liebknecht-Straße 12",
+    "postal_code": "04107",
+    "city": "Leipzig",
+    "country": "DE",
+    "vat_id": "DE219273003",
+    "impressum_url": "https://joyclub.com/en/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "ticketcorner-ch",
+    "reachable": false
+  },
+  {
+    "slug": "mannsein-de",
+    "reachable": false
+  },
+  {
+    "slug": "maennlichkeit-leben-de",
+    "reachable": true
+  },
+  {
+    "slug": "mann-seminare-de",
+    "reachable": false
+  },
+  {
+    "slug": "masculinehearts-de",
+    "reachable": false
+  },
+  {
+    "slug": "maennerweg-de",
+    "reachable": false
+  },
+  {
+    "slug": "neue-maennlichkeit-de",
+    "reachable": false
+  },
+  {
+    "slug": "potenzcoaching-de",
+    "reachable": false
+  },
+  {
+    "slug": "erotik-coaching-fuer-maenner-de",
+    "reachable": false
+  },
+  {
+    "slug": "manpower-seminare-de",
+    "reachable": false
+  },
+  {
+    "slug": "herzensmaenner-de",
+    "reachable": true,
+    "legal_name": "Alexandra Brünsch",
+    "contact_name": "Alexandra Brünsch",
+    "email": "kontakt@herzensmaenner.de",
+    "phone": "+49 152 2401 4028",
+    "street": "Pariser Straße 34",
+    "postal_code": "81667",
+    "city": "München",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://herzensmaenner.de/impressum",
+    "logo_url": null
+  },
+  {
+    "slug": "karezza-seminar-de",
+    "reachable": false
+  },
+  {
+    "slug": "sexcoach-fuer-maenner-de",
+    "reachable": false
+  },
+  {
+    "slug": "maennliche-sexualitaet-de",
+    "reachable": false
+  },
+  {
+    "slug": "weg-des-mannes-de",
+    "reachable": false
+  },
+  {
+    "slug": "maenner-retreats-de",
+    "reachable": false
+  },
+  {
+    "slug": "phallische-reise-de",
+    "reachable": false
+  },
+  {
+    "slug": "liebeskraft-fuer-maenner-de",
+    "reachable": false
+  },
+  {
+    "slug": "maennliche-initiation-de",
+    "reachable": false
+  },
+  {
+    "slug": "embodied-man-de",
+    "reachable": false
+  },
+  {
+    "slug": "sexualberatung-fuer-maenner-at",
+    "reachable": false
+  },
+  {
+    "slug": "maenner-sexualitaet-at",
+    "reachable": false
+  },
+  {
+    "slug": "koerperweisheit-maenner-at",
+    "reachable": false
+  },
+  {
+    "slug": "maennlicher-eros-at",
+    "reachable": false
+  },
+  {
+    "slug": "mannkraft-ch",
+    "reachable": false
+  },
+  {
+    "slug": "maennliche-sexualitaet-ch",
+    "reachable": false
+  },
+  {
+    "slug": "herzensmann-ch",
+    "reachable": false
+  },
+  {
+    "slug": "sexualcoaching-maenner-ch",
+    "reachable": false
+  },
+  {
+    "slug": "embodiedmasculine-ch",
+    "reachable": false
+  },
+  {
+    "slug": "weiblichkeit-leben-de",
+    "reachable": false
+  },
+  {
+    "slug": "orgasmic-woman-com",
+    "reachable": true,
+    "legal_name": "Orgasmic Woman e.V.",
+    "contact_name": "Vivien Adam (geb. Schlitter)",
+    "email": "info@orgasmic-woman.com",
+    "phone": null,
+    "street": "Spindelstraße 3",
+    "postal_code": "14482",
+    "city": "Potsdam",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://orgasmic-woman.com/impressum/",
+    "logo_url": "https://orgasmic-woman.com/cms/wp-content/uploads/media/structure/orgasmic-woman.png"
+  },
+  {
+    "slug": "sabine-schroeder-seminare-de",
+    "reachable": true,
+    "legal_name": null,
+    "contact_name": "Sabine Schröder",
+    "email": "info@sabine-schroeder-seminare.de",
+    "phone": "08380/9834680",
+    "street": "Hohbuchweg 21",
+    "postal_code": "88147",
+    "city": "Achberg",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://sabine-schroeder-seminare.de/impressum",
+    "logo_url": "https://sabine-schroeder-seminare.de/wp-content/uploads/Logo_0525.png"
+  },
+  {
+    "slug": "sexualberatung-und-seminare-de",
+    "reachable": true,
+    "legal_name": "Gitta Arntzen Sexualberatung, Training & Massage",
+    "contact_name": "Gitta Arntzen",
+    "email": "info@sexualberatung-und-sexocorporel.de",
+    "phone": "+49 2137 9980131",
+    "street": "Espenstraße 79",
+    "postal_code": "41470",
+    "city": "Neuss",
+    "country": "DE",
+    "vat_id": "DE275173718",
+    "impressum_url": "https://sexualberatung-und-seminare.de/impressum/",
+    "logo_url": null
+  },
+  {
+    "slug": "pauluna-at",
+    "reachable": false
+  },
+  {
+    "slug": "johannadebes-life",
+    "reachable": false
+  },
+  {
+    "slug": "frauenberatung-at",
+    "reachable": true,
+    "legal_name": "Frauenberatung Notruf bei sexueller Gewalt",
+    "contact_name": null,
+    "email": "notruf@frauenberatung.at",
+    "phone": "+43 (0)1 523 22 22",
+    "street": "Halbgasse 2/7",
+    "postal_code": "1070",
+    "city": "Wien",
+    "country": "AT",
+    "vat_id": null,
+    "impressum_url": "https://frauenberatung.at/index.php/impressum",
+    "logo_url": "https://frauenberatung.at/images/notruf-logo.png"
+  },
+  {
+    "slug": "regyna-ch",
+    "reachable": false
+  },
+  {
+    "slug": "verena-bust-de",
+    "reachable": true,
+    "legal_name": null,
+    "contact_name": "Verena Bust",
+    "email": "info@verena-bust.de",
+    "phone": "+49 (0)151 - 65153860",
+    "street": "Im Wiehler Feld 10",
+    "postal_code": "51674",
+    "city": "Wiehl",
+    "country": "DE",
+    "vat_id": null,
+    "impressum_url": "https://verena-bust.de/impressum",
+    "logo_url": "https://verena-bust.de/elm/i/logo-verena-bust-big.svg"
+  },
+  {
+    "slug": "femsued-at",
+    "reachable": false
+  },
+  {
+    "slug": "beruehrungsraum-ch",
+    "reachable": true,
+    "legal_name": null,
+    "contact_name": "Brigitte Rimann",
+    "email": "brigitte@beruehrungsraum.ch",
+    "phone": null,
+    "street": null,
+    "postal_code": "5615",
+    "city": "Fahrwangen",
+    "country": "CH",
+    "vat_id": null,
+    "impressum_url": "https://beruehrungsraum.ch/impressum",
+    "logo_url": "https://i0.wp.com/beruehrungsraum.ch/wp-content/uploads/2021/07/cropped-logo.png?fit=640%2C640&ssl=1"
+  },
+  {
+    "slug": "beingfemale-de",
+    "reachable": false
+  },
+  {
+    "slug": "martinaballon-at",
+    "reachable": false
+  }
 ]
