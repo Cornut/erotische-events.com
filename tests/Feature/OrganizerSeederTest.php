@@ -13,6 +13,7 @@ it('seeds the curated organizers owned by the admin', function () {
     $o = Organizer::where('slug', 'no-guru-net')->firstOrFail();
     expect($o->company_name)->toBe('No-Guru Institut Tantra')
         ->and($o->website)->toBe('https://no-guru.net')
+        ->and($o->category)->toBe('tantra')
         ->and($o->verification_status)->toBe(OrganizerVerificationStatus::Approved)
         ->and($o->owner->email)->toBe('admin@erotische-events.com');
 });

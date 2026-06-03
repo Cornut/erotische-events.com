@@ -16,7 +16,7 @@ class Organizer extends Model
     protected $fillable = [
         'owner_user_id', 'company_name', 'legal_name', 'contact_name', 'email', 'phone',
         'website', 'impressum_url', 'social_links', 'description', 'logo', 'slug', 'verification_status',
-        'street', 'postal_code', 'city', 'country', 'vat_id',
+        'category', 'street', 'postal_code', 'city', 'country', 'vat_id',
     ];
 
     protected function casts(): array

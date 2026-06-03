@@ -40,6 +40,7 @@ class OrganizerSeeder extends Seeder
                     'company_name' => $row['company_name'],
                     'website' => $row['website'],
                     'description' => $row['description'],
+                    'category' => $row['category'] ?? null,
                     'social_links' => [],
                     'verification_status' => OrganizerVerificationStatus::Approved,
                 ],
