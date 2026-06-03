@@ -2,6 +2,10 @@
 
 namespace App\Filament\Resources\Events\Tables;
 
+use App\Enums\EventStatus;
+use App\Models\Event;
+use App\Services\EventPublishingService;
+use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -70,6 +74,16 @@ class EventsTable
                 TrashedFilter::make(),
             ])
             ->recordActions([
+                Action::make('publish')
+                    ->color('success')
+                    ->requiresConfirmation()
+                    ->visible(fn (Event $record) => $record->status === EventStatus::PendingReview)
+                    ->action(fn (Event $record) => app(EventPublishingService::class)->publish($record)),
+                Action::make('reject')
+                    ->color('danger')
+                    ->requiresConfirmation()
+                    ->visible(fn (Event $record) => $record->status === EventStatus::PendingReview)
+                    ->action(fn (Event $record) => app(EventPublishingService::class)->reject($record)),
                 EditAction::make(),
             ])
             ->toolbarActions([
