@@ -72,6 +72,12 @@ class OrganizerSeeder extends Seeder
                 continue;
             }
 
+            if (($row['reachable'] ?? true) === false) {
+                $service->reject($organizer);
+
+                continue;
+            }
+
             $service->apply($organizer, $row);
 
             if ($downloadLogos && ! empty($row['logo_url'])) {

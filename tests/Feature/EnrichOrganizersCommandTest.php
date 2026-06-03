@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\OrganizerVerificationStatus;
 use App\Models\Organizer;
 use App\Models\Venue;
 use Illuminate\Support\Facades\Http;
@@ -30,6 +31,27 @@ it('applies scanned Stammdaten from a json file via the command', function () {
         ->and($organizer->city)->toBe('Köln')
         ->and($organizer->logo)->toBe('organizers/demo-net/logo.png');
     expect(Venue::where('slug', 'demo-net-hauptstandort')->exists())->toBeTrue();
+
+    @unlink($file);
+});
+
+it('rejects an organizer whose url was unreachable', function () {
+    $organizer = Organizer::factory()->create([
+        'slug' => 'dead-net',
+        'verification_status' => OrganizerVerificationStatus::Approved,
+    ]);
+
+    $file = tempnam(sys_get_temp_dir(), 'enrich').'.json';
+    file_put_contents($file, json_encode([[
+        'slug' => 'dead-net',
+        'reachable' => false,
+        'note' => 'site unreachable',
+    ]]));
+
+    $this->artisan('organizers:enrich', ['file' => $file])->assertSuccessful();
+
+    expect($organizer->refresh()->verification_status)->toBe(OrganizerVerificationStatus::Rejected)
+        ->and(Venue::where('slug', 'dead-net-hauptstandort')->exists())->toBeFalse();
 
     @unlink($file);
 });

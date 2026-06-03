@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Enums\OrganizerVerificationStatus;
 use App\Models\Organizer;
 use App\Models\Venue;
 use Illuminate\Support\Facades\Http;
@@ -23,6 +24,17 @@ class ImpressumImportService
      * @param  array<string, mixed>  $data  Keys: legal_name, contact_name, email, phone,
      *                                      street, postal_code, city, country, vat_id, impressum_url
      */
+    /**
+     * Mark an organizer as rejected — used when its website / Impressum URL is
+     * unreachable during the scan.
+     */
+    public function reject(Organizer $organizer): Organizer
+    {
+        $organizer->update(['verification_status' => OrganizerVerificationStatus::Rejected]);
+
+        return $organizer;
+    }
+
     public function apply(Organizer $organizer, array $data): Organizer
     {
         $fields = collect([

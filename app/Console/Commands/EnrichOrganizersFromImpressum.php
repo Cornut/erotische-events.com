@@ -23,6 +23,7 @@ class EnrichOrganizersFromImpressum extends Command
 
         $rows = json_decode((string) file_get_contents($file), true) ?: [];
         $applied = 0;
+        $rejected = 0;
 
         foreach ($rows as $row) {
             $slug = $row['slug'] ?? null;
@@ -30,6 +31,14 @@ class EnrichOrganizersFromImpressum extends Command
 
             if ($organizer === null) {
                 $this->warn('skip (unknown slug): '.json_encode($slug));
+
+                continue;
+            }
+
+            if (($row['reachable'] ?? true) === false) {
+                $service->reject($organizer);
+                $rejected++;
+                $this->line("rejected (unreachable): {$organizer->slug}");
 
                 continue;
             }
@@ -44,7 +53,7 @@ class EnrichOrganizersFromImpressum extends Command
             $this->line("enriched: {$organizer->slug}");
         }
 
-        $this->info("Done. Enriched {$applied} organizer(s).");
+        $this->info("Done. Enriched {$applied}, rejected {$rejected} organizer(s).");
 
         return self::SUCCESS;
     }
