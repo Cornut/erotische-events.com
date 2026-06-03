@@ -6,15 +6,16 @@ use App\Enums\OrganizerVerificationStatus;
 use App\Enums\UserRole;
 use App\Models\Organizer;
 use App\Models\User;
+use App\Services\ImpressumImportService;
 use Illuminate\Database\Seeder;
 
 class OrganizerSeeder extends Seeder
 {
     /**
-     * Seed organizers from the curated list (database/seeders/data/organizers.json).
-     * All are assigned to the admin account as owner and set to Approved so the
-     * curated catalog is publicly visible. Stammdaten from each Impressum
-     * (contact_name, email, phone, address-as-venue) are a separate later step.
+     * Seed organizers from the curated list (database/seeders/data/organizers.json),
+     * owned by the admin and set to Approved so the catalog is publicly visible,
+     * then enrich them with the scanned Impressum Stammdaten from
+     * database/seeders/data/impressum.json (master data + primary venue + logo).
      */
     public function run(): void
     {
@@ -43,6 +44,39 @@ class OrganizerSeeder extends Seeder
                     'verification_status' => OrganizerVerificationStatus::Approved,
                 ],
             );
+        }
+
+        $this->applyImpressumData();
+    }
+
+    /**
+     * Apply scanned Impressum Stammdaten (master data + primary venue, and the
+     * logo download outside the test environment to keep the suite network-free).
+     */
+    private function applyImpressumData(): void
+    {
+        $path = database_path('seeders/data/impressum.json');
+        if (! is_file($path)) {
+            return;
+        }
+
+        $rows = json_decode((string) file_get_contents($path), true) ?: [];
+        $service = app(ImpressumImportService::class);
+        $downloadLogos = ! app()->runningUnitTests();
+
+        foreach ($rows as $row) {
+            $slug = $row['slug'] ?? null;
+            $organizer = $slug ? Organizer::where('slug', $slug)->first() : null;
+
+            if ($organizer === null) {
+                continue;
+            }
+
+            $service->apply($organizer, $row);
+
+            if ($downloadLogos && ! empty($row['logo_url'])) {
+                $service->storeLogoFromUrl($organizer, $row['logo_url']);
+            }
         }
     }
 }
