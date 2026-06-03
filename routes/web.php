@@ -4,6 +4,8 @@ use App\Http\Controllers\Organizer\DashboardController;
 use App\Http\Controllers\Organizer\EventController;
 use App\Http\Controllers\OrganizerRegistrationController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Public\EventController as PublicEventController;
+use App\Http\Controllers\Public\OrganizerController as PublicOrganizerController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -20,6 +22,11 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+// Public catalog (published events / approved organizers only)
+Route::get('/events', [PublicEventController::class, 'index'])->name('events.index');
+Route::get('/events/{slug}', [PublicEventController::class, 'show'])->name('events.show');
+Route::get('/organizers/{slug}', [PublicOrganizerController::class, 'show'])->name('organizers.show');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
