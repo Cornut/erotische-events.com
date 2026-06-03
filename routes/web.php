@@ -25,6 +25,15 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+// Locale switch (DE/EN)
+Route::get('/locale/{locale}', function (string $locale) {
+    if (in_array($locale, ['de', 'en'], true)) {
+        session(['locale' => $locale]);
+    }
+
+    return back();
+})->name('locale.switch');
+
 // Outbound tracking redirect (published events only); records a click, no IP stored.
 Route::get('/go/{event}', [GoController::class, 'redirect'])->name('go');
 
