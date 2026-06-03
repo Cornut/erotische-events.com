@@ -42,6 +42,10 @@ class EventsTable
                 TextColumn::make('status')
                     ->badge()
                     ->searchable(),
+                TextColumn::make('clicks_count')
+                    ->label('Klicks')
+                    ->counts('clicks')
+                    ->sortable(),
                 TextColumn::make('min_participants')
                     ->numeric()
                     ->sortable(),

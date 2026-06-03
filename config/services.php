@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'geoip' => [
+        'database' => env('GEOIP_DATABASE'),
+    ],
+
 ];

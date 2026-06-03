@@ -55,6 +55,11 @@ class Event extends Model
         return $this->hasMany(EventPrice::class);
     }
 
+    public function clicks(): HasMany
+    {
+        return $this->hasMany(EventClick::class);
+    }
+
     public function categories(): BelongsToMany
     {
         return $this->belongsToMany(Category::class, 'event_category');

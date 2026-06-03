@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\GoController;
 use App\Http\Controllers\Organizer\DashboardController;
 use App\Http\Controllers\Organizer\EventController;
 use App\Http\Controllers\OrganizerRegistrationController;
@@ -23,6 +24,9 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+// Outbound tracking redirect (published events only); records a click, no IP stored.
+Route::get('/go/{event}', [GoController::class, 'redirect'])->name('go');
 
 // Public catalog (published events / approved organizers only)
 Route::get('/events', [PublicEventController::class, 'index'])->name('events.index');
