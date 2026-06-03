@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\EventStatus;
 use App\Models\Category;
 use App\Models\Event;
 use App\Models\EventPrice;
@@ -20,7 +21,7 @@ it('finds published events by text query', function () {
 });
 
 it('excludes unpublished events from search', function () {
-    Event::factory()->create(['title' => 'Hidden Tantra', 'status' => \App\Enums\EventStatus::Draft]);
+    Event::factory()->create(['title' => 'Hidden Tantra', 'status' => EventStatus::Draft]);
 
     expect($this->service->search(['q' => 'tantra'])->total())->toBe(0);
 });
