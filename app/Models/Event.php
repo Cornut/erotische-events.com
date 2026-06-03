@@ -11,10 +11,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Searchable;
 
 class Event extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, Searchable, SoftDeletes;
 
     protected $fillable = [
         'organizer_id', 'venue_id', 'title', 'slug', 'short_description', 'long_description',
@@ -67,5 +68,41 @@ class Event extends Model
     public function teachers(): BelongsToMany
     {
         return $this->belongsToMany(Teacher::class, 'event_teacher');
+    }
+
+    public function shouldBeSearchable(): bool
+    {
+        return $this->status === EventStatus::Published;
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function toSearchableArray(): array
+    {
+        $this->loadMissing(['organizer', 'venue', 'categories', 'tags', 'teachers']);
+
+        $data = [
+            'id' => $this->id,
+            'title' => $this->title,
+            'short_description' => $this->short_description,
+            'long_description' => $this->long_description,
+            'organizer' => $this->organizer?->company_name,
+            'venue_city' => $this->venue?->city,
+            'venue_country' => $this->venue?->country,
+            'categories' => $this->categories->pluck('name_de')->all(),
+            'tags' => $this->tags->pluck('name')->all(),
+            'teachers' => $this->teachers->pluck('name')->all(),
+            'start_date' => $this->start_date?->timestamp,
+        ];
+
+        if ($this->venue && $this->venue->latitude !== null && $this->venue->longitude !== null) {
+            $data['_geo'] = [
+                'lat' => (float) $this->venue->latitude,
+                'lng' => (float) $this->venue->longitude,
+            ];
+        }
+
+        return $data;
     }
 }
