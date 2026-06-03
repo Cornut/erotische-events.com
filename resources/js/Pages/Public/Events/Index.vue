@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Head, Link } from '@inertiajs/vue3';
+import { Head, Link, router } from '@inertiajs/vue3';
+import { reactive } from 'vue';
 
 interface EventItem {
     id: number;
@@ -11,11 +12,28 @@ interface EventItem {
     venue?: { city: string | null } | null;
 }
 
-defineProps<{
+const props = defineProps<{
     events: {
         data: EventItem[];
     };
+    filters: {
+        q: string;
+        city: string;
+        category: string;
+    };
 }>();
+
+const form = reactive({
+    q: props.filters.q ?? '',
+    city: props.filters.city ?? '',
+});
+
+function submit() {
+    router.get('/events', { q: form.q || undefined, city: form.city || undefined }, {
+        preserveState: true,
+        replace: true,
+    });
+}
 </script>
 
 <template>
@@ -23,6 +41,24 @@ defineProps<{
 
     <div class="mx-auto max-w-5xl p-6">
         <h1 class="mb-6 text-2xl font-bold">Events</h1>
+
+        <form class="mb-6 flex flex-wrap gap-2" @submit.prevent="submit">
+            <input
+                v-model="form.q"
+                type="search"
+                placeholder="Suche…"
+                class="flex-1 rounded-md border-gray-300"
+            />
+            <input
+                v-model="form.city"
+                type="text"
+                placeholder="Stadt"
+                class="w-40 rounded-md border-gray-300"
+            />
+            <button type="submit" class="rounded-md bg-indigo-600 px-4 py-2 font-semibold text-white hover:bg-indigo-700">
+                Suchen
+            </button>
+        </form>
 
         <div v-if="events.data.length === 0" class="text-gray-500">
             Noch keine veröffentlichten Events.
