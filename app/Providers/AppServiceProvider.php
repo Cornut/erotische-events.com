@@ -12,6 +12,7 @@ use App\Scraping\Extractors\StructuredDataExtractor;
 use App\Scraping\HttpPageFetcher;
 use App\Scraping\Llm\AnthropicLlmClient;
 use App\Scraping\Llm\LlmClient;
+use App\Scraping\UrlDiscoveryService;
 use App\Tracking\GeoIpResolver;
 use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\ServiceProvider;
@@ -31,6 +32,17 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(CurrencyNormalizer::class, fn () => CurrencyNormalizer::fromConfig());
 
         $this->app->bind(LlmClient::class, AnthropicLlmClient::class);
+
+        $this->app->bind(UrlDiscoveryService::class, function ($app) {
+            return new UrlDiscoveryService(
+                $app->make(HttpPageFetcher::class),
+                $app->make(AnthropicLlmClient::class),
+                [
+                    $app->make(StructuredDataExtractor::class),
+                    $app->make(IcalExtractor::class),
+                ],
+            );
+        });
 
         $this->app->bind(EventScraperService::class, function ($app) {
             return new EventScraperService(

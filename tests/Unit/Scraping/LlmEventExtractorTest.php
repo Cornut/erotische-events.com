@@ -20,6 +20,11 @@ it('maps llm json output to scraped events', function () {
                 'prices' => [['amount' => 25.0, 'currency' => 'EUR']],
             ]];
         }
+
+        public function findEventUrls(string $content, string $baseUrl): array
+        {
+            return [];
+        }
     };
 
     $events = (new LlmEventExtractor($fake))->extract('<html>...</html>', 'https://x.de/termine');
