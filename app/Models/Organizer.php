@@ -17,6 +17,7 @@ class Organizer extends Model
         'owner_user_id', 'company_name', 'legal_name', 'contact_name', 'email', 'phone',
         'website', 'impressum_url', 'social_links', 'description', 'logo', 'slug', 'verification_status',
         'category', 'street', 'postal_code', 'city', 'country', 'vat_id',
+        'events_url', 'last_scraped_at',
     ];
 
     protected function casts(): array
@@ -24,6 +25,7 @@ class Organizer extends Model
         return [
             'social_links' => 'array',
             'verification_status' => OrganizerVerificationStatus::class,
+            'last_scraped_at' => 'datetime',
         ];
     }
 
