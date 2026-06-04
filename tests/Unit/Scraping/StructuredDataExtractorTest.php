@@ -13,7 +13,7 @@ it('extracts schema.org Event JSON-LD from html', function () {
     </script></head><body></body></html>
     HTML;
 
-    $events = (new StructuredDataExtractor())->extract($html, 'https://x.de/termine');
+    $events = (new StructuredDataExtractor)->extract($html, 'https://x.de/termine');
 
     expect($events)->toHaveCount(1);
     $e = $events[0];
@@ -25,5 +25,5 @@ it('extracts schema.org Event JSON-LD from html', function () {
 });
 
 it('returns empty array when no JSON-LD present', function () {
-    expect((new StructuredDataExtractor())->extract('<html></html>', 'https://x.de'))->toBe([]);
+    expect((new StructuredDataExtractor)->extract('<html></html>', 'https://x.de'))->toBe([]);
 });
