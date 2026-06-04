@@ -39,6 +39,7 @@ class OrganizerSeeder extends Seeder
                     'owner_user_id' => $admin->id,
                     'company_name' => $row['company_name'],
                     'website' => $row['website'],
+                    'events_url' => $row['events_url'] ?? null,
                     'description' => $row['description'],
                     'category' => $row['category'] ?? null,
                     'social_links' => [],

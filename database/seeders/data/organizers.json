@@ -5,7 +5,8 @@
         "website": "https://no-guru.net",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Hamburg"
+        "description": "Tantra · Deutschland · Hamburg",
+        "events_url": "https://www.no-guru.net/de/"
     },
     {
         "company_name": "Shakti Sangha",
@@ -13,7 +14,8 @@
         "website": "https://shakti-sangha.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Online / versch. Orte"
+        "description": "Tantra · Deutschland · Online / versch. Orte",
+        "events_url": "https://shakti-sangha.de/tantra-seminare/"
     },
     {
         "company_name": "Secret of Tantra",
@@ -21,7 +23,8 @@
         "website": "https://secret-of-tantra.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Berlin"
+        "description": "Tantra · Deutschland · Berlin",
+        "events_url": "https://www.secret-of-tantra.de/"
     },
     {
         "company_name": "SURYA-Tantra",
@@ -29,7 +32,8 @@
         "website": "https://surya-tantra.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Norddeutschland"
+        "description": "Tantra · Deutschland · Norddeutschland",
+        "events_url": "https://www.surya-tantra.de"
     },
     {
         "company_name": "Spiritual Tantra",
@@ -37,7 +41,8 @@
         "website": "https://spiritual-tantra.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Berlin / Brandenburg"
+        "description": "Tantra · Deutschland · Berlin / Brandenburg",
+        "events_url": "https://www.spiritual-tantra.de"
     },
     {
         "company_name": "sinneserleben – Tantra Seminare",
@@ -45,7 +50,8 @@
         "website": "https://sinneserleben.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Saarland u.a."
+        "description": "Tantra · Deutschland · Saarland u.a.",
+        "events_url": "https://www.sinneserleben.de/tantra-seminare/tantra-seminare.html"
     },
     {
         "company_name": "Heart of Tantra",
@@ -53,7 +59,8 @@
         "website": "https://heartoftantra.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Online / Festival"
+        "description": "Tantra · Deutschland · Online / Festival",
+        "events_url": "https://heartoftantra.de"
     },
     {
         "company_name": "TantraXperience – Seminare & Ausbildung",
@@ -61,7 +68,8 @@
         "website": "https://tantraxperience.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · NRW"
+        "description": "Tantra · Deutschland · NRW",
+        "events_url": "https://www.tantraxperience.de"
     },
     {
         "company_name": "Eye Of The Tantra",
@@ -69,7 +77,8 @@
         "website": "https://eye-of-the-tantra.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Hamburg"
+        "description": "Tantra · Deutschland · Hamburg",
+        "events_url": "https://eye-of-the-tantra.de"
     },
     {
         "company_name": "ARUNA Institut",
@@ -77,7 +86,8 @@
         "website": "https://aruna-tantra.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.aruna-tantra.de"
     },
     {
         "company_name": "BeFree Tantra",
@@ -85,7 +95,8 @@
         "website": "https://befree-tantra.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://befree-tantra.de"
     },
     {
         "company_name": "Tantra erleben Institut",
@@ -93,7 +104,8 @@
         "website": "https://tantraerleben-in.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.tantraerleben-in.de/seminare"
     },
     {
         "company_name": "Pravahi Tantra Institut",
@@ -101,7 +113,8 @@
         "website": "https://pravahi.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · D/A/CH"
+        "description": "Tantra · Deutschland · D/A/CH",
+        "events_url": "https://pravahi.de/tantra-institut/"
     },
     {
         "company_name": "Art of Loving Tantra",
@@ -109,7 +122,8 @@
         "website": "https://art-of-loving-tantra.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.art-of-loving-tantra.de"
     },
     {
         "company_name": "Tantra Yoga Art",
@@ -117,7 +131,8 @@
         "website": "https://tantra-yoga-art.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.tantra-yoga-art.de"
     },
     {
         "company_name": "Vision Institut für integrales Tantra",
@@ -125,7 +140,8 @@
         "website": "https://tantra.vision",
         "country": "AT",
         "category": "tantra",
-        "description": "Tantra · Österreich · Österreichweit"
+        "description": "Tantra · Österreich · Österreichweit",
+        "events_url": "https://www.tantra.vision"
     },
     {
         "company_name": "Institut Namasté – Tantra",
@@ -133,7 +149,8 @@
         "website": "https://tantra.one",
         "country": "AT",
         "category": "tantra",
-        "description": "Tantra · Österreich · Großraum Wien"
+        "description": "Tantra · Österreich · Großraum Wien",
+        "events_url": "https://tantra.one"
     },
     {
         "company_name": "Leben und Lieben",
@@ -141,7 +158,8 @@
         "website": "https://leben-und-lieben.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Leipzig u.a."
+        "description": "Tantra · Deutschland · Leipzig u.a.",
+        "events_url": "https://www.leben-und-lieben.de"
     },
     {
         "company_name": "Laya Tantra",
@@ -149,7 +167,8 @@
         "website": "https://laya-tantra.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.laya-tantra.de"
     },
     {
         "company_name": "Tantra Institut Anandawave",
@@ -157,7 +176,8 @@
         "website": "https://anandawave.com",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.anandawave.com"
     },
     {
         "company_name": "Moha Institut für ganzheitliches Tantra",
@@ -165,7 +185,8 @@
         "website": "https://moha-institut.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.moha-institut.de"
     },
     {
         "company_name": "Laya und Shivakti Tantra",
@@ -173,7 +194,8 @@
         "website": "https://shivakti-tantra.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.shivakti-tantra.de"
     },
     {
         "company_name": "Tantrazentrum Berlin",
@@ -181,7 +203,8 @@
         "website": "https://tantra-berlin.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.tantra-berlin.de"
     },
     {
         "company_name": "Tantra Connection",
@@ -189,7 +212,8 @@
         "website": "https://tantra-connection.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.tantra-connection.de"
     },
     {
         "company_name": "SkyDancing Tantra Deutschland",
@@ -197,7 +221,8 @@
         "website": "https://skydancing.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.skydancing.de"
     },
     {
         "company_name": "Tantra Institut Diamond Lotus Berlin",
@@ -205,7 +230,8 @@
         "website": "https://diamond-lotus.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.diamond-lotus.de"
     },
     {
         "company_name": "Tantrabande",
@@ -213,7 +239,8 @@
         "website": "https://tantrabande.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.tantrabande.de"
     },
     {
         "company_name": "Ananda Balance",
@@ -221,7 +248,8 @@
         "website": "https://ananda-balance.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.ananda-balance.de"
     },
     {
         "company_name": "Tantra Institut Dakini",
@@ -229,7 +257,8 @@
         "website": "https://dakinimassagen.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.dakinimassagen.de/seminare/"
     },
     {
         "company_name": "Tantra Institut Yoni & Lingam",
@@ -237,7 +266,8 @@
         "website": "https://yoni-und-lingam.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.yoni-und-lingam.de"
     },
     {
         "company_name": "Tantra Institut Bewusster leben & lieben",
@@ -245,7 +275,8 @@
         "website": "https://bewusster-leben-und-lieben.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.bewusster-leben-und-lieben.de"
     },
     {
         "company_name": "Tantra-Training",
@@ -253,7 +284,8 @@
         "website": "https://tantra-training.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.tantra-training.de"
     },
     {
         "company_name": "Tantra-Club",
@@ -261,7 +293,8 @@
         "website": "https://tantra-club.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.tantra-club.de"
     },
     {
         "company_name": "Tantra-Seminarhaus Gut Frohberg",
@@ -269,7 +302,8 @@
         "website": "https://gut-frohberg.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.gut-frohberg.de/tantra/"
     },
     {
         "company_name": "Love & Spirit Tantra",
@@ -277,7 +311,8 @@
         "website": "https://love-and-spirit.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.love-and-spirit.de"
     },
     {
         "company_name": "Mann-Frau-Balance",
@@ -285,7 +320,8 @@
         "website": "https://mann-frau-balance.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.mann-frau-balance.de"
     },
     {
         "company_name": "Tantra Lebensfreude",
@@ -293,7 +329,8 @@
         "website": "https://tantra-lebensfreude.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.tantra-lebensfreude.de"
     },
     {
         "company_name": "AnuKan – Lebenskunst & Tantra",
@@ -301,7 +338,8 @@
         "website": "https://anukan.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.anukan.de"
     },
     {
         "company_name": "AnuKan Akademie",
@@ -309,7 +347,8 @@
         "website": "https://anukan-akademie.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.anukan-akademie.de"
     },
     {
         "company_name": "Shakti Mandir – Tantra & Yoga",
@@ -317,7 +356,8 @@
         "website": "https://shakti-mandir.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · München"
+        "description": "Tantra · Deutschland · München",
+        "events_url": "https://www.shakti-mandir.de"
     },
     {
         "company_name": "Tantra München",
@@ -325,7 +365,8 @@
         "website": "https://tantra-muenchen.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · München"
+        "description": "Tantra · Deutschland · München",
+        "events_url": "https://www.tantra-muenchen.de"
     },
     {
         "company_name": "Tantra Köln",
@@ -333,7 +374,8 @@
         "website": "https://tantra-koeln.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Köln"
+        "description": "Tantra · Deutschland · Köln",
+        "events_url": "https://www.tantra-koeln.de"
     },
     {
         "company_name": "Tantra Frankfurt",
@@ -341,7 +383,8 @@
         "website": "https://tantra-frankfurt.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Frankfurt"
+        "description": "Tantra · Deutschland · Frankfurt",
+        "events_url": "https://www.tantra-frankfurt.de"
     },
     {
         "company_name": "Tantra Hamburg",
@@ -349,7 +392,8 @@
         "website": "https://tantra-hamburg.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Hamburg"
+        "description": "Tantra · Deutschland · Hamburg",
+        "events_url": "https://www.tantra-hamburg.de"
     },
     {
         "company_name": "Tantra Berlin",
@@ -357,7 +401,8 @@
         "website": "https://tantra-berlin.com",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Berlin"
+        "description": "Tantra · Deutschland · Berlin",
+        "events_url": "https://www.tantra-berlin.com"
     },
     {
         "company_name": "Tantra Hannover",
@@ -365,7 +410,8 @@
         "website": "https://tantra-hannover.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Hannover"
+        "description": "Tantra · Deutschland · Hannover",
+        "events_url": "https://www.tantra-hannover.de"
     },
     {
         "company_name": "Tantra Stuttgart",
@@ -373,7 +419,8 @@
         "website": "https://tantra-stuttgart.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Stuttgart"
+        "description": "Tantra · Deutschland · Stuttgart",
+        "events_url": "https://www.tantra-stuttgart.de"
     },
     {
         "company_name": "Tantra Nürnberg",
@@ -381,7 +428,8 @@
         "website": "https://tantra-nuernberg.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Nürnberg"
+        "description": "Tantra · Deutschland · Nürnberg",
+        "events_url": "https://www.tantra-nuernberg.de"
     },
     {
         "company_name": "Tantra Bremen",
@@ -389,7 +437,8 @@
         "website": "https://tantra-bremen.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Bremen"
+        "description": "Tantra · Deutschland · Bremen",
+        "events_url": "https://www.tantra-bremen.de"
     },
     {
         "company_name": "Tantra Dresden",
@@ -397,7 +446,8 @@
         "website": "https://tantra-dresden.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Dresden"
+        "description": "Tantra · Deutschland · Dresden",
+        "events_url": "https://www.tantra-dresden.de"
     },
     {
         "company_name": "Tantra Lounge Hamburg",
@@ -405,7 +455,8 @@
         "website": "https://tantra-lounge-hamburg.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Hamburg"
+        "description": "Tantra · Deutschland · Hamburg",
+        "events_url": "https://www.tantra-lounge-hamburg.de"
     },
     {
         "company_name": "Tantra Tempel Berlin",
@@ -413,7 +464,8 @@
         "website": "https://tantra-tempel-berlin.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Berlin"
+        "description": "Tantra · Deutschland · Berlin",
+        "events_url": "https://www.tantra-tempel-berlin.de"
     },
     {
         "company_name": "Tantra Zentrum Leipzig",
@@ -421,7 +473,8 @@
         "website": "https://tantra-leipzig.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Leipzig"
+        "description": "Tantra · Deutschland · Leipzig",
+        "events_url": "https://www.tantra-leipzig.de"
     },
     {
         "company_name": "Tantra Raum NRW",
@@ -429,7 +482,8 @@
         "website": "https://tantra-raum-nrw.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · NRW"
+        "description": "Tantra · Deutschland · NRW",
+        "events_url": "https://www.tantra-raum-nrw.de"
     },
     {
         "company_name": "Tantra Süd",
@@ -437,7 +491,8 @@
         "website": "https://tantra-sued.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Süddeutschland"
+        "description": "Tantra · Deutschland · Süddeutschland",
+        "events_url": "https://www.tantra-sued.de"
     },
     {
         "company_name": "Körpertempel Berlin",
@@ -445,7 +500,8 @@
         "website": "https://koerpertempel-berlin.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Berlin"
+        "description": "Tantra · Deutschland · Berlin",
+        "events_url": "https://www.koerpertempel-berlin.de/tantra/"
     },
     {
         "company_name": "Tantra Institut Munich",
@@ -453,7 +509,8 @@
         "website": "https://tantra-institut-muenchen.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · München"
+        "description": "Tantra · Deutschland · München",
+        "events_url": "https://www.tantra-institut-muenchen.de"
     },
     {
         "company_name": "Lust & Liebe Tantra",
@@ -461,7 +518,8 @@
         "website": "https://lust-und-liebe-tantra.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.lust-und-liebe-tantra.de"
     },
     {
         "company_name": "Tantra Weg",
@@ -469,7 +527,8 @@
         "website": "https://tantra-weg.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.tantra-weg.de"
     },
     {
         "company_name": "Liebe jetzt – Tantra",
@@ -477,7 +536,8 @@
         "website": "https://liebe-jetzt-tantra.de",
         "country": "DE",
         "category": "tantra",
-        "description": "Tantra · Deutschland · Deutschlandweit"
+        "description": "Tantra · Deutschland · Deutschlandweit",
+        "events_url": "https://www.liebe-jetzt-tantra.de"
     },
     {
         "company_name": "Shiva Institut Innsbruck",
@@ -485,7 +545,8 @@
         "website": "https://shiva-institut.com",
         "country": "AT",
         "category": "tantra",
-        "description": "Tantra · Österreich · Tirol / Innsbruck"
+        "description": "Tantra · Österreich · Tirol / Innsbruck",
+        "events_url": "https://www.shiva-institut.com"
     },
     {
         "company_name": "Reconnect Prem",
@@ -493,7 +554,8 @@
         "website": "https://reconnectprem.com",
         "country": "AT",
         "category": "tantra",
-        "description": "Tantra · Österreich · Österreichweit"
+        "description": "Tantra · Österreich · Österreichweit",
+        "events_url": "https://www.reconnectprem.com/tantra-seminar-oesterreich/"
     },
     {
         "company_name": "Desire & Love Tantraseminar für Paare",
@@ -501,7 +563,8 @@
         "website": "https://alpenhaus-gastein.at",
         "country": "AT",
         "category": "tantra",
-        "description": "Tantra · Österreich · Salzburger Land"
+        "description": "Tantra · Österreich · Salzburger Land",
+        "events_url": "https://www.alpenhaus-gastein.at/packages/desire-love-tantraseminar-fuer-paare-2/"
     },
     {
         "company_name": "Leben & Lieben Österreich",
@@ -509,7 +572,8 @@
         "website": "https://leben-und-lieben.at",
         "country": "AT",
         "category": "tantra",
-        "description": "Tantra · Österreich · Österreichweit"
+        "description": "Tantra · Österreich · Österreichweit",
+        "events_url": "https://www.leben-und-lieben.at"
     },
     {
         "company_name": "Tantra Institut Wien",
@@ -517,7 +581,8 @@
         "website": "https://tantra-wien.at",
         "country": "AT",
         "category": "tantra",
-        "description": "Tantra · Österreich · Wien"
+        "description": "Tantra · Österreich · Wien",
+        "events_url": "https://www.tantra-wien.at"
     },
     {
         "company_name": "Tantra Linz",
@@ -525,7 +590,8 @@
         "website": "https://tantra-linz.at",
         "country": "AT",
         "category": "tantra",
-        "description": "Tantra · Österreich · Linz"
+        "description": "Tantra · Österreich · Linz",
+        "events_url": "https://www.tantra-linz.at"
     },
     {
         "company_name": "Tantra Graz",
@@ -533,7 +599,8 @@
         "website": "https://tantra-graz.at",
         "country": "AT",
         "category": "tantra",
-        "description": "Tantra · Österreich · Graz"
+        "description": "Tantra · Österreich · Graz",
+        "events_url": "https://www.tantra-graz.at"
     },
     {
         "company_name": "Tantra Innsbruck",
@@ -541,7 +608,8 @@
         "website": "https://tantra-innsbruck.at",
         "country": "AT",
         "category": "tantra",
-        "description": "Tantra · Österreich · Innsbruck"
+        "description": "Tantra · Österreich · Innsbruck",
+        "events_url": "https://www.tantra-innsbruck.at"
     },
     {
         "company_name": "Tantra Salzburg",
@@ -549,7 +617,8 @@
         "website": "https://tantra-salzburg.at",
         "country": "AT",
         "category": "tantra",
-        "description": "Tantra · Österreich · Salzburg"
+        "description": "Tantra · Österreich · Salzburg",
+        "events_url": "https://www.tantra-salzburg.at"
     },
     {
         "company_name": "Tantra Kärnten",
@@ -557,7 +626,8 @@
         "website": "https://tantra-kaernten.at",
         "country": "AT",
         "category": "tantra",
-        "description": "Tantra · Österreich · Klagenfurt"
+        "description": "Tantra · Österreich · Klagenfurt",
+        "events_url": "https://www.tantra-kaernten.at"
     },
     {
         "company_name": "Tantra Vorarlberg",
@@ -565,7 +635,8 @@
         "website": "https://tantra-vorarlberg.at",
         "country": "AT",
         "category": "tantra",
-        "description": "Tantra · Österreich · Vorarlberg"
+        "description": "Tantra · Österreich · Vorarlberg",
+        "events_url": "https://www.tantra-vorarlberg.at"
     },
     {
         "company_name": "Alles ist Eins",
@@ -573,7 +644,8 @@
         "website": "https://alles-ist-eins.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Zürich"
+        "description": "Tantra · Schweiz · Zürich",
+        "events_url": "https://alles-ist-eins.ch"
     },
     {
         "company_name": "Leben & Lieben Schweiz",
@@ -581,7 +653,8 @@
         "website": "https://leben-und-lieben.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Zürich"
+        "description": "Tantra · Schweiz · Zürich",
+        "events_url": "https://www.leben-und-lieben.ch"
     },
     {
         "company_name": "Kularnava Schweiz",
@@ -589,7 +662,8 @@
         "website": "https://kularnava-schweiz.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Basel & Zürich"
+        "description": "Tantra · Schweiz · Basel & Zürich",
+        "events_url": "https://kularnava-schweiz.ch"
     },
     {
         "company_name": "Tantra Zürich",
@@ -597,7 +671,8 @@
         "website": "https://tantra-zuerich.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Zürich"
+        "description": "Tantra · Schweiz · Zürich",
+        "events_url": "https://www.tantra-zuerich.ch"
     },
     {
         "company_name": "Tantra Basel",
@@ -605,7 +680,8 @@
         "website": "https://tantra-basel.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Basel"
+        "description": "Tantra · Schweiz · Basel",
+        "events_url": "https://www.tantra-basel.ch"
     },
     {
         "company_name": "Tantra Bern",
@@ -613,7 +689,8 @@
         "website": "https://tantra-bern.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Bern"
+        "description": "Tantra · Schweiz · Bern",
+        "events_url": "https://www.tantra-bern.ch"
     },
     {
         "company_name": "Tantra Luzern",
@@ -621,7 +698,8 @@
         "website": "https://tantra-luzern.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Luzern"
+        "description": "Tantra · Schweiz · Luzern",
+        "events_url": "https://www.tantra-luzern.ch"
     },
     {
         "company_name": "Tantra St. Gallen",
@@ -629,7 +707,8 @@
         "website": "https://tantra-stgallen.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · St. Gallen"
+        "description": "Tantra · Schweiz · St. Gallen",
+        "events_url": "https://www.tantra-stgallen.ch"
     },
     {
         "company_name": "Tantra Raum Zürich",
@@ -637,7 +716,8 @@
         "website": "https://tantra-raum-zuerich.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Zürich"
+        "description": "Tantra · Schweiz · Zürich",
+        "events_url": "https://www.tantra-raum-zuerich.ch"
     },
     {
         "company_name": "Tantra Zug",
@@ -645,7 +725,8 @@
         "website": "https://tantra-zug.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Zug"
+        "description": "Tantra · Schweiz · Zug",
+        "events_url": "https://www.tantra-zug.ch"
     },
     {
         "company_name": "Tantra Aarau",
@@ -653,7 +734,8 @@
         "website": "https://tantra-aarau.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Aarau"
+        "description": "Tantra · Schweiz · Aarau",
+        "events_url": "https://www.tantra-aarau.ch"
     },
     {
         "company_name": "Tantra Schaffhausen",
@@ -661,7 +743,8 @@
         "website": "https://tantra-schaffhausen.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Schaffhausen"
+        "description": "Tantra · Schweiz · Schaffhausen",
+        "events_url": "https://www.tantra-schaffhausen.ch"
     },
     {
         "company_name": "Tantra Chur",
@@ -669,7 +752,8 @@
         "website": "https://tantra-chur.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Chur"
+        "description": "Tantra · Schweiz · Chur",
+        "events_url": "https://www.tantra-chur.ch"
     },
     {
         "company_name": "Tantra Lausanne",
@@ -677,7 +761,8 @@
         "website": "https://tantra-lausanne.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Lausanne"
+        "description": "Tantra · Schweiz · Lausanne",
+        "events_url": "https://www.tantra-lausanne.ch"
     },
     {
         "company_name": "Tantra Genf",
@@ -685,7 +770,8 @@
         "website": "https://tantra-genf.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Genf"
+        "description": "Tantra · Schweiz · Genf",
+        "events_url": "https://www.tantra-genf.ch"
     },
     {
         "company_name": "Tantra Tessin",
@@ -693,7 +779,8 @@
         "website": "https://tantra-tessin.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Tessin"
+        "description": "Tantra · Schweiz · Tessin",
+        "events_url": "https://www.tantra-tessin.ch"
     },
     {
         "company_name": "Tantra Institut Zürich",
@@ -701,7 +788,8 @@
         "website": "https://tantra-institut-zuerich.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Zürich"
+        "description": "Tantra · Schweiz · Zürich",
+        "events_url": "https://www.tantra-institut-zuerich.ch"
     },
     {
         "company_name": "Tantra Institut Basel",
@@ -709,7 +797,8 @@
         "website": "https://tantra-institut-basel.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Basel"
+        "description": "Tantra · Schweiz · Basel",
+        "events_url": "https://www.tantra-institut-basel.ch"
     },
     {
         "company_name": "Tantra Institut Bern",
@@ -717,7 +806,8 @@
         "website": "https://tantra-institut-bern.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Bern"
+        "description": "Tantra · Schweiz · Bern",
+        "events_url": "https://www.tantra-institut-bern.ch"
     },
     {
         "company_name": "Sinn & Sinnlichkeit – Tantra Schweiz",
@@ -725,7 +815,8 @@
         "website": "https://sinn-und-sinnlichkeit-tantra.ch",
         "country": "CH",
         "category": "tantra",
-        "description": "Tantra · Schweiz · Zürich"
+        "description": "Tantra · Schweiz · Zürich",
+        "events_url": "https://www.sinn-und-sinnlichkeit-tantra.ch"
     },
     {
         "company_name": "LUX Kurse – BDSM Workshops",
@@ -733,7 +824,8 @@
         "website": "https://smkurse.de",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Deutschlandweit"
+        "description": "BDSM / Shibari / Kink · Deutschland · Deutschlandweit",
+        "events_url": "https://smkurse.de"
     },
     {
         "company_name": "GILLIAN EVENTS",
@@ -741,7 +833,8 @@
         "website": "https://gillian-events.de",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Karlsruhe / Offenbach / Hamburg"
+        "description": "BDSM / Shibari / Kink · Deutschland · Karlsruhe / Offenbach / Hamburg",
+        "events_url": "https://www.gillian-events.de/bdsm-workshops-kurse-seminare-coachings/"
     },
     {
         "company_name": "Flair Apartment – BDSM Seminare",
@@ -749,7 +842,8 @@
         "website": "https://flair-apartment.de",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Deutschlandweit"
+        "description": "BDSM / Shibari / Kink · Deutschland · Deutschlandweit",
+        "events_url": "https://www.flair-apartment.de/specials/seminare-workshops/"
     },
     {
         "company_name": "Kristina Marlen",
@@ -757,7 +851,8 @@
         "website": "https://marlen.me",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Berlin"
+        "description": "BDSM / Shibari / Kink · Deutschland · Berlin",
+        "events_url": "https://www.marlen.me/workshops/"
     },
     {
         "company_name": "Marlen's World – BDSM & Massage Workshops",
@@ -765,7 +860,8 @@
         "website": "https://marlensworld.com",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Berlin"
+        "description": "BDSM / Shibari / Kink · Deutschland · Berlin",
+        "events_url": "https://www.marlensworld.com/live-workshops/"
     },
     {
         "company_name": "Quälgeist Berlin e.V.",
@@ -773,7 +869,8 @@
         "website": "https://quaelgeist.sm",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Berlin"
+        "description": "BDSM / Shibari / Kink · Deutschland · Berlin",
+        "events_url": "https://quaelgeist.sm/workshops/"
     },
     {
         "company_name": "DOMinic – Achtsame BDSM-Workshops",
@@ -781,7 +878,8 @@
         "website": "https://black-candle.de",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Deutschlandweit"
+        "description": "BDSM / Shibari / Kink · Deutschland · Deutschlandweit",
+        "events_url": "https://black-candle.de/workshops-by-dominic/"
     },
     {
         "company_name": "Sakura Rope – Shibari & Rope Art",
@@ -789,7 +887,8 @@
         "website": "https://sakura-rope.de",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Stuttgart / Ludwigsburg"
+        "description": "BDSM / Shibari / Kink · Deutschland · Stuttgart / Ludwigsburg",
+        "events_url": "https://www.sakura-rope.de"
     },
     {
         "company_name": "RIGGOROS e.V. – Shibari & Kinbaku",
@@ -797,7 +896,8 @@
         "website": "https://riggoros.love",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Köln / Bonn / Düsseldorf"
+        "description": "BDSM / Shibari / Kink · Deutschland · Köln / Bonn / Düsseldorf",
+        "events_url": "https://riggoros.love/shibari-lernen/"
     },
     {
         "company_name": "Fessel-Schule – Shibari & Bondage",
@@ -805,7 +905,8 @@
         "website": "https://fessel-schule.de",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Forchheim (Bayern)"
+        "description": "BDSM / Shibari / Kink · Deutschland · Forchheim (Bayern)",
+        "events_url": "https://fessel-schule.de"
     },
     {
         "company_name": "Mie Neko – Shibari Workshops",
@@ -813,7 +914,8 @@
         "website": "https://mieneko.com",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Essen / Ruhrgebiet"
+        "description": "BDSM / Shibari / Kink · Deutschland · Essen / Ruhrgebiet",
+        "events_url": "https://mieneko.com/home/"
     },
     {
         "company_name": "Seilprofi – Shibari-Anfänger Workshop",
@@ -821,7 +923,8 @@
         "website": "https://seilprofi.com",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Deutschlandweit"
+        "description": "BDSM / Shibari / Kink · Deutschland · Deutschlandweit",
+        "events_url": "https://seilprofi.com/shop/workshop-einfuehrung-in-shibari-teil-1/"
     },
     {
         "company_name": "Julia Seifried – TOUCH OF ROPE",
@@ -829,7 +932,8 @@
         "website": "https://juliaseifried.de",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Deutschlandweit"
+        "description": "BDSM / Shibari / Kink · Deutschland · Deutschlandweit",
+        "events_url": "https://juliaseifried.de/workshop-shibari/"
     },
     {
         "company_name": "Waldschlösschen – Bondage/Shibari",
@@ -837,7 +941,8 @@
         "website": "https://seminare.waldschloesschen.org",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Waldschlösschen"
+        "description": "BDSM / Shibari / Kink · Deutschland · Waldschlösschen",
+        "events_url": "https://seminare.waldschloesschen.org/fr/43c3289fcc4d4f4399a76b9a3064d195/bondageshibari-fur-einsteigerinnen"
     },
     {
         "company_name": "Madamé Kali Dreadful",
@@ -845,7 +950,8 @@
         "website": "https://kali-dreadful.de",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Mönchengladbach / Stuttgart / Hannover"
+        "description": "BDSM / Shibari / Kink · Deutschland · Mönchengladbach / Stuttgart / Hannover",
+        "events_url": "https://kali-dreadful.de/workshops/"
     },
     {
         "company_name": "Kinkalitz – BDSM Workshops & Coaching",
@@ -853,7 +959,8 @@
         "website": "https://kinkalitz.de",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Deutschlandweit"
+        "description": "BDSM / Shibari / Kink · Deutschland · Deutschlandweit",
+        "events_url": "https://kinkalitz.de"
     },
     {
         "company_name": "BDSM Experience FFM",
@@ -861,7 +968,8 @@
         "website": "https://bdsmexperience-ffm.com",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Frankfurt / Taunus"
+        "description": "BDSM / Shibari / Kink · Deutschland · Frankfurt / Taunus",
+        "events_url": "https://www.bdsmexperience-ffm.com"
     },
     {
         "company_name": "Dresdner Erlebniswelt – Bondage Workshop",
@@ -869,7 +977,8 @@
         "website": "https://dresdner-erlebniswelt.de",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Dresden"
+        "description": "BDSM / Shibari / Kink · Deutschland · Dresden",
+        "events_url": "https://dresdner-erlebniswelt.de/products/bondage-workshop-dresden"
     },
     {
         "company_name": "Domina Ausbildung – BDSM Seminare",
@@ -877,7 +986,8 @@
         "website": "https://domina-ausbildung.com",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Deutschlandweit"
+        "description": "BDSM / Shibari / Kink · Deutschland · Deutschlandweit",
+        "events_url": "https://www.domina-ausbildung.com"
     },
     {
         "company_name": "Lady Louisa von Luxe – BDSM Academy",
@@ -885,7 +995,8 @@
         "website": "https://louisa-von-luxe.de",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Berlin / Düsseldorf / Frankfurt / Hamburg / Köln / München"
+        "description": "BDSM / Shibari / Kink · Deutschland · Berlin / Düsseldorf / Frankfurt / Hamburg / Köln / München",
+        "events_url": "https://www.louisa-von-luxe.de/index.php/workshops/"
     },
     {
         "company_name": "Passion Messe Hamburg",
@@ -893,7 +1004,8 @@
         "website": "https://passion-messe.com",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Hamburg"
+        "description": "BDSM / Shibari / Kink · Deutschland · Hamburg",
+        "events_url": "https://www.passion-messe.com/de/workshops"
     },
     {
         "company_name": "Melanie Fritz – SET Tagesseminare",
@@ -901,7 +1013,8 @@
         "website": "https://melanie-fritz.com",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Nürnberg"
+        "description": "BDSM / Shibari / Kink · Deutschland · Nürnberg",
+        "events_url": "https://www.melanie-fritz.com/seminaruebersicht/index.html"
     },
     {
         "company_name": "Passion Factory – BDSM Domina Studio",
@@ -909,7 +1022,8 @@
         "website": "https://passionfactory.de",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Nürnberg"
+        "description": "BDSM / Shibari / Kink · Deutschland · Nürnberg",
+        "events_url": "https://www.passionfactory.de/index.html"
     },
     {
         "company_name": "Lady Alexa X",
@@ -917,7 +1031,8 @@
         "website": "https://ladyalexa.de",
         "country": "DE",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Deutschland · Nürnberg"
+        "description": "BDSM / Shibari / Kink · Deutschland · Nürnberg",
+        "events_url": "https://www.ladyalexa.de"
     },
     {
         "company_name": "Princess Zuleika – Shibari Workshop",
@@ -925,7 +1040,8 @@
         "website": "https://princesszuleika.de",
         "country": "CH",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Schweiz · Zürich-Regensdorf"
+        "description": "BDSM / Shibari / Kink · Schweiz · Zürich-Regensdorf",
+        "events_url": "https://princesszuleika.de/18-19-05-shibari-workshop-zuerich/"
     },
     {
         "company_name": "Residenz Hekaté – BDSM & Fetisch Studio",
@@ -933,7 +1049,8 @@
         "website": "https://residenz-hekate.ch",
         "country": "CH",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Schweiz · Egg / Zürich"
+        "description": "BDSM / Shibari / Kink · Schweiz · Egg / Zürich",
+        "events_url": "https://www.residenz-hekate.ch"
     },
     {
         "company_name": "Libertine Vienna – BDSM-Stammtische",
@@ -941,7 +1058,8 @@
         "website": "https://old.libertine.at",
         "country": "AT",
         "category": "bdsm",
-        "description": "BDSM / Shibari / Kink · Österreich · Wien / Salzburg"
+        "description": "BDSM / Shibari / Kink · Österreich · Wien / Salzburg",
+        "events_url": "https://old.libertine.at/libgroups.html"
     },
     {
         "company_name": "Expertinnen-Netzwerk Polyamorie",
@@ -949,7 +1067,8 @@
         "website": "https://netzwerk-polyamorie.de",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · Deutschlandweit"
+        "description": "Conscious Relating · Deutschland · Deutschlandweit",
+        "events_url": "https://www.netzwerk-polyamorie.de/workshops-1"
     },
     {
         "company_name": "Annika Ackermann – Polyamorie-Weiterbildung",
@@ -957,7 +1076,8 @@
         "website": "https://annikaackermann.de",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · Online"
+        "description": "Conscious Relating · Deutschland · Online",
+        "events_url": "https://annikaackermann.de/polyamorie-weiterbildung"
     },
     {
         "company_name": "Deutsche Psychologen Akademie – Polyamorie",
@@ -965,7 +1085,8 @@
         "website": "https://psychologenakademie.de",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · Deutschlandweit"
+        "description": "Conscious Relating · Deutschland · Deutschlandweit",
+        "events_url": "https://www.psychologenakademie.de/seminar/polyamorie-und-offene-beziehungen-verstehen/"
     },
     {
         "company_name": "OAP – Offene Beziehungen & Polyamorie",
@@ -973,7 +1094,8 @@
         "website": "https://online-akademie-psychotherapie.de",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · Online"
+        "description": "Conscious Relating · Deutschland · Online",
+        "events_url": "https://www.online-akademie-psychotherapie.de/offene-beziehungen-und-polyamorie-verstehen-und-begleiten/"
     },
     {
         "company_name": "KuschelRaum – Conscious Cuddle Experiences",
@@ -981,7 +1103,8 @@
         "website": "https://kuschelraum.de",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · D/A/CH"
+        "description": "Conscious Relating · Deutschland · D/A/CH",
+        "events_url": "https://kuschelraum.de/kuschelpartys/kuschelevents-kalender/"
     },
     {
         "company_name": "Kölner Kuschelparty",
@@ -989,7 +1112,8 @@
         "website": "https://koelner-kuschelparty.de",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · Köln"
+        "description": "Conscious Relating · Deutschland · Köln",
+        "events_url": "https://www.koelner-kuschelparty.de"
     },
     {
         "company_name": "Die Kuschel Kiste – Kuschelservice",
@@ -997,7 +1121,8 @@
         "website": "https://cuddlers.net",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · D/A/CH"
+        "description": "Conscious Relating · Deutschland · D/A/CH",
+        "events_url": "https://cuddlers.net"
     },
     {
         "company_name": "Luisa Wulf – Conscious Cuddle Experience",
@@ -1005,7 +1130,8 @@
         "website": "https://luisawulf.com",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · Deutschlandweit"
+        "description": "Conscious Relating · Deutschland · Deutschlandweit",
+        "events_url": "https://luisawulf.com/kuschelparty/"
     },
     {
         "company_name": "Sinneswelten Stuttgart – Kuschelparty",
@@ -1013,7 +1139,8 @@
         "website": "https://sinneswelten-stuttgart.de",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · Stuttgart"
+        "description": "Conscious Relating · Deutschland · Stuttgart",
+        "events_url": "https://www.sinneswelten-stuttgart.de/kuschelparty.php"
     },
     {
         "company_name": "Cuddle-events",
@@ -1021,7 +1148,8 @@
         "website": "https://kuschelevents.de",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · Deutschlandweit"
+        "description": "Conscious Relating · Deutschland · Deutschlandweit",
+        "events_url": "https://www.kuschelevents.de/en"
     },
     {
         "company_name": "AwA* – Konsens Basics Workshop",
@@ -1029,7 +1157,8 @@
         "website": "https://awa-stern.info",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · Deutschlandweit"
+        "description": "Conscious Relating · Deutschland · Deutschlandweit",
+        "events_url": "https://awa-stern.info/konsens-basics-workshop/"
     },
     {
         "company_name": "Gewaltfrei.at – SEX=KOMMUNIKATION",
@@ -1037,7 +1166,8 @@
         "website": "https://gewaltfrei.at",
         "country": "AT",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Österreich · Online"
+        "description": "Conscious Relating · Österreich · Online",
+        "events_url": "https://www.gewaltfrei.at/seminare/sex-kommunikation-wie-du-lust-und-konsens-zusammen-kriegst"
     },
     {
         "company_name": "Akademie Konsenskultur",
@@ -1045,7 +1175,8 @@
         "website": "https://konsenskultur.at",
         "country": "AT",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Österreich · Wien"
+        "description": "Conscious Relating · Österreich · Wien",
+        "events_url": "https://www.konsenskultur.at/seminare/"
     },
     {
         "company_name": "ZISS – Seminarreihe Sex und Liebe",
@@ -1053,7 +1184,8 @@
         "website": "https://ziss.ch",
         "country": "CH",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Schweiz · Zürich"
+        "description": "Conscious Relating · Schweiz · Zürich",
+        "events_url": "https://www.ziss.ch/fuer-alle/gruppen-und-seminare/seminarreihe-sex-und-liebe/"
     },
     {
         "company_name": "Bodywork Center – Sexuelle Körperarbeit",
@@ -1061,7 +1193,8 @@
         "website": "https://bodyworkcenter.ch",
         "country": "CH",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Schweiz · Zürich"
+        "description": "Conscious Relating · Schweiz · Zürich",
+        "events_url": "https://bodyworkcenter.ch/kurse/"
     },
     {
         "company_name": "Simon Heller – Sexological Bodywork Ausbildung",
@@ -1069,7 +1202,8 @@
         "website": "https://simonheller.ch",
         "country": "CH",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Schweiz · Zürich"
+        "description": "Conscious Relating · Schweiz · Zürich",
+        "events_url": "https://www.simonheller.ch/sexological-bodywork-ausbildung-in-zuerich/"
     },
     {
         "company_name": "Ekstase lernen – Somatische Sexualberatung",
@@ -1077,7 +1211,8 @@
         "website": "https://ekstase-lernen.ch",
         "country": "CH",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Schweiz · Schweizweit"
+        "description": "Conscious Relating · Schweiz · Schweizweit",
+        "events_url": "https://www.ekstase-lernen.ch/Sexualcoaching-Sessions/Somatische-Sexualberatung-.htm"
     },
     {
         "company_name": "Dr. Oberpeilsteiner – Leben und Sexualität genießen",
@@ -1085,7 +1220,8 @@
         "website": "https://dr-oberpeilsteiner.de",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · Pfaffingen"
+        "description": "Conscious Relating · Deutschland · Pfaffingen",
+        "events_url": "https://dr-oberpeilsteiner.de/seminar/"
     },
     {
         "company_name": "Osho UTA Institut – Sexual Healing",
@@ -1093,7 +1229,8 @@
         "website": "https://oshouta.de",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · Deutschlandweit"
+        "description": "Conscious Relating · Deutschland · Deutschlandweit",
+        "events_url": "https://www.oshouta.de/de/angebot/sexual-healing"
     },
     {
         "company_name": "Somatic Experiencing – Liebe, Sexualität & Intimität",
@@ -1101,7 +1238,8 @@
         "website": "https://somatic-experiencing.de",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · Deutschlandweit"
+        "description": "Conscious Relating · Deutschland · Deutschlandweit",
+        "events_url": "https://www.somatic-experiencing.de/blog/veranstaltung/liebe-sexualitaet-und-intimitaet"
     },
     {
         "company_name": "Teach LOVE Akademie – Sexuelle Bildung",
@@ -1109,7 +1247,8 @@
         "website": "https://teach-love.de",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · Online"
+        "description": "Conscious Relating · Deutschland · Online",
+        "events_url": "https://teach-love.de/aufklaerung/"
     },
     {
         "company_name": "lust.voll.lernen – Zentrum für Sexuelle Bildung",
@@ -1117,7 +1256,8 @@
         "website": "https://lustvolllernen.de",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · Deutschlandweit"
+        "description": "Conscious Relating · Deutschland · Deutschlandweit",
+        "events_url": "https://lustvolllernen.de"
     },
     {
         "company_name": "Vanessa Langer – Erotic Workshops",
@@ -1125,7 +1265,8 @@
         "website": "https://vanessalanger.ch",
         "country": "CH",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Schweiz · Schweizweit"
+        "description": "Conscious Relating · Schweiz · Schweizweit",
+        "events_url": "https://www.vanessalanger.ch/en/erotic-workshops-switzerland/"
     },
     {
         "company_name": "Maria Magdalena Garzon – Intimacy Guide",
@@ -1133,7 +1274,8 @@
         "website": "https://intimacy-guide.com",
         "country": "AT",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Österreich · Wien"
+        "description": "Conscious Relating · Österreich · Wien",
+        "events_url": "https://www.intimacy-guide.com"
     },
     {
         "company_name": "Seminarzentrum Glarisegg – ISTA Level One",
@@ -1141,7 +1283,8 @@
         "website": "https://seminare-glarisegg.ch",
         "country": "CH",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Schweiz · Glarisegg"
+        "description": "Conscious Relating · Schweiz · Glarisegg",
+        "events_url": "https://seminare-glarisegg.ch/event_categories/bewusste-sexualitat/"
     },
     {
         "company_name": "Waldhaus Seminare – Making Love Retreat",
@@ -1149,7 +1292,8 @@
         "website": "https://seminare.waldhaus.ch",
         "country": "CH",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Schweiz · Chlotisberg"
+        "description": "Conscious Relating · Schweiz · Chlotisberg",
+        "events_url": "https://seminare.waldhaus.ch/making-love-retreats/puja-diana-und-raja-michael-richardson"
     },
     {
         "company_name": "CoachingYou – Ausbildung Paar- & Sexualberatung",
@@ -1157,7 +1301,8 @@
         "website": "https://coachingyou.at",
         "country": "AT",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Österreich · Online"
+        "description": "Conscious Relating · Österreich · Online",
+        "events_url": "https://www.coachingyou.at/paarberatung.html"
     },
     {
         "company_name": "Sabine Sonnenschein – Embodied Intimacy",
@@ -1165,7 +1310,8 @@
         "website": "https://tantrischekoerperarbeit.at",
         "country": "AT",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Österreich · Wien"
+        "description": "Conscious Relating · Österreich · Wien",
+        "events_url": "https://www.tantrischekoerperarbeit.at/tantra_circling_2020.html"
     },
     {
         "company_name": "Deutsche Aidshilfe – Sexualberatung",
@@ -1173,7 +1319,8 @@
         "website": "https://seminar.aidshilfe.de",
         "country": "DE",
         "category": "conscious-relating",
-        "description": "Conscious Relating · Deutschland · Online & Präsenz"
+        "description": "Conscious Relating · Deutschland · Online & Präsenz",
+        "events_url": "https://seminar.aidshilfe.de/de/5ac79d717ebc4230b6a410078c624342/fortbildung-lebensweltorientierte-sexualberatung"
     },
     {
         "company_name": "Open Heart Festival – ZEGG",
@@ -1181,7 +1328,8 @@
         "website": "https://tantra-festival.de",
         "country": "DE",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Deutschland · Bad Belzig / Brandenburg"
+        "description": "Festival / Sex-Positive · Deutschland · Bad Belzig / Brandenburg",
+        "events_url": "https://www.tantra-festival.de"
     },
     {
         "company_name": "Heart of Tantra Festival",
@@ -1189,7 +1337,8 @@
         "website": "https://heartoftantrafestival.com",
         "country": "DE",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Deutschland · versch. Orte"
+        "description": "Festival / Sex-Positive · Deutschland · versch. Orte",
+        "events_url": "https://www.heartoftantrafestival.com"
     },
     {
         "company_name": "Tócame Tantra Festival",
@@ -1197,7 +1346,8 @@
         "website": "https://lifebalance-frankfurt.de",
         "country": "DE",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Deutschland · Selters / Liebfrauenberg"
+        "description": "Festival / Sex-Positive · Deutschland · Selters / Liebfrauenberg",
+        "events_url": "https://lifebalance-frankfurt.de/tocame-tantra-festival-26-29-06-25/"
     },
     {
         "company_name": "Xplore Festival Berlin",
@@ -1205,7 +1355,8 @@
         "website": "https://xplore-berlin.de",
         "country": "DE",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Deutschland · Berlin"
+        "description": "Festival / Sex-Positive · Deutschland · Berlin",
+        "events_url": "https://xplore-berlin.de/de/"
     },
     {
         "company_name": "UNFOLDING – Embodiment-Lab",
@@ -1213,7 +1364,8 @@
         "website": "https://tribehaus.org",
         "country": "DE",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Deutschland · Eifel / Haus Abrahm"
+        "description": "Festival / Sex-Positive · Deutschland · Eifel / Haus Abrahm",
+        "events_url": "https://tribehaus.org/event/unfolding-embodiment-lab-sexpositives-festival"
     },
     {
         "company_name": "EQUINOXE VIBES Festival",
@@ -1221,7 +1373,8 @@
         "website": "https://club-equinoxe.de",
         "country": "DE",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Deutschland · Deutschlandweit"
+        "description": "Festival / Sex-Positive · Deutschland · Deutschlandweit",
+        "events_url": "https://club-equinoxe.de/event/equinoxe-vibes-festival-vom-26-06-30-06-2025-2/"
     },
     {
         "company_name": "Burning Pants Festival",
@@ -1229,7 +1382,8 @@
         "website": "https://burning-pants.de",
         "country": "DE",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Deutschland · Hude (bei Oldenburg)"
+        "description": "Festival / Sex-Positive · Deutschland · Hude (bei Oldenburg)",
+        "events_url": "https://www.burning-pants.de"
     },
     {
         "company_name": "Konsentival",
@@ -1237,7 +1391,8 @@
         "website": "https://konsentival.events",
         "country": "DE",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Deutschland · Deutschlandweit"
+        "description": "Festival / Sex-Positive · Deutschland · Deutschlandweit",
+        "events_url": "https://konsentival.events"
     },
     {
         "company_name": "Kinky Circus",
@@ -1245,7 +1400,8 @@
         "website": "https://kinkycircus.de",
         "country": "DE",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Deutschland · Köln / Bochum"
+        "description": "Festival / Sex-Positive · Deutschland · Köln / Bochum",
+        "events_url": "https://www.kinkycircus.de/sexpositive-party/"
     },
     {
         "company_name": "Einmalig-Events",
@@ -1253,7 +1409,8 @@
         "website": "https://einmalig-events.de",
         "country": "DE",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Deutschland · NRW"
+        "description": "Festival / Sex-Positive · Deutschland · NRW",
+        "events_url": "https://www.einmalig-events.de"
     },
     {
         "company_name": "The Intimate Revolution",
@@ -1261,7 +1418,8 @@
         "website": "https://theintimaterevolution.com",
         "country": "DE",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Deutschland · versch. Orte"
+        "description": "Festival / Sex-Positive · Deutschland · versch. Orte",
+        "events_url": "https://www.theintimaterevolution.com"
     },
     {
         "company_name": "Liebeskunst-Netzwerk",
@@ -1269,7 +1427,8 @@
         "website": "https://liebeskunstnetzwerk.de",
         "country": "DE",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Deutschland · Berlin / Brandenburg"
+        "description": "Festival / Sex-Positive · Deutschland · Berlin / Brandenburg",
+        "events_url": "https://liebeskunstnetzwerk.de"
     },
     {
         "company_name": "RaumFür Verteiler",
@@ -1277,7 +1436,8 @@
         "website": "https://raumfuer.com",
         "country": "DE",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Deutschland · D/A/CH"
+        "description": "Festival / Sex-Positive · Deutschland · D/A/CH",
+        "events_url": "https://www.raumfuer.com/verteiler"
     },
     {
         "company_name": "FrüherKommen – Sexpositive Party Wien",
@@ -1285,7 +1445,8 @@
         "website": "https://hausgemacht.org",
         "country": "AT",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Österreich · Wien"
+        "description": "Festival / Sex-Positive · Österreich · Wien",
+        "events_url": "https://www.hausgemacht.org/zusammenkommen"
     },
     {
         "company_name": "Pure Pleasure",
@@ -1293,7 +1454,8 @@
         "website": "https://purepleasure.at",
         "country": "AT",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Österreich · Wien"
+        "description": "Festival / Sex-Positive · Österreich · Wien",
+        "events_url": "https://www.purepleasure.at/event"
     },
     {
         "company_name": "UNIQUEx – Sexpositive Events Wien",
@@ -1301,7 +1463,8 @@
         "website": "https://joyclub.com",
         "country": "AT",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Österreich · Wien"
+        "description": "Festival / Sex-Positive · Österreich · Wien",
+        "events_url": "https://www.joyclub.com/en/club/veranstaltungen/5268913.uniquex.html"
     },
     {
         "company_name": "Extasia – Erotikmesse & Festival",
@@ -1309,7 +1472,8 @@
         "website": "https://ticketcorner.ch",
         "country": "CH",
         "category": "festival",
-        "description": "Festival / Sex-Positive · Schweiz · Zürich / Basel"
+        "description": "Festival / Sex-Positive · Schweiz · Zürich / Basel",
+        "events_url": "https://www.ticketcorner.ch/artist/extasia/"
     },
     {
         "company_name": "Mannsein – Seminare für Männer",
@@ -1317,7 +1481,8 @@
         "website": "https://mannsein.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Deutschlandweit"
+        "description": "Männerarbeit · Deutschland · Deutschlandweit",
+        "events_url": "https://www.mannsein.de/seminare/"
     },
     {
         "company_name": "Männlichkeit leben",
@@ -1325,7 +1490,8 @@
         "website": "https://maennlichkeit-leben.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Deutschlandweit"
+        "description": "Männerarbeit · Deutschland · Deutschlandweit",
+        "events_url": "https://www.maennlichkeit-leben.de"
     },
     {
         "company_name": "Mann-Seminare",
@@ -1333,7 +1499,8 @@
         "website": "https://mann-seminare.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Deutschlandweit"
+        "description": "Männerarbeit · Deutschland · Deutschlandweit",
+        "events_url": "https://www.mann-seminare.de"
     },
     {
         "company_name": "Masculine Hearts",
@@ -1341,7 +1508,8 @@
         "website": "https://masculinehearts.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Online / versch. Orte"
+        "description": "Männerarbeit · Deutschland · Online / versch. Orte",
+        "events_url": "https://www.masculinehearts.de/workshops/"
     },
     {
         "company_name": "Männerweg",
@@ -1349,7 +1517,8 @@
         "website": "https://maennerweg.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Deutschlandweit"
+        "description": "Männerarbeit · Deutschland · Deutschlandweit",
+        "events_url": "https://www.maennerweg.de/seminare/"
     },
     {
         "company_name": "Neue Männlichkeit",
@@ -1357,7 +1526,8 @@
         "website": "https://neue-maennlichkeit.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Deutschlandweit"
+        "description": "Männerarbeit · Deutschland · Deutschlandweit",
+        "events_url": "https://www.neue-maennlichkeit.de/kurse/"
     },
     {
         "company_name": "Potenzcoaching",
@@ -1365,7 +1535,8 @@
         "website": "https://potenzcoaching.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Online / versch. Orte"
+        "description": "Männerarbeit · Deutschland · Online / versch. Orte",
+        "events_url": "https://www.potenzcoaching.de/workshops/"
     },
     {
         "company_name": "Erotik-Coaching für Männer",
@@ -1373,7 +1544,8 @@
         "website": "https://erotik-coaching-fuer-maenner.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Berlin"
+        "description": "Männerarbeit · Deutschland · Berlin",
+        "events_url": "https://www.erotik-coaching-fuer-maenner.de"
     },
     {
         "company_name": "ManPower Seminare",
@@ -1381,7 +1553,8 @@
         "website": "https://manpower-seminare.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Deutschlandweit"
+        "description": "Männerarbeit · Deutschland · Deutschlandweit",
+        "events_url": "https://www.manpower-seminare.de"
     },
     {
         "company_name": "Herzens-Männer",
@@ -1389,7 +1562,8 @@
         "website": "https://herzensmaenner.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Online / versch. Orte"
+        "description": "Männerarbeit · Deutschland · Online / versch. Orte",
+        "events_url": "https://www.herzensmaenner.de/workshops/"
     },
     {
         "company_name": "Karezza Seminar",
@@ -1397,7 +1571,8 @@
         "website": "https://karezza-seminar.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Deutschlandweit"
+        "description": "Männerarbeit · Deutschland · Deutschlandweit",
+        "events_url": "https://www.karezza-seminar.de"
     },
     {
         "company_name": "Sexcoach für Männer",
@@ -1405,7 +1580,8 @@
         "website": "https://sexcoach-fuer-maenner.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Online / versch. Orte"
+        "description": "Männerarbeit · Deutschland · Online / versch. Orte",
+        "events_url": "https://www.sexcoach-fuer-maenner.de/seminare/"
     },
     {
         "company_name": "Männliche Sexualität",
@@ -1413,7 +1589,8 @@
         "website": "https://maennliche-sexualitaet.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Deutschlandweit"
+        "description": "Männerarbeit · Deutschland · Deutschlandweit",
+        "events_url": "https://www.maennliche-sexualitaet.de/kurse/"
     },
     {
         "company_name": "Weg des Mannes",
@@ -1421,7 +1598,8 @@
         "website": "https://weg-des-mannes.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Deutschlandweit"
+        "description": "Männerarbeit · Deutschland · Deutschlandweit",
+        "events_url": "https://www.weg-des-mannes.de/seminare/"
     },
     {
         "company_name": "Männer-Retreats",
@@ -1429,7 +1607,8 @@
         "website": "https://maenner-retreats.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Deutschlandweit"
+        "description": "Männerarbeit · Deutschland · Deutschlandweit",
+        "events_url": "https://www.maenner-retreats.de"
     },
     {
         "company_name": "Phallische Reise",
@@ -1437,7 +1616,8 @@
         "website": "https://phallische-reise.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Deutschlandweit"
+        "description": "Männerarbeit · Deutschland · Deutschlandweit",
+        "events_url": "https://www.phallische-reise.de/workshops/"
     },
     {
         "company_name": "Liebeskraft für Männer",
@@ -1445,7 +1625,8 @@
         "website": "https://liebeskraft-fuer-maenner.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Online / versch. Orte"
+        "description": "Männerarbeit · Deutschland · Online / versch. Orte",
+        "events_url": "https://www.liebeskraft-fuer-maenner.de"
     },
     {
         "company_name": "Männliche Initiation",
@@ -1453,7 +1634,8 @@
         "website": "https://maennliche-initiation.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Deutschlandweit"
+        "description": "Männerarbeit · Deutschland · Deutschlandweit",
+        "events_url": "https://www.maennliche-initiation.de/seminare/"
     },
     {
         "company_name": "Embodied Man",
@@ -1461,7 +1643,8 @@
         "website": "https://embodied-man.de",
         "country": "DE",
         "category": "mens-work",
-        "description": "Männerarbeit · Deutschland · Online / versch. Orte"
+        "description": "Männerarbeit · Deutschland · Online / versch. Orte",
+        "events_url": "https://www.embodied-man.de/workshops/"
     },
     {
         "company_name": "Sexualberatung für Männer Wien",
@@ -1469,7 +1652,8 @@
         "website": "https://sexualberatung-fuer-maenner.at",
         "country": "AT",
         "category": "mens-work",
-        "description": "Männerarbeit · Österreich · Wien"
+        "description": "Männerarbeit · Österreich · Wien",
+        "events_url": "https://www.sexualberatung-fuer-maenner.at/workshops/"
     },
     {
         "company_name": "Männer & Sexualität Österreich",
@@ -1477,7 +1661,8 @@
         "website": "https://maenner-sexualitaet.at",
         "country": "AT",
         "category": "mens-work",
-        "description": "Männerarbeit · Österreich · Österreichweit"
+        "description": "Männerarbeit · Österreich · Österreichweit",
+        "events_url": "https://www.maenner-sexualitaet.at/seminare/"
     },
     {
         "company_name": "Körperweisheit für Männer",
@@ -1485,7 +1670,8 @@
         "website": "https://koerperweisheit-maenner.at",
         "country": "AT",
         "category": "mens-work",
-        "description": "Männerarbeit · Österreich · Wien / Graz"
+        "description": "Männerarbeit · Österreich · Wien / Graz",
+        "events_url": "https://www.koerperweisheit-maenner.at/kurse/"
     },
     {
         "company_name": "Männlicher Eros",
@@ -1493,7 +1679,8 @@
         "website": "https://maennlicher-eros.at",
         "country": "AT",
         "category": "mens-work",
-        "description": "Männerarbeit · Österreich · Österreichweit"
+        "description": "Männerarbeit · Österreich · Österreichweit",
+        "events_url": "https://www.maennlicher-eros.at/workshops/"
     },
     {
         "company_name": "Mannkraft",
@@ -1501,7 +1688,8 @@
         "website": "https://mannkraft.ch",
         "country": "CH",
         "category": "mens-work",
-        "description": "Männerarbeit · Schweiz · Zürich"
+        "description": "Männerarbeit · Schweiz · Zürich",
+        "events_url": "https://www.mannkraft.ch/workshops/"
     },
     {
         "company_name": "Männliche Sexualität Schweiz",
@@ -1509,7 +1697,8 @@
         "website": "https://maennliche-sexualitaet.ch",
         "country": "CH",
         "category": "mens-work",
-        "description": "Männerarbeit · Schweiz · Zürich / Bern"
+        "description": "Männerarbeit · Schweiz · Zürich / Bern",
+        "events_url": "https://www.maennliche-sexualitaet.ch/kurse/"
     },
     {
         "company_name": "Herzensmann",
@@ -1517,7 +1706,8 @@
         "website": "https://herzensmann.ch",
         "country": "CH",
         "category": "mens-work",
-        "description": "Männerarbeit · Schweiz · Schweizweit"
+        "description": "Männerarbeit · Schweiz · Schweizweit",
+        "events_url": "https://www.herzensmann.ch/seminare/"
     },
     {
         "company_name": "Sexualcoaching für Männer Schweiz",
@@ -1525,7 +1715,8 @@
         "website": "https://sexualcoaching-maenner.ch",
         "country": "CH",
         "category": "mens-work",
-        "description": "Männerarbeit · Schweiz · Zürich"
+        "description": "Männerarbeit · Schweiz · Zürich",
+        "events_url": "https://www.sexualcoaching-maenner.ch/workshops/"
     },
     {
         "company_name": "Embodied Masculine",
@@ -1533,7 +1724,8 @@
         "website": "https://embodiedmasculine.ch",
         "country": "CH",
         "category": "mens-work",
-        "description": "Männerarbeit · Schweiz · Schweizweit"
+        "description": "Männerarbeit · Schweiz · Schweizweit",
+        "events_url": "https://www.embodiedmasculine.ch/retreats/"
     },
     {
         "company_name": "Weiblichkeit leben! Dakini Frauentrainings",
@@ -1541,7 +1733,8 @@
         "website": "https://weiblichkeit-leben.de",
         "country": "DE",
         "category": "womens-work",
-        "description": "Frauenarbeit · Deutschland · versch. Orte / Online"
+        "description": "Frauenarbeit · Deutschland · versch. Orte / Online",
+        "events_url": "https://www.weiblichkeit-leben.de"
     },
     {
         "company_name": "Orgasmic Woman",
@@ -1549,7 +1742,8 @@
         "website": "https://orgasmic-woman.com",
         "country": "DE",
         "category": "womens-work",
-        "description": "Frauenarbeit · Deutschland · Online / versch. Orte"
+        "description": "Frauenarbeit · Deutschland · Online / versch. Orte",
+        "events_url": "https://orgasmic-woman.com/workshops/"
     },
     {
         "company_name": "Sabine Schröder",
@@ -1557,7 +1751,8 @@
         "website": "https://sabine-schroeder-seminare.de",
         "country": "DE",
         "category": "womens-work",
-        "description": "Frauenarbeit · Deutschland · Deutschlandweit"
+        "description": "Frauenarbeit · Deutschland · Deutschlandweit",
+        "events_url": "https://sabine-schroeder-seminare.de/event/weibliche-sexualitaet-neu-entdecken/"
     },
     {
         "company_name": "Inspiration und Lebenslust",
@@ -1565,7 +1760,8 @@
         "website": "https://sexualberatung-und-seminare.de",
         "country": "DE",
         "category": "womens-work",
-        "description": "Frauenarbeit · Deutschland · Nettetal"
+        "description": "Frauenarbeit · Deutschland · Nettetal",
+        "events_url": "https://sexualberatung-und-seminare.de/seminare/seminare-fuer-frauen/seitentitel/"
     },
     {
         "company_name": "Pauluna",
@@ -1573,7 +1769,8 @@
         "website": "https://pauluna.at",
         "country": "AT",
         "category": "womens-work",
-        "description": "Frauenarbeit · Österreich · Wien"
+        "description": "Frauenarbeit · Österreich · Wien",
+        "events_url": "https://pauluna.at/mein-angebot/workshop/"
     },
     {
         "company_name": "Johanna Debes",
@@ -1581,7 +1778,8 @@
         "website": "https://johannadebes.life",
         "country": "DE",
         "category": "womens-work",
-        "description": "Frauenarbeit · Deutschland · Online / versch. Orte"
+        "description": "Frauenarbeit · Deutschland · Online / versch. Orte",
+        "events_url": "https://johannadebes.life/workshops/"
     },
     {
         "company_name": "Frauenberatung Wien",
@@ -1589,7 +1787,8 @@
         "website": "https://frauenberatung.at",
         "country": "AT",
         "category": "womens-work",
-        "description": "Frauenarbeit · Österreich · Wien"
+        "description": "Frauenarbeit · Österreich · Wien",
+        "events_url": "https://frauenberatung.at/index.php/angebote/workshops"
     },
     {
         "company_name": "Regyna – Lust auf Lust",
@@ -1597,7 +1796,8 @@
         "website": "https://regyna.ch",
         "country": "CH",
         "category": "womens-work",
-        "description": "Frauenarbeit · Schweiz · Bern"
+        "description": "Frauenarbeit · Schweiz · Bern",
+        "events_url": "https://www.regyna.ch/seminare-kurse/sexualitaet-lust-kurse-fuer-frauen"
     },
     {
         "company_name": "Verena Bust",
@@ -1605,7 +1805,8 @@
         "website": "https://verena-bust.de",
         "country": "DE",
         "category": "womens-work",
-        "description": "Frauenarbeit · Deutschland · Online / versch. Orte"
+        "description": "Frauenarbeit · Deutschland · Online / versch. Orte",
+        "events_url": "https://verena-bust.de"
     },
     {
         "company_name": "FEM Süd",
@@ -1613,7 +1814,8 @@
         "website": "https://femsued.at",
         "country": "AT",
         "category": "womens-work",
-        "description": "Frauenarbeit · Österreich · Wien"
+        "description": "Frauenarbeit · Österreich · Wien",
+        "events_url": "https://femsued.at/kurs/workshop-verhuetung-und-sexualitaet/"
     },
     {
         "company_name": "berührungsraum – Lustvoll Frau-Sein",
@@ -1621,7 +1823,8 @@
         "website": "https://beruehrungsraum.ch",
         "country": "CH",
         "category": "womens-work",
-        "description": "Frauenarbeit · Schweiz · Zürich"
+        "description": "Frauenarbeit · Schweiz · Zürich",
+        "events_url": "https://beruehrungsraum.ch/kurs-reihe-lustvoll-frau-sein/"
     },
     {
         "company_name": "being female",
@@ -1629,7 +1832,8 @@
         "website": "https://beingfemale.de",
         "country": "DE",
         "category": "womens-work",
-        "description": "Frauenarbeit · Deutschland · Online"
+        "description": "Frauenarbeit · Deutschland · Online",
+        "events_url": "https://www.beingfemale.de/coaching-angebot"
     },
     {
         "company_name": "Sexualworkshop für Frauen – Dr. Martina Ballon",
@@ -1637,6 +1841,7 @@
         "website": "https://martinaballon.at",
         "country": "AT",
         "category": "womens-work",
-        "description": "Frauenarbeit · Österreich · Graz"
+        "description": "Frauenarbeit · Österreich · Graz",
+        "events_url": "https://www.martinaballon.at/workshops/sexualworkshop/"
     }
 ]
