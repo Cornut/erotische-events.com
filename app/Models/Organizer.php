@@ -17,8 +17,21 @@ class Organizer extends Model
         'owner_user_id', 'company_name', 'legal_name', 'contact_name', 'email', 'phone',
         'website', 'impressum_url', 'social_links', 'description', 'logo', 'slug', 'verification_status',
         'category', 'street', 'postal_code', 'city', 'country', 'vat_id',
-        'events_url', 'last_scraped_at',
+        'events_url', 'scrape_urls', 'last_scraped_at',
     ];
+
+    /**
+     * Curated listing/feed URLs (one per line) to scrape without AI.
+     *
+     * @return array<int, string>
+     */
+    public function scrapeUrls(): array
+    {
+        return array_values(array_filter(
+            array_map('trim', preg_split('/\r\n|\r|\n/', (string) $this->scrape_urls) ?: []),
+            fn (string $url) => $url !== '',
+        ));
+    }
 
     protected function casts(): array
     {

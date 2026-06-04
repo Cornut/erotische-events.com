@@ -6,6 +6,7 @@ use App\Scraping\CurrencyNormalizer;
 use App\Scraping\EventImportService;
 use App\Scraping\EventScraperService;
 use App\Scraping\EventsUrlResolver;
+use App\Scraping\Extractors\IcalExtractor;
 use App\Scraping\Extractors\LlmEventExtractor;
 use App\Scraping\Extractors\StructuredDataExtractor;
 use App\Scraping\HttpPageFetcher;
@@ -36,8 +37,9 @@ class AppServiceProvider extends ServiceProvider
                 $app->make(HttpPageFetcher::class),
                 [
                     $app->make(StructuredDataExtractor::class),
-                    new LlmEventExtractor($app->make(AnthropicLlmClient::class)),
+                    $app->make(IcalExtractor::class),
                 ],
+                new LlmEventExtractor($app->make(AnthropicLlmClient::class)),
                 $app->make(EventImportService::class),
                 $app->make(EventsUrlResolver::class),
             );
