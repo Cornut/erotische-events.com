@@ -30,7 +30,7 @@ class ScrapedEvent
         $start = trim((string) ($data['start_date'] ?? ''));
         $source = trim((string) ($data['source_url'] ?? ''));
 
-        if ($title === '' || $start === '') {
+        if ($title === '' || $start === '' || $source === '') {
             return null;
         }
 

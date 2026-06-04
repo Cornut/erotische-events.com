@@ -21,6 +21,7 @@ class EventImportService
         $created = 0;
         $updated = 0;
         $venueId = $organizer->venues()->value('id');
+        $categoryId = $organizer->category ? Category::where('slug', $organizer->category)->value('id') : null;
 
         foreach ($events as $scraped) {
             $existing = Event::query()
@@ -59,11 +60,8 @@ class EventImportService
             }
 
             // Category from the organizer's sheet category (if it maps to a known category slug).
-            if ($organizer->category) {
-                $categoryId = Category::where('slug', $organizer->category)->value('id');
-                if ($categoryId) {
-                    $event->categories()->syncWithoutDetaching([$categoryId]);
-                }
+            if ($categoryId) {
+                $event->categories()->syncWithoutDetaching([$categoryId]);
             }
 
             $isNew ? $created++ : $updated++;

@@ -20,3 +20,7 @@ it('builds from an array with defaults', function () {
 it('ignores entries without a title or start date', function () {
     expect(ScrapedEvent::fromArray(['source_url' => 'x']))->toBeNull();
 });
+
+it('ignores entries without a source url', function () {
+    expect(ScrapedEvent::fromArray(['title' => 'X', 'start_date' => '2026-01-01']))->toBeNull();
+});
