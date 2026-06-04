@@ -3,6 +3,7 @@
 use App\Enums\EventStatus;
 use App\Models\Event;
 use App\Models\Organizer;
+use App\Models\Teacher;
 use App\Scraping\EventImportService;
 use App\Scraping\ScrapedEvent;
 
@@ -50,4 +51,17 @@ it('never touches manually created events (source_url null)', function () {
     importer()->import($org, [scraped()]);
 
     expect($manual->fresh()->title)->toBe('Manual');
+});
+
+it('creates teachers and shares one record across events and organizers', function () {
+    $orgA = Organizer::factory()->approved()->create();
+    $orgB = Organizer::factory()->approved()->create();
+
+    importer()->import($orgA, [scraped(['source_url' => 'https://a.de/e1', 'teachers' => ['Jane Doe']])]);
+    importer()->import($orgB, [scraped(['source_url' => 'https://b.de/e9', 'teachers' => ['Jane Doe']])]);
+
+    expect(Teacher::where('slug', 'jane-doe')->count())->toBe(1);
+
+    $teacher = Teacher::where('slug', 'jane-doe')->firstOrFail();
+    expect($teacher->events()->count())->toBe(2);
 });

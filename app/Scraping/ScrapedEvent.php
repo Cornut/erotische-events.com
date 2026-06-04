@@ -7,6 +7,7 @@ class ScrapedEvent
     /**
      * @param  array<int, array{amount: float, currency: string}>  $prices
      * @param  array<int, string>  $languages
+     * @param  array<int, string>  $teachers  Teacher/instructor names (deduped globally on import)
      */
     public function __construct(
         public readonly string $title,
@@ -19,6 +20,7 @@ class ScrapedEvent
         public readonly ?string $imageUrl = null,
         public readonly array $prices = [],
         public readonly array $languages = [],
+        public readonly array $teachers = [],
     ) {}
 
     /**
@@ -45,6 +47,10 @@ class ScrapedEvent
             imageUrl: isset($data['image_url']) ? (string) $data['image_url'] : null,
             prices: array_values($data['prices'] ?? []),
             languages: array_values($data['languages'] ?? []),
+            teachers: array_values(array_filter(
+                array_map(fn ($t) => is_string($t) ? trim($t) : trim((string) ($t['name'] ?? '')), $data['teachers'] ?? []),
+                fn (string $name) => $name !== '',
+            )),
         );
     }
 }

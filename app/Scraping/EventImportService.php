@@ -6,6 +6,7 @@ use App\Enums\EventStatus;
 use App\Models\Category;
 use App\Models\Event;
 use App\Models\Organizer;
+use App\Models\Teacher;
 use Illuminate\Support\Str;
 
 class EventImportService
@@ -62,6 +63,20 @@ class EventImportService
             // Category from the organizer's sheet category (if it maps to a known category slug).
             if ($categoryId) {
                 $event->categories()->syncWithoutDetaching([$categoryId]);
+            }
+
+            // Teachers: global dedup by slug so the same person is ONE record shared
+            // across events and organizers (e.g. a teacher appearing at several festivals).
+            $teacherIds = [];
+            foreach ($scraped->teachers as $name) {
+                $teacher = Teacher::firstOrCreate(
+                    ['slug' => Str::slug($name)],
+                    ['name' => $name],
+                );
+                $teacherIds[] = $teacher->id;
+            }
+            if ($teacherIds !== []) {
+                $event->teachers()->syncWithoutDetaching($teacherIds);
             }
 
             $isNew ? $created++ : $updated++;

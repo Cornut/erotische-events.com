@@ -27,3 +27,16 @@ it('extracts schema.org Event JSON-LD from html', function () {
 it('returns empty array when no JSON-LD present', function () {
     expect((new StructuredDataExtractor)->extract('<html></html>', 'https://x.de'))->toBe([]);
 });
+
+it('extracts schema.org performers as teacher names', function () {
+    $html = <<<'HTML'
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Event","name":"Festival","startDate":"2026-09-01T10:00",
+     "url":"https://x.de/f","performer":[{"@type":"Person","name":"Alice"},{"@type":"Person","name":"Bob"}]}
+    </script>
+    HTML;
+
+    $events = (new StructuredDataExtractor)->extract($html, 'https://x.de');
+
+    expect($events[0]->teachers)->toBe(['Alice', 'Bob']);
+});

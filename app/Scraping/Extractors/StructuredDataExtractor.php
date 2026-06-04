@@ -71,6 +71,19 @@ class StructuredDataExtractor implements EventExtractor
 
         $city = $node['location']['address']['addressLocality'] ?? null;
 
+        // schema.org Event.performer may be a Person, an array of Persons, or a string.
+        $teachers = [];
+        $performers = $node['performer'] ?? [];
+        if (! is_array($performers) || ! array_is_list($performers)) {
+            $performers = [$performers];
+        }
+        foreach ($performers as $performer) {
+            $name = is_array($performer) ? ($performer['name'] ?? null) : $performer;
+            if (is_string($name) && trim($name) !== '') {
+                $teachers[] = trim($name);
+            }
+        }
+
         return ScrapedEvent::fromArray([
             'title' => $node['name'] ?? null,
             'start_date' => $node['startDate'] ?? null,
@@ -80,6 +93,7 @@ class StructuredDataExtractor implements EventExtractor
             'description' => $node['description'] ?? null,
             'image_url' => is_array($node['image'] ?? null) ? ($node['image'][0] ?? null) : ($node['image'] ?? null),
             'prices' => $prices,
+            'teachers' => $teachers,
         ]);
     }
 }

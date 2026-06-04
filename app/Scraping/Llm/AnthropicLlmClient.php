@@ -16,7 +16,8 @@ class AnthropicLlmClient implements LlmClient
 
         $prompt = 'Extract all events from this page as a JSON array. Each item: '
             .'{title, start_date (Y-m-d H:i), end_date|null, source_url (absolute), city|null, '
-            .'description|null, image_url|null, prices:[{amount:number, currency:ISO}]}. '
+            .'description|null, image_url|null, prices:[{amount:number, currency:ISO}], '
+            .'teachers:[names of the teachers/instructors/leaders presenting the event]}. '
             ."Page URL: {$pageUrl}. Return ONLY the JSON array, no prose.\n\n"
             .mb_substr(strip_tags($content), 0, 60000);
 
