@@ -38,3 +38,20 @@ it('shows an organizer public profile', function () {
     $organizer = Organizer::factory()->approved()->create();
     $this->get("/organizers/{$organizer->slug}")->assertSuccessful();
 });
+
+it('paginates the public listing so infinite scroll can load further pages', function () {
+    Event::factory()->count(30)->published()->create();
+
+    $this->get('/events')->assertInertia(
+        fn (AssertableInertia $page) => $page
+            ->where('events.current_page', 1)
+            ->where('events.last_page', 3)
+            ->has('events.data', 12)
+    );
+
+    $this->get('/events?page=2')->assertInertia(
+        fn (AssertableInertia $page) => $page
+            ->where('events.current_page', 2)
+            ->has('events.data', 12)
+    );
+});
