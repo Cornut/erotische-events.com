@@ -55,3 +55,14 @@ it('paginates the public listing so infinite scroll can load further pages', fun
             ->has('events.data', 12)
     );
 });
+
+it('obfuscates the outbound url on the event detail page (no raw booking_url in props)', function () {
+    $event = Event::factory()->published()->create(['booking_url' => 'https://organizer.test/secret-page']);
+
+    $this->get("/events/{$event->slug}")->assertInertia(
+        fn (AssertableInertia $page) => $page
+            ->component('Public/Events/Show')
+            ->missing('event.booking_url')
+            ->missing('event.source_url')
+    );
+});

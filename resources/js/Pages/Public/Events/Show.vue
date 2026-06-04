@@ -7,7 +7,6 @@ interface EventDetail {
     long_description: string | null;
     start_date: string;
     end_date: string | null;
-    booking_url: string;
     organizer?: { company_name: string; slug: string } | null;
     venue?: { name: string; city: string | null } | null;
     categories?: { id: number; name_de: string }[];
@@ -57,10 +56,12 @@ defineProps<{ event: EventDetail }>();
             </li>
         </ul>
 
+        <!-- Obfuscated outbound link: routed through /go/{event} which records an
+             event_click and 302-redirects to the organizer URL (no raw URL in the page). -->
         <a
-            :href="event.booking_url"
+            :href="`/go/${event.id}`"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             class="mt-8 inline-block rounded-md bg-indigo-600 px-5 py-3 font-semibold text-white hover:bg-indigo-700"
         >
             Zum Veranstalter

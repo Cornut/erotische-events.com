@@ -36,6 +36,10 @@ class EventController extends Controller
             ->with(['organizer', 'venue', 'teachers', 'categories', 'tags', 'prices'])
             ->firstOrFail();
 
+        // Obfuscate the outbound target: never expose the raw URL to the client;
+        // the "Zum Veranstalter" link uses /go/{event} for tracked redirection.
+        $event->makeHidden(['booking_url', 'source_url']);
+
         return Inertia::render('Public/Events/Show', [
             'event' => $event,
         ]);
