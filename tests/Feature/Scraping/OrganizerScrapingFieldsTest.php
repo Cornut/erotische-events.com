@@ -12,6 +12,18 @@ it('stores events_url and last_scraped_at on an organizer', function () {
         ->and($o->last_scraped_at)->not->toBeNull();
 });
 
+it('splits events_url into a trimmed list via eventUrls()', function () {
+    $o = Organizer::factory()->create([
+        'events_url' => "https://a.de/termine\n  https://a.de/seminare  \n\nhttps://a.de/events\n",
+    ]);
+
+    expect($o->eventUrls())->toBe([
+        'https://a.de/termine',
+        'https://a.de/seminare',
+        'https://a.de/events',
+    ]);
+});
+
 it('splits scrape_urls into a trimmed list via scrapeUrls()', function () {
     $o = Organizer::factory()->create([
         'scrape_urls' => "https://a.de/termine\n  https://a.de/cal.ics  \n\nhttps://a.de/seminare\n",

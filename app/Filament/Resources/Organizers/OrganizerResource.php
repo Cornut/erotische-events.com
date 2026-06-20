@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Organizers;
 use App\Filament\Resources\Organizers\Pages\CreateOrganizer;
 use App\Filament\Resources\Organizers\Pages\EditOrganizer;
 use App\Filament\Resources\Organizers\Pages\ListOrganizers;
+use App\Filament\Resources\Organizers\RelationManagers\EventsRelationManager;
 use App\Filament\Resources\Organizers\Schemas\OrganizerForm;
 use App\Filament\Resources\Organizers\Tables\OrganizersTable;
 use App\Models\Organizer;
@@ -35,7 +36,7 @@ class OrganizerResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            EventsRelationManager::class,
         ];
     }
 

@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Enums\UserRole;
-use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,21 +10,15 @@ class DatabaseSeeder extends Seeder
     use WithoutModelEvents;
 
     /**
-     * Seed the application's database.
+     * Seed the application's database. Idempotent — safe to re-run on staging.
      */
     public function run(): void
     {
-        User::firstOrCreate(
-            ['email' => 'admin@erotische-events.com'],
-            [
-                'name' => 'Admin',
-                'password' => bcrypt('password'),
-                'role' => UserRole::Admin,
-                'locale' => 'de',
-            ],
-        );
-
-        $this->call(CategorySeeder::class);
-        $this->call(OrganizerSeeder::class);
+        $this->call([
+            AdminUserSeeder::class,   // admin account (env-driven credentials)
+            CategorySeeder::class,    // main + sub categories
+            OrganizerSeeder::class,   // curated organizers + venues + logos
+            SettingsSeeder::class,    // app settings defaults
+        ]);
     }
 }

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Head, Link } from '@inertiajs/vue3';
+import AppLayout from '@/Layouts/AppLayout.vue';
 
 interface OrganizerProfile {
     id: number;
@@ -15,8 +16,11 @@ defineProps<{ organizer: OrganizerProfile }>();
 <template>
     <Head :title="organizer.company_name" />
 
+    <AppLayout>
     <div class="mx-auto max-w-3xl p-6">
-        <h1 class="text-3xl font-bold">{{ organizer.company_name }}</h1>
+        <Link href="/organizers" class="text-sm text-indigo-600 hover:underline">&larr; Alle Veranstalter:innen</Link>
+
+        <h1 class="mt-4 text-3xl font-bold">{{ organizer.company_name }}</h1>
 
         <a
             v-if="organizer.website"
@@ -45,4 +49,5 @@ defineProps<{ organizer: OrganizerProfile }>();
             </li>
         </ul>
     </div>
+    </AppLayout>
 </template>

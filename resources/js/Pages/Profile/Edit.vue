@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import SettingsLayout from '@/Layouts/SettingsLayout.vue';
 import DeleteUserForm from './Partials/DeleteUserForm.vue';
 import UpdatePasswordForm from './Partials/UpdatePasswordForm.vue';
 import UpdateProfileInformationForm from './Partials/UpdateProfileInformationForm.vue';
@@ -12,41 +12,27 @@ defineProps<{
 </script>
 
 <template>
-    <Head title="Profile" />
+    <Head title="Profil" />
 
-    <AuthenticatedLayout>
-        <template #header>
-            <h2
-                class="text-xl font-semibold leading-tight text-gray-800"
-            >
-                Profile
-            </h2>
-        </template>
+    <SettingsLayout>
+        <h2 class="mb-6 text-lg font-semibold text-gray-900">Profil</h2>
 
-        <div class="py-12">
-            <div class="mx-auto max-w-7xl space-y-6 sm:px-6 lg:px-8">
-                <div
-                    class="bg-white p-4 shadow sm:rounded-lg sm:p-8"
-                >
-                    <UpdateProfileInformationForm
-                        :must-verify-email="mustVerifyEmail"
-                        :status="status"
-                        class="max-w-xl"
-                    />
-                </div>
+        <div class="space-y-6">
+            <div class="bg-white p-4 shadow sm:rounded-lg sm:p-8">
+                <UpdateProfileInformationForm
+                    :must-verify-email="mustVerifyEmail"
+                    :status="status"
+                    class="max-w-xl"
+                />
+            </div>
 
-                <div
-                    class="bg-white p-4 shadow sm:rounded-lg sm:p-8"
-                >
-                    <UpdatePasswordForm class="max-w-xl" />
-                </div>
+            <div class="bg-white p-4 shadow sm:rounded-lg sm:p-8">
+                <UpdatePasswordForm class="max-w-xl" />
+            </div>
 
-                <div
-                    class="bg-white p-4 shadow sm:rounded-lg sm:p-8"
-                >
-                    <DeleteUserForm class="max-w-xl" />
-                </div>
+            <div class="bg-white p-4 shadow sm:rounded-lg sm:p-8">
+                <DeleteUserForm class="max-w-xl" />
             </div>
         </div>
-    </AuthenticatedLayout>
+    </SettingsLayout>
 </template>

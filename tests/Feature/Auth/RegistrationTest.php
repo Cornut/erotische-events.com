@@ -7,7 +7,7 @@ test('registration screen can be rendered', function () {
 });
 
 test('new users can register', function () {
-    $response = $this->post('/register', [
+    $response = $this->from('/events')->post('/register', [
         'name' => 'Test User',
         'email' => 'test@example.com',
         'password' => 'password',
@@ -15,5 +15,6 @@ test('new users can register', function () {
     ]);
 
     $this->assertAuthenticated();
-    $response->assertRedirect(route('dashboard', absolute: false));
+    // Stays on the page the registration popup was opened from.
+    $response->assertRedirect('/events');
 });

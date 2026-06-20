@@ -40,6 +40,63 @@ it('fetches, extracts and imports events for an organizer', function () {
         ->and($org->fresh()->last_scraped_at)->not->toBeNull();
 });
 
+it('crawls one level deeper with the LLM when overview pages yield nothing', function () {
+    $org = Organizer::factory()->approved()->create([
+        'website' => 'https://x.de',
+        'events_url' => 'https://x.de/termine',
+    ]);
+
+    // Overview page links to two detail pages; detail pages carry the actual events.
+    $pages = [
+        'https://x.de/termine' => '<a href="/detail/1.html">A</a><a href="/detail/2.html">B</a>',
+        'https://x.de/detail/1.html' => 'PLAINTEXT EVENT ONE',
+        'https://x.de/detail/2.html' => 'PLAINTEXT EVENT TWO',
+    ];
+    $fetcher = new class($pages) implements PageFetcher
+    {
+        public function __construct(private array $pages) {}
+
+        public function get(string $url): ?string
+        {
+            return $this->pages[$url] ?? null;
+        }
+    };
+
+    // Structured extractor finds nothing anywhere (plain text).
+    $structured = new class implements EventExtractor
+    {
+        public function extract(string $html, string $pageUrl): array
+        {
+            return [];
+        }
+    };
+
+    // LLM finds an event only on detail sub-pages, never on the overview.
+    $llm = new class implements EventExtractor
+    {
+        public function extract(string $html, string $pageUrl): array
+        {
+            if (! str_contains($pageUrl, '/detail/')) {
+                return [];
+            }
+            $e = ScrapedEvent::fromArray([
+                'title' => 'Deep '.$pageUrl,
+                'start_date' => '2026-10-01 18:00',
+                'source_url' => $pageUrl,
+            ]);
+
+            return $e ? [$e] : [];
+        }
+    };
+
+    $service = new EventScraperService($fetcher, [$structured], $llm, app(EventImportService::class), new EventsUrlResolver);
+    $result = $service->scrape($org);
+
+    expect($result['created'])->toBe(2)
+        ->and(Event::where('source_url', 'https://x.de/detail/1.html')->exists())->toBeTrue()
+        ->and(Event::where('source_url', 'https://x.de/detail/2.html')->exists())->toBeTrue();
+});
+
 it('aggregates events from curated scrape_urls without using the LLM', function () {
     $org = Organizer::factory()->approved()->create([
         'website' => 'https://x.de',

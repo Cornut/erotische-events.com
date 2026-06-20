@@ -27,7 +27,7 @@ it('shows only the current user favorites on the favorites page', function () {
 
     User::factory()->create()->favorites()->attach($other);
 
-    $this->actingAs($user)->get('/favorites')->assertSuccessful();
+    $this->actingAs($user)->get('/settings/favorites')->assertSuccessful();
     expect($user->favorites()->count())->toBe(1)
         ->and($user->favorites()->first()->is($mine))->toBeTrue();
 });

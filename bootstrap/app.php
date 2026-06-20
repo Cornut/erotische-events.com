@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Middleware\EnforceLoginRequired;
+use App\Http\Middleware\EnsureOrganizer;
 use App\Http\Middleware\EnsureUserHasRole;
 use App\Http\Middleware\HandleInertiaRequests;
 use App\Http\Middleware\SetLocale;
@@ -18,12 +20,14 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->web(append: [
             SetLocale::class,
+            EnforceLoginRequired::class,
             HandleInertiaRequests::class,
             AddLinkHeadersForPreloadedAssets::class,
         ]);
 
         $middleware->alias([
             'role' => EnsureUserHasRole::class,
+            'organizer' => EnsureOrganizer::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {

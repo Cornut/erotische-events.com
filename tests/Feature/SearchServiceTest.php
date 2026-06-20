@@ -36,6 +36,16 @@ it('filters by category slug', function () {
     expect($results->total())->toBe(1)->and($results->first()->is($match))->toBeTrue();
 });
 
+it('filters by teacher name', function () {
+    $teacher = App\Models\Teacher::create(['slug' => 'jane-doe', 'name' => 'Jane Doe']);
+    $match = Event::factory()->published()->create();
+    $match->teachers()->attach($teacher);
+    Event::factory()->published()->create();
+
+    $results = $this->service->search(['teacher' => 'jane']);
+    expect($results->total())->toBe(1)->and($results->first()->is($match))->toBeTrue();
+});
+
 it('filters by city via the venue', function () {
     $organizer = Organizer::factory()->create();
     $berlinVenue = Venue::factory()->create(['organizer_id' => $organizer->id, 'city' => 'Berlin']);
@@ -44,6 +54,21 @@ it('filters by city via the venue', function () {
 
     $results = $this->service->search(['city' => 'Berlin']);
     expect($results->total())->toBe(1)->and($results->first()->is($match))->toBeTrue();
+});
+
+it('filters by multiple countries', function () {
+    $organizer = Organizer::factory()->create();
+    $de = Venue::factory()->create(['organizer_id' => $organizer->id, 'country' => 'DE']);
+    $ch = Venue::factory()->create(['organizer_id' => $organizer->id, 'country' => 'CH']);
+    $at = Venue::factory()->create(['organizer_id' => $organizer->id, 'country' => 'AT']);
+    $deEvent = Event::factory()->published()->create(['venue_id' => $de->id]);
+    $chEvent = Event::factory()->published()->create(['venue_id' => $ch->id]);
+    Event::factory()->published()->create(['venue_id' => $at->id]);
+
+    $results = $this->service->search(['countries' => ['DE', 'CH']]);
+
+    expect($results->total())->toBe(2)
+        ->and($results->pluck('id')->all())->toContain($deEvent->id, $chEvent->id);
 });
 
 it('filters by maximum price', function () {

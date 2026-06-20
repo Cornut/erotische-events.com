@@ -1,118 +1,67 @@
 <script setup lang="ts">
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import InputError from '@/Components/InputError.vue';
-import InputLabel from '@/Components/InputLabel.vue';
+import { Head, Link, useForm } from '@inertiajs/vue3';
+import OrganizerLayout from '@/Layouts/OrganizerLayout.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
-import TextInput from '@/Components/TextInput.vue';
-import { Head, useForm } from '@inertiajs/vue3';
+import EventFormFields from './Form.vue';
 
-interface Event {
+interface EventData {
     id: number;
     title: string;
-    booking_url: string;
-    start_date: string | null;
     short_description: string | null;
+    long_description: string | null;
+    start_date: string | null;
+    end_date: string | null;
+    booking_url: string;
+    venue_id: number | null;
+    status: string;
+    categories: string[];
+    teachers: number[];
+    price_amount: string | number | null;
+    price_currency: string | null;
 }
 
 const props = defineProps<{
-    event: Event;
+    event: EventData;
+    options: {
+        venues: { id: number; name: string }[];
+        categories: { slug: string; name_de: string }[];
+        teachers: { id: number; name: string }[];
+    };
 }>();
 
 const form = useForm({
-    title: props.event.title,
-    booking_url: props.event.booking_url,
-    start_date: props.event.start_date ?? '',
+    title: props.event.title ?? '',
     short_description: props.event.short_description ?? '',
+    long_description: props.event.long_description ?? '',
+    start_date: props.event.start_date ?? '',
+    end_date: props.event.end_date ?? '',
+    booking_url: props.event.booking_url ?? '',
+    venue_id: props.event.venue_id,
+    categories: [...(props.event.categories ?? [])],
+    teachers: [...(props.event.teachers ?? [])],
+    price_amount: props.event.price_amount != null ? String(props.event.price_amount) : '',
+    price_currency: props.event.price_currency ?? 'EUR',
 });
 
-const submit = () => {
-    form.put(route('organizer.events.update', { event: props.event.id }));
-};
+const submit = () => form.put(`/organizer/events/${props.event.id}`);
 </script>
 
 <template>
-    <Head title="Edit Event" />
+    <Head title="Event bearbeiten" />
 
-    <AuthenticatedLayout>
-        <template #header>
-            <h2 class="text-xl font-semibold leading-tight text-gray-800">
-                Edit Event
-            </h2>
-        </template>
-
-        <div class="py-12">
-            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
-                    <div class="p-6">
-                        <form @submit.prevent="submit">
-                            <div>
-                                <InputLabel for="title" value="Title" />
-
-                                <TextInput
-                                    id="title"
-                                    type="text"
-                                    class="mt-1 block w-full"
-                                    v-model="form.title"
-                                    required
-                                    autofocus
-                                />
-
-                                <InputError class="mt-2" :message="form.errors.title" />
-                            </div>
-
-                            <div class="mt-4">
-                                <InputLabel for="booking_url" value="Booking URL" />
-
-                                <TextInput
-                                    id="booking_url"
-                                    type="url"
-                                    class="mt-1 block w-full"
-                                    v-model="form.booking_url"
-                                    required
-                                />
-
-                                <InputError class="mt-2" :message="form.errors.booking_url" />
-                            </div>
-
-                            <div class="mt-4">
-                                <InputLabel for="start_date" value="Start Date" />
-
-                                <TextInput
-                                    id="start_date"
-                                    type="datetime-local"
-                                    class="mt-1 block w-full"
-                                    v-model="form.start_date"
-                                    required
-                                />
-
-                                <InputError class="mt-2" :message="form.errors.start_date" />
-                            </div>
-
-                            <div class="mt-4">
-                                <InputLabel for="short_description" value="Short Description" />
-
-                                <TextInput
-                                    id="short_description"
-                                    type="text"
-                                    class="mt-1 block w-full"
-                                    v-model="form.short_description"
-                                />
-
-                                <InputError class="mt-2" :message="form.errors.short_description" />
-                            </div>
-
-                            <div class="mt-4 flex items-center justify-end">
-                                <PrimaryButton
-                                    :class="{ 'opacity-25': form.processing }"
-                                    :disabled="form.processing"
-                                >
-                                    Save Changes
-                                </PrimaryButton>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+    <OrganizerLayout>
+        <div class="mb-6 flex items-center justify-between">
+            <h2 class="text-lg font-semibold text-gray-900">Event bearbeiten</h2>
+            <Link href="/organizer/events" class="text-sm text-indigo-600 hover:underline">&larr; Zur Event-Liste</Link>
         </div>
-    </AuthenticatedLayout>
+
+        <form @submit.prevent="submit">
+            <EventFormFields :form="form" :options="options" />
+            <div class="mt-6">
+                <PrimaryButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                    Änderungen speichern
+                </PrimaryButton>
+            </div>
+        </form>
+    </OrganizerLayout>
 </template>

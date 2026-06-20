@@ -66,3 +66,40 @@ it('obfuscates the outbound url on the event detail page (no raw booking_url in 
             ->missing('event.source_url')
     );
 });
+
+it('rebuilds a filtered back-link when arriving from the events list', function () {
+    $event = Event::factory()->published()->create();
+
+    $this->get("/events/{$event->slug}?from=events&q=tantra&category=tantra&countries[0]=CH")
+        ->assertInertia(
+            fn (AssertableInertia $page) => $page
+                ->component('Public/Events/Show')
+                ->where('eventsBackUrl', fn (?string $url) => $url !== null
+                    && str_contains($url, 'q=tantra')
+                    && str_contains($url, 'category=tantra')
+                    && str_contains($url, 'CH'))
+        );
+});
+
+it('has no events back-link without the from=events marker', function () {
+    $event = Event::factory()->published()->create();
+
+    $this->get("/events/{$event->slug}?q=tantra")->assertInertia(
+        fn (AssertableInertia $page) => $page
+            ->component('Public/Events/Show')
+            ->where('eventsBackUrl', null)
+    );
+});
+
+it('does not echo unknown query params into the back-link (no open redirect)', function () {
+    $event = Event::factory()->published()->create();
+
+    $this->get("/events/{$event->slug}?from=events&evil=https://attacker.test&q=safe")
+        ->assertInertia(
+            fn (AssertableInertia $page) => $page
+                ->component('Public/Events/Show')
+                ->where('eventsBackUrl', fn (?string $url) => $url !== null
+                    && str_starts_with($url, '/events?')
+                    && ! str_contains($url, 'attacker'))
+        );
+});

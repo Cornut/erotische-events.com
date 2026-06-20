@@ -13,8 +13,8 @@ class EventsUrlResolver
     {
         $urls = [];
 
-        if (! empty($organizer->events_url)) {
-            $urls[] = $organizer->events_url;
+        foreach ($organizer->eventUrls() as $eventUrl) {
+            $urls[] = $eventUrl;
         }
 
         $base = rtrim((string) $organizer->website, '/');

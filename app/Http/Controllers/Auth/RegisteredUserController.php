@@ -50,6 +50,7 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('dashboard', absolute: false));
+        // Stay on the page the registration popup was opened from.
+        return redirect()->intended(url()->previous());
     }
 }

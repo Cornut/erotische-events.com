@@ -21,14 +21,32 @@ class Organizer extends Model
     ];
 
     /**
+     * Event-listing seed URLs for auto-discovery (one per line).
+     *
+     * @return array<int, string>
+     */
+    public function eventUrls(): array
+    {
+        return $this->urlsFromMultiline($this->events_url);
+    }
+
+    /**
      * Curated listing/feed URLs (one per line) to scrape without AI.
      *
      * @return array<int, string>
      */
     public function scrapeUrls(): array
     {
+        return $this->urlsFromMultiline($this->scrape_urls);
+    }
+
+    /**
+     * @return array<int, string>
+     */
+    private function urlsFromMultiline(?string $value): array
+    {
         return array_values(array_filter(
-            array_map('trim', preg_split('/\r\n|\r|\n/', (string) $this->scrape_urls) ?: []),
+            array_map('trim', preg_split('/\r\n|\r|\n/', (string) $value) ?: []),
             fn (string $url) => $url !== '',
         ));
     }
@@ -67,5 +85,10 @@ class Organizer extends Model
     public function events(): HasMany
     {
         return $this->hasMany(Event::class);
+    }
+
+    public function clicks(): HasMany
+    {
+        return $this->hasMany(EventClick::class);
     }
 }

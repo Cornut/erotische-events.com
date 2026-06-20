@@ -33,7 +33,8 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        // Stay on the page the login popup was opened from (no forced dashboard).
+        return redirect()->intended(url()->previous());
     }
 
     /**

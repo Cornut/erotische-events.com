@@ -42,6 +42,10 @@ class EventsTable
                 TextColumn::make('status')
                     ->badge()
                     ->searchable(),
+                TextColumn::make('favorited_by_count')
+                    ->label('Favoriten')
+                    ->counts('favoritedBy')
+                    ->sortable(),
                 TextColumn::make('clicks_count')
                     ->label('Klicks')
                     ->counts('clicks')

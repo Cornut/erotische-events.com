@@ -33,14 +33,33 @@ class UrlDiscoveryService
      */
     public function discover(Organizer $organizer): array
     {
-        $seed = $organizer->events_url ?: $organizer->website;
-        if (empty($seed)) {
+        $seeds = $organizer->eventUrls();
+        if ($seeds === [] && ! empty($organizer->website)) {
+            $seeds = [rtrim((string) $organizer->website, '/')];
+        }
+        if ($seeds === []) {
             return [];
         }
 
+        $valid = [];
+        foreach ($seeds as $seed) {
+            foreach ($this->discoverFromSeed($organizer, $seed) as $url) {
+                $valid[] = $url;
+            }
+        }
+
+        return array_values(array_unique($valid));
+    }
+
+    /**
+     * @return array<int, string>
+     */
+    private function discoverFromSeed(Organizer $organizer, string $seed): array
+    {
         $html = $this->fetcher->get($seed);
-        if ($html === null && $organizer->website && $organizer->website !== $seed) {
-            $seed = $organizer->website;
+        $website = rtrim((string) $organizer->website, '/');
+        if ($html === null && $website !== '' && $website !== rtrim($seed, '/')) {
+            $seed = $website;
             $html = $this->fetcher->get($seed);
         }
         if ($html === null) {
@@ -60,7 +79,7 @@ class UrlDiscoveryService
             }
         }
 
-        return array_values(array_unique($valid));
+        return $valid;
     }
 
     private function yieldsEvents(string $url): bool
@@ -88,10 +107,10 @@ class UrlDiscoveryService
         $found = [];
         $max = (int) config('scraping.max_detail_pages', 25);
 
-        foreach (array_slice($this->sameDomainLinks($html, $seed), 0, $max) as $page) {
+        foreach (array_slice(LinkExtractor::sameDomainLinks($html, $seed), 0, $max) as $page) {
             $body = $this->fetcher->get($page);
             if ($body !== null) {
-                $found = array_merge($found, $this->icalLinks($body, $page));
+                $found = array_merge($found, LinkExtractor::icalLinks($body, $page));
             }
         }
 
@@ -103,77 +122,6 @@ class UrlDiscoveryService
      */
     private function icalLinks(string $html, string $base): array
     {
-        if (! preg_match_all('/(?:href|src)\s*=\s*["\']([^"\']+)["\']/i', $html, $m)) {
-            return [];
-        }
-
-        $links = [];
-        foreach ($m[1] as $href) {
-            if (preg_match('/\.ics(\?|#|$)|webcal:|\/ics\//i', $href)) {
-                $abs = $this->absoluteUrl($href, $base);
-                if ($abs !== null) {
-                    $links[] = $abs;
-                }
-            }
-        }
-
-        return array_values(array_unique($links));
-    }
-
-    /**
-     * @return array<int, string> Absolute same-domain page URLs linked from the HTML.
-     */
-    private function sameDomainLinks(string $html, string $base): array
-    {
-        if (! preg_match_all('/href\s*=\s*["\']([^"\']+)["\']/i', $html, $m)) {
-            return [];
-        }
-
-        $host = parse_url($base, PHP_URL_HOST);
-        $links = [];
-        foreach ($m[1] as $href) {
-            if (str_starts_with($href, '#') || str_starts_with($href, 'mailto:') || str_starts_with($href, 'tel:')) {
-                continue;
-            }
-            $abs = $this->absoluteUrl($href, $base);
-            if ($abs !== null && parse_url($abs, PHP_URL_HOST) === $host) {
-                $links[] = $abs;
-            }
-        }
-
-        return array_values(array_unique($links));
-    }
-
-    private function absoluteUrl(string $href, string $base): ?string
-    {
-        $href = trim($href);
-        if ($href === '') {
-            return null;
-        }
-        if (str_starts_with($href, 'webcal:')) {
-            return 'https:'.substr($href, strlen('webcal:'));
-        }
-        if (str_starts_with($href, 'http://') || str_starts_with($href, 'https://')) {
-            return $href;
-        }
-
-        $scheme = parse_url($base, PHP_URL_SCHEME) ?: 'https';
-        $host = parse_url($base, PHP_URL_HOST);
-        if ($host === null) {
-            return null;
-        }
-        $origin = "{$scheme}://{$host}";
-
-        if (str_starts_with($href, '//')) {
-            return "{$scheme}:{$href}";
-        }
-        if (str_starts_with($href, '/')) {
-            return $origin.$href;
-        }
-
-        $path = (string) parse_url($base, PHP_URL_PATH);
-        $dir = rtrim(substr($path, 0, (int) strrpos($path, '/') + 1), '/');
-
-        return "{$origin}{$dir}/{$href}";
+        return LinkExtractor::icalLinks($html, $base);
     }
 }

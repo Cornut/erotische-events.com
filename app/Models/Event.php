@@ -75,6 +75,11 @@ class Event extends Model
         return $this->belongsToMany(Teacher::class, 'event_teacher');
     }
 
+    public function favoritedBy(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'favorites');
+    }
+
     public function shouldBeSearchable(): bool
     {
         return $this->status === EventStatus::Published;

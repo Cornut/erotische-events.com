@@ -42,6 +42,10 @@ class OrganizersTable
                 TextColumn::make('verification_status')
                     ->badge()
                     ->searchable(),
+                TextColumn::make('clicks_count')
+                    ->label('Klicks gesamt')
+                    ->counts('clicks')
+                    ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

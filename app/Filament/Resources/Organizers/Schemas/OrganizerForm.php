@@ -3,6 +3,8 @@
 namespace App\Filament\Resources\Organizers\Schemas;
 
 use App\Enums\OrganizerVerificationStatus;
+use App\Models\Organizer;
+use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
@@ -15,6 +17,10 @@ class OrganizerForm
     {
         return $schema
             ->components([
+                Placeholder::make('clicks_total')
+                    ->label('Klicks gesamt')
+                    ->content(fn (?Organizer $record): int => $record?->clicks()->count() ?? 0)
+                    ->columnSpanFull(),
                 Select::make('owner_user_id')
                     ->relationship('owner', 'name')
                     ->searchable()
@@ -29,9 +35,10 @@ class OrganizerForm
                     ->tel(),
                 TextInput::make('website')
                     ->url(),
-                TextInput::make('events_url')
-                    ->label('Events-URL (Auto-Discovery)')
-                    ->url(),
+                Textarea::make('events_url')
+                    ->label('Events-URLs (Auto-Discovery, eine pro Zeile)')
+                    ->rows(4)
+                    ->columnSpanFull(),
                 Textarea::make('scrape_urls')
                     ->label('Scrape-URLs (eine pro Zeile, ohne KI: JSON-LD + iCal)')
                     ->rows(4)

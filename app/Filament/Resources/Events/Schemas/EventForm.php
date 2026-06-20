@@ -4,8 +4,10 @@ namespace App\Filament\Resources\Events\Schemas;
 
 use App\Enums\EventAccommodation;
 use App\Enums\EventStatus;
+use App\Models\Event;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -90,6 +92,12 @@ class EventForm
                     ->multiple()
                     ->searchable()
                     ->preload(),
+                Placeholder::make('favorites_stat')
+                    ->label('Favoriten')
+                    ->content(fn (?Event $record): int => $record?->favoritedBy()->count() ?? 0),
+                Placeholder::make('clicks_stat')
+                    ->label('Klicks')
+                    ->content(fn (?Event $record): int => $record?->clicks()->count() ?? 0),
             ]);
     }
 }

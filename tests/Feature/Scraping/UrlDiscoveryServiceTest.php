@@ -91,3 +91,60 @@ it('discovers an .ics feed one level deep (linked from a detail page) and valida
 
     expect($service->discover($organizer))->toBe(['https://x.de/ics/1.ics']);
 });
+
+it('discovers validated urls from each events_url seed', function () {
+    $organizer = Organizer::factory()->make([
+        'website' => 'https://x.de',
+        'events_url' => "https://x.de/termine\nhttps://x.de/workshops",
+    ]);
+
+    $fetcher = new class implements PageFetcher
+    {
+        public function get(string $url): ?string
+        {
+            return 'content-of:'.$url;
+        }
+    };
+
+    $llm = new class implements LlmClient
+    {
+        public function extractEvents(string $content, string $pageUrl): array
+        {
+            return [];
+        }
+
+        public function findEventUrls(string $content, string $baseUrl): array
+        {
+            return match ($baseUrl) {
+                'https://x.de/termine' => ['https://x.de/termine-feed.ics'],
+                'https://x.de/workshops' => ['https://x.de/workshop-feed.ics'],
+                default => [],
+            };
+        }
+    };
+
+    $structured = new class implements EventExtractor
+    {
+        public function extract(string $html, string $pageUrl): array
+        {
+            if (! str_ends_with($pageUrl, '.ics')) {
+                return [];
+            }
+
+            $e = ScrapedEvent::fromArray([
+                'title' => 'X',
+                'start_date' => '2026-01-01 10:00',
+                'source_url' => $pageUrl.'/1',
+            ]);
+
+            return $e ? [$e] : [];
+        }
+    };
+
+    $urls = (new UrlDiscoveryService($fetcher, $llm, [$structured]))->discover($organizer);
+
+    expect($urls)->toBe([
+        'https://x.de/termine-feed.ics',
+        'https://x.de/workshop-feed.ics',
+    ]);
+});
