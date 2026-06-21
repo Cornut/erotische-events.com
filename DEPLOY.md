@@ -2,7 +2,7 @@
 php artisan key:generate
 Logo nach storage/app/public/logo.png
 Meilisearch läuft (vor scout:import und vor jedem Event-Save)
-queue:work --timeout=300
+php artisan queue:work --timeout=300
 Cron: * * * * * php artisan schedule:run (täglicher Scrape, wöchentliche URL-Discovery)
 Mail: echtes SMTP (sonst landet das Kontaktformular nur im Log)
 
@@ -20,7 +20,6 @@ php artisan storage:link
 php artisan config:cache && route:cache && view:cache && event:cache
 php artisan filament:cache-components && icons:cache
 php artisan scout:import "App\Models\Event"
-
 
 ## Deploy on production server
 php artisan migrate --force

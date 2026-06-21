@@ -4,6 +4,7 @@
     "type": "module",
     "scripts": {
         "build": "vue-tsc && vite build",
+        "build:only": "vite build",
         "dev": "vite"
     },
     "devDependencies": {

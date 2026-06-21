@@ -1,0 +1,201 @@
+Ist auf member.archtime.net installiert und läuft auf host meilisearch.archtime.net
+mit Apache2-Reverse-Proxy zu http://127.0.0.1:7700
+
+## 1. Meilisearch installieren
+
+Auf dem Server (als root oder mit sudo):
+
+```bash
+# Binary holen und installieren
+curl -L https://install.meilisearch.com | sh
+sudo mv ./meilisearch /usr/local/bin/
+
+# Dedizierten User + Verzeichnisse anlegen
+sudo useradd -d /var/lib/meilisearch -b /bin/false -m -r meilisearch
+sudo mkdir -p /var/lib/meilisearch/data /var/lib/meilisearch/dumps /var/lib/meilisearch/snapshots
+sudo chown -R meilisearch:meilisearch /var/lib/meilisearch
+sudo chmod 750 /var/lib/meilisearch
+```
+
+## 2. Master-Key generieren
+
+```bash
+openssl rand -base64 48
+```
+
+Den Output gut aufheben – das ist dein Admin-Schlüssel.
+
+## 3. Config-Datei `/etc/meilisearch.toml`
+
+```toml
+env = "production"
+master_key = "HIER_DEIN_GENERIERTER_KEY"
+db_path = "/var/lib/meilisearch/data"
+dump_dir = "/var/lib/meilisearch/dumps"
+snapshot_dir = "/var/lib/meilisearch/snapshots"
+http_addr = "127.0.0.1:7700"
+no_analytics = true
+```
+
+Entscheidend ist `http_addr = "127.0.0.1:7700"` – Meilisearch ist damit **nur lokal** erreichbar, nicht von außen.
+
+## 4. systemd-Service `/etc/systemd/system/meilisearch.service`
+
+```ini
+[Unit]
+Description=Meilisearch
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=meilisearch
+Group=meilisearch
+ExecStart=/usr/local/bin/meilisearch --config-file-path /etc/meilisearch.toml
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Starten und für Reboots aktivieren:
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable --now meilisearch
+sudo systemctl status meilisearch
+```
+
+## 5. Apache2-Reverse-Proxy + HTTPS
+
+Du brauchst eine (Sub-)Domain, die auf die Server-IP zeigt, z. B. `meilisearch.archtime.net`.
+
+Benötigte Apache-Module aktivieren:
+
+```bash
+sudo apt install apache2 certbot python3-certbot-apache -y
+sudo a2enmod proxy proxy_http headers ssl rewrite
+sudo systemctl reload apache2
+```
+
+VirtualHost `/etc/apache2/sites-available/meilisearch.conf`:
+
+```apache
+<VirtualHost *:80>
+    ServerName meilisearch.archtime.net
+
+    ProxyPreserveHost On
+    RequestHeader set X-Forwarded-Proto "http"
+    RequestHeader set X-Forwarded-For "%{REMOTE_ADDR}s"
+
+    ProxyPass        / http://127.0.0.1:7700/
+    ProxyPassReverse / http://127.0.0.1:7700/
+
+    # Meilisearch-Uploads können groß sein (100 MB)
+    LimitRequestBody 104857600
+
+    ErrorLog ${APACHE_LOG_DIR}/meilisearch-error.log
+    CustomLog ${APACHE_LOG_DIR}/meilisearch-access.log combined
+</VirtualHost>
+```
+
+Site aktivieren und Konfiguration prüfen:
+
+```bash
+sudo a2ensite meilisearch.conf
+sudo apache2ctl configtest
+sudo systemctl reload apache2
+```
+
+HTTPS mit Let's Encrypt (certbot richtet Redirect und SSL-VHost ein):
+
+```bash
+sudo certbot --apache -d meilisearch.archtime.net
+```
+
+Nach certbot sollte der SSL-VHost ungefähr so aussehen (certbot ergänzt die Pfade automatisch):
+
+```apache
+<VirtualHost *:443>
+    ServerName meilisearch.archtime.net
+
+    SSLEngine on
+    SSLCertificateFile /etc/letsencrypt/live/meilisearch.archtime.net/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/meilisearch.archtime.net/privkey.pem
+    Include /etc/letsencrypt/options-ssl-apache.conf
+
+    ProxyPreserveHost On
+    RequestHeader set X-Forwarded-Proto "https"
+    RequestHeader set X-Forwarded-For "%{REMOTE_ADDR}s"
+
+    ProxyPass        / http://127.0.0.1:7700/
+    ProxyPassReverse / http://127.0.0.1:7700/
+
+    LimitRequestBody 104857600
+
+    ErrorLog ${APACHE_LOG_DIR}/meilisearch-ssl-error.log
+    CustomLog ${APACHE_LOG_DIR}/meilisearch-ssl-access.log combined
+</VirtualHost>
+```
+
+## 6. Firewall
+
+Mit `ufw`:
+
+```bash
+sudo ufw allow 22/tcp      # SSH
+sudo ufw allow 80/tcp      # HTTP (für Let's Encrypt)
+sudo ufw allow 443/tcp     # HTTPS – hierüber läuft der Zugriff
+sudo ufw enable
+```
+
+**Port 7700 bleibt zu.** Bei Hetzner gibt es zusätzlich noch die Cloud-Firewall im Web-Panel – dort dieselbe Logik: nur 22, 80, 443 erlauben.
+
+Damit ist der Zugriff: `https://meilisearch.archtime.net` → Apache2 (Port 443, TLS) → intern weiter an `127.0.0.1:7700`. Niemand kommt direkt an Meilisearch ran, und Authentifizierung erfolgt über den Key im `Authorization: Bearer`-Header.
+
+## 7. Laravel-Scout-Anbindung
+
+```bash
+composer require laravel/scout meilisearch/meilisearch-php
+php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
+```
+
+In der `.env` (auf SiteGround):
+
+```env
+SCOUT_DRIVER=meilisearch
+MEILISEARCH_HOST=https://meilisearch.archtime.net
+MEILISEARCH_KEY=DEIN_MASTER_KEY
+```
+
+Ein kurzer Sicherheitshinweis dazu: Der **Master-Key** kann alles (Indizes anlegen, löschen). Scout braucht ihn fürs Indexieren, das ist okay im Backend. Für die **Suche im Frontend** (z. B. wenn du per JavaScript direkt gegen Meilisearch suchst) solltest du dir aber einen separaten, eingeschränkten Such-API-Key generieren statt den Master-Key auszuliefern:
+
+```bash
+curl -X POST 'https://meilisearch.archtime.net/keys' \
+  -H "Authorization: Bearer DEIN_MASTER_KEY" \
+  -H 'Content-Type: application/json' \
+  --data '{
+    "description": "Search-only key",
+    "actions": ["search"],
+    "indexes": ["*"],
+    "expiresAt": null
+  }'
+```
+
+Zum Testen, ob alles steht:
+
+```bash
+curl https://meilisearch.archtime.net/health
+# erwartete Antwort: {"status":"available"}
+```
+
+Lokal auf dem Server (nur Meilisearch, ohne Apache):
+
+```bash
+curl http://127.0.0.1:7700/health
+```
+
+Noch eine Überlegung zur Erreichbarkeit von SiteGround aus: Da Shared Hosting oft keine feste/vorhersehbare ausgehende IP hat, ist eine IP-Whitelist in der Firewall hier unzuverlässig. Genau deshalb ist der Weg über HTTPS + Master-Key die robuste Lösung – die Absicherung läuft über den Key, nicht über die Quell-IP.
+
+Soll ich dir noch zeigen, wie du ein Model für Scout indexierbar machst (`Searchable`-Trait + `php artisan scout:import`)?
